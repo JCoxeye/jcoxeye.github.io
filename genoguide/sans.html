@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html id="top">
+	
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Genoguide - Sans</title>
+		<link rel="stylesheet" href="../scripting/style.css">
+		<script src="../scripting/dropDown.js"></script>
+		<script src="../scripting/emphasis.js"></script>
+		<script src="../scripting/poppupPositionFix.js"></script>
+		<script>
+			window.onload = (event) =>
+			{
+				dropDown();
+				emphasis();
+				poppupPositionFix();
+			};
+		</script>
+	</head>
+	
+	<!-- P.S., thanks to ColdCalzone and Stagelights for ideas for corruptions of 'Sans Undertale' -->
+	
+	<!-- P.P.S., Yes, I know how much iframes suck. I don't have any great alternatives right now aside from remaking the lot of them as GIFs, so everyone will just have to deal with the horrific load times for a bit. -->
+	
+	<body>
+		
+		<nav>
+			<h2>Navigation</h2>
+				<ul>
+					<p>| <a href="../index.html">Back to Home</a> |</p>
+					<li>| <a href="genoguide.html" class="r">The Genoguide</a> |</li>
+					<ol>
+						<li>| <a href="utu.html" class="r">Boss Guide 1</a> |</li>
+						<li>| <a href="mttneo.html" class="r">Boss Guide 2</a> |</li>
+						<li>| <span class="r">Boss Guide 3</span> |</li>
+					</ol>
+					<li>| <a href="#top">Top</a> |</li>
+					<li>| <a href="#basics">The Basics</a> |</li>
+					<li>| <a href="#equipment" class="p">Equipment</a> |</li>
+					<li>| <a href="#consumables" class="g">Consumables</a> |</li>
+					<li>| <a href="#attacks" class="b">Attacks</a> |</li>
+					<li>| <a href="#invAndKarma" class="p">INV and KARMA</a> |</li>
+					<li>| <a href="#funFacts">Fun Factoids</a> |</li>
+					<li>| <a href="#speedrunning" class="o">Speedrunning</a> |</li>
+					<li>| <a href="#conclusion">Conclusion</a> |</li>
+				</ul>
+		</nav>
+				
+		<header>
+			
+			<h1><span class="b">JCoxeye</span>'s Guide to Fighting <span class="b">Sans</span></h1>
+				<p class="subTitle3">A comprehensive guide to fighting <span class="b">Sans</span>, the final boss of the <span class="r">Genocide</span>/<span class="r">No Mercy</span> route.</p>
+			
+		</header>
+		
+		<section>
+			
+			<h2>Preface</h2>
+				<p><span class="b">Sans Undertale</span>.<br>The ultimate test of any <em animSubType="rainbow">True <i>Undertale</i> Gamer</em>.</p>
+				<p><span class="b">Sands Thundersnail</span> is quite the challenge, especially if you don't know what to expect, nor how the fight even works.</p>
+				<p>That's where this guide comes in.</p>
+				<p>Below, I will explain the mechanics of <span class="b">Sadge Trogdorfail</span>'s fight, which strategies work and which don't, and show all of his attacks.</p>
+				<p>This guide limits spoilers for the remainder of the <span class="r">No Mercy</span> route, but it does have a section related to <a href="#speedrunning" class="o">Speedrunning</a>, found at the bottom of the page.</p>
+				<p>The following sub-sections will be organized by their relevance to the average player.</p>
+			
+		</section>
+		
+		<section id="basics">
+			
+			<h2 class="">The Basics</h2>
+				<p><span class="b">Chives Mustardkale</span> has only <span class="g">1 HP</span>, <span class="c">1 ATK</span>, and <span class="b">1 DEF</span>, so he would normally be a very easy enemy.</p>
+				<p>To make up for this, he bends the rules of the game to get an advantage:</p>
+				<ul>
+					<li>Although the battle is still turn-based, he takes his turn first.</li>
+					<li>Just as you (attempt) to dodge his attacks, he dodges your attacks as well, making your <span class="c">AT STAT</span> useless against him.</li>
+					<li>He ignores invincibility frames, damaging you for <span class="g">1 HP</span> every frame, for <span class="b">30 Damage</span> per second. Because he only deals <span class="b">1 Damage</span> at a time, your <span class="b">DF STAT</span> is useless as well.</li>
+					<li>He also inflicts a poison effect called <span class="p">KARMA</span>, in the form of additional purple damage that is slowly converted into actual damage.<br>Like <span class="b">Direct Damage</span>, <span class="p">KR</span> is inflicted at a rate of <span class="p">30 KR</span> per second.</li>
+				</ul>
+				<p>Some other important notes:</p>
+				<ul>
+					<li>As he dodges your attacks, he slowly gets more and more tired; attacking him is necessary to progress the fight. Do note that using consumables does not progress the fight, so using them to heal will extend it.</li>
+					<li>Importantly, although <span class="b">Saul Goodman</span> usually ignores <span class="c">AT</span> and <span class="b">DF</span>, certain equipment can still be used to give yourself an advantage, as discussed in the <a href="#equipment" class="p">Equipment</a> section.</li>
+					<li>In the <span class="b">Blue SOUL mode</span>, if you press the 'jump' button mid-air and keep holding it until you land, you'll jump as soon as you touch the ground.<br>Using this, you can effectively queue your jumps ahead of time, removing the need to time them.</li>
+					<li>The rate at which <span class="p">KARMA</span> is converted to damage is highly variable, but in general, <span class="p">KR</span> drains faster as you have more of it, and slower as you have more <span class="p">INV</span>.</li>
+				</ul>
+			
+		</section>
+		
+		<section id="equipment">
+			
+			<h2 class="p">Equipment</h2>
+				<p>Given <span class="b">Franz Ferdinand</span>'s <span class="r">STAT</span>s and unique mechanics, <span class="c">ATK</span> and <span class="b">DEF</span> are useless against him - <span class="b">DF</span> doesn't reduce the damage you take, and <span class="c">AT</span> doesn't affect the turn length of the battle.</p>
+				<p>With that, the only weapons and armor that affect the battle are ones that give special effects, those being:</p>
+				<ul>
+					<li>
+						The
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="g">Burnt Pan</span>:
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/itemLocations/burntPan.gif" width="640" height="480">
+								</span>
+							</span>
+						Gives all of your healing items an extra <span class="g">4 HP</span> of healing, which amounts to at most <span class="g">32</span> extra <span class="g">HP</span> to work with throughout the fight, depending on the items at your disposal.
+					</li>
+					<li>
+						The
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="p">Torn Notebook</span>:
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/rooms/waterfallCrossroads.png" width="640" height="480">
+								</span>
+							</span>
+						Provides a very slight amount of <span class="p">INV</span> (immunity frames after getting hit). By my guess, it'll reduce the damage you take by ~1/15 of what you normally would.
+					</li>
+					<li>
+						The
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="p">Cloudy Glasses</span>:
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/rooms/waterfallCrossroads.png" width="640" height="480">
+								</span>
+							</span>
+						Provides a slightly higher amount of <span class="p">INV</span>, preventing roughly ~1/12 of the damage you take.
+					</li>
+				</ul>
+				<p>Finally, using both the <span class="p">Torn Notebook</span> and <span class="p">Cloudy Glasses</span> at the same time reduces damage even further (preventing roughly ~1/9 of damage taken), and slows the rate at which <span class="p">KARMA</span> is converted to damage.</p>
+				<p>Given all of that, which should you choose?</p>
+				<p>Well, given that the <span class="p">Cloudy Glasses</span> are the only armor item that actually do anything against <span class="b">Cans</span>, you should always be using them.</p>
+				<p>As for the weapon, most say that the <span class="g">Burnt Pan</span> is the best, but they're likely unaware of the effect that <span class="p">INV</span> has during the fight.</p>
+				<p>The other useful weapon to use is the <span class="p">Torn Notebook</span>, which effectively gives you more defense, while also slowing the rate at which <span class="p">KARMA</span> drains your <span class="g">HP</span>.</p>
+				<p>Either choice is valid, but I would suggest the <span class="p">Torn Notebook</span>:<br>The extra ~<span class="g">25</span>-<span class="g">30 HP</span> you'll get via the <span class="g">Burnt Pan</span> is probably not much more than the <span class="g">HP</span> you'll save by taking less damage, if at all. Plus, healing loses you a turn, and in my experience, most people beat <span class="b">Pan's Worsethanbook</span> with a consumable or two left in their inventory anyway.</p>
+				<p>Speaking of...</p>
+			
+		</section>
+		
+		<section id="consumables">
+			
+			<h2 class="g">Consumables</h2>
+				<p>In the <span class="y">MTT</span> Resort, one can buy Legendary Heroes, which heal <span class="g">40 HP</span>.<br>With that, the only relevant consumables are ones that heal more than <span class="g">40 HP</span>, or have special effects:</p>
+				<ul>
+					<li>
+						Pie: Heals <span class="g">MAX HP</span>, can only be obtained once, from
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="r">Toriel</span>'s home.
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/itemLocations/pie.gif" width="640" height="480">
+								</span>
+							</span>
+					</li>
+					<li>
+						Instant Noodles: Heals <span class="g">90 HP</span>, can only be obtained once, from
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="y">Alphys</span>' fridge.
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/itemLocations/instantNoodles.gif" width="640" height="480">
+								</span>
+							</span>
+					</li>
+					<li>
+						Snowman Pieces: Heals <span class="g">45 HP</span>, can only be obtained thrice, from
+							<span class="poppup">
+								<span class="poppupTrigger">
+									the Snowman partly through Snowdin Forest.
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/rooms/snowmanCliff.png" width="640" height="480">
+								</span>
+							</span>
+					</li>
+					<li>
+						Legendary Heroes: Heals <span class="g">40 HP</span>, from the <span class="y">MTT</span>-Brand Burger Emporium for <span class="y">300G</span>.
+					</li>
+					<li>
+						Sea Tea: Heals <span class="g">10 HP</span>, increases <span class="o">SPEED</span> (movement speed while dodging attacks), from
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="y">Gerson</span>'s Shop for <span class="y">18G</span>.
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/rooms/waterfallCrossroads.png" width="640" height="480">
+								</span>
+							</span>
+					</li>
+				</ul>
+				<p>
+					Provided you haven't used the Pie, Instant Noodles, or Snowman Pieces, you should have three spaces open for Legendary Heroes and/or Sea Tea.
+				</p>
+				<p>
+					If you've already used the Snowman Pieces, don't worry - having at most <span class="g">15</span> less <span class="g">HP</span> to work with isn't a big deal.<br>If you've already used the Pie or Instant Noodles, <b animSubType="shake">may <span class="elemHoly">The Angel</span> have mercy on your SOUL.</b>
+				</p>
+				<p>
+					As for the remaining spaces in your inventory, just fill them up with Legendary Heroes.
+				</p>
+				<p>
+					Trading a Legendary Hero for a Sea Tea to get the <span class="o">SPEED</span> bonus is often recommended, as it can be a lifesaver for his harder attacks.<br>I'd say two Sea Teas is too much however, as sacrificing <span class="g">30 HP</span> for diminishing returns really isn't worth it.
+				</p>
+			
+		</section>
+		
+		<section id="attacks">
+			
+			<h2 class="b">Dodging Attacks</h2>
+				<p>Arright. This is what you've been waiting for.</p>
+				<p>There's quite a high demand for guides for these attacks, as this is by far the most difficult fight in the game.<br><a href="https://jcw87.github.io/c2-sans-fight/" target="blank">You can even find a whole online simulator for this!</a></p>
+				<p>Of course, that so-called 'bad time simulator' is just a simulator - it doesn't show you the <em animSubType="rainbow">Pro Gamer Strats</em>!<br><s>and also the emulation is terrible oh my god why is it like that</s></p>
+				<p>Anyway, here's all of <span class="b">Stan Millvale</span>'s attacks done without getting hit, and strategies for each!</p>
+				
+				<div id="atk1" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk1ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 1: Intro</div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk1ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk1Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Xf4tECexiWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p><span class="b">Seven Granddad</span>'s opening attack.</p>
+						<p>I recommend using only <kbd>Up</kbd> and <kbd>Down</kbd> for this entire attack; using <kbd>Left</kbd> and <kbd>Right</kbd> is unnecessary, and will only make dodging it more complicated.</p>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>First, he does a <span class="b">Gravity Slam</span> towards the bottom of the <span class="r">Bullet Board</span>.<br>Simply hold up as soon as the attack starts to dodge it, making sure to do a full jump.</p>
+						<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>He then creates a Bone Hallway for you to squeeze through. At this point, you'll probably already be in position to dodge this if you dodged the last part properly.</p>
+						<p>After this, <span class="b">Sam Jaundice</span> summons several sets of <span class="gray">Gaster Blasters</span>, creating safe spots for you to dodge them:</p>
+						<ol>
+							<li>The first set makes a box around the center; simply move towards the center after dodging the last part of the attack.</li>
+							<li>The second set makes an 'x' shape across the <span class="r">Bullet Board</span>. You can dodge this either by going all the way up or all the way down.</li>
+							<li>The third set is another box shape, dodged the same way as last time.</li>
+							<li>The fourth set is two large <span class="gray">Gaster Blasters</span> shooting left and right, dodged the same way as the 'x' shape.</li>
+						</ol>
+						<p>[<span class="b">Gravity Slam</span> and Bone Hallway: <span class="p">6 Innate KR</span>] - [<span class="gray">Gaster Blasters</span>: <span class="p">10 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk1ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 1: Intro - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk2" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk2ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 2: <span class="b">Small Hops 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk2ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk2Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/QEiQ37m1518" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>A seemingly simple <span class="b">Blue SOUL Mode</span> attack that is actually pretty dang hard to dodge.</p>
+						<p>Sets of vertical bones will shoot towards the center of the <span class="r">Bullet Board</span>, forcing you to jump between the small gaps.</p>
+						<p>Again, I recommend only using <kbd>Up</kbd> and <kbd>Down</kbd> for this attack. Pressing <kbd>Left</kbd> or <kbd>Right</kbd> will severely screw with the timing, making the attack nigh impossible to dodge.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk2ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 2: <span class="b">Small Hops 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk3" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk3ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 3: <span class="b">Blue Bones</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk3ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk3Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/C-C9qTCndDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>One of <span class="b">Anne</span>'s only <span class="c">Blue Attacks</span>.</p>
+						<p>This one is quite hard to dodge, especially if you don't know how to do it to begin with.</p>
+						<p>There's only a small window of time to jump over the small white bone after the <span class="c">blue bone</span> passes you, and the next <span class="c">blue bone</span> forces you to make as small a jump as possible.</p>
+						<p>This attack is made much easier by moving with the bones as you jump, giving you just enough time to land before the next <span class="c">blue bone</span> movement-checks you.</p>
+						<p>Importantly, after the third small white bone, the attack switches directions; after jumping over the third white bone, start shifting to the right to give yourself more time to react to the set coming from the left.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk3ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 3: <span class="b">Blue Bones</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk4" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk4ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 4: <span class="b">Random Hops 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk4ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk4Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/GPYCZj9uT48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>A variation of the <span class="b">Small Hops</span> attack.</p>
+						<p>In this attack, the gaps are all random distances from the ground, requiring more reaction speed, and (slightly) less precision.</p>
+						<p>This attack can be pretty hard if you don't have it down, but muscle memory will eventually take hold, allowing you to know exactly how long to hold <kbd>Up</kbd> for.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk4ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 4: <span class="b">Random Hops 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk5" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk5ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 5: <span class="b">Simple Platforms 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk5ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk5Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/catdjl87v7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>Woohoo!</p>
+						<p>Platforming!</p>
+						<p>In this attack, the ground quickly becomes covered in bones, requiring you to jump on the moving <span class="b">platforms</span> hovering above.</p>
+						<p>This is simple at first, but the third <span class="b">platform</span> has bones jutting out from the ceiling above.</p>
+						<p>You'll have to maneuver around them by coming in at a sharper angle.</p>
+						<p>After the third <span class="b">platform</span> comes and goes, the 'Bone Ocean' will start to disappear. Quickly jump down to the clear ground before a single large bone blocks the path.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk5ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 5: <span class="b">Simple Platforms 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk6" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk6ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 6: <span class="b">Simple Platforms 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk6ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk6Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/5GU9umBMUXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>The continuation of the last attack.</p>
+						<p>It's mostly the same at first, albeit headed in the opposite direction.</p>
+						<p>The big difference comes in with a large extra bone with a <span class="b">platform</span> above, sitting in between the first and second <span class="b">platforms</span>.<br>You can jump onto the high <span class="b">platform</span> if you want, but you can also just jump all the way to the next one, making the attack quite a bit simpler.</p>
+						<p>Next comes three <span class="b">platforms</span> with bones above them, like the third <span class="b">platform</span> from the previous attack.<br>Like last time, you'll have to come in at a sharper angle so you don't get hit by the bones above.</p>
+						<p>Once you're on the first of these <span class="b">platforms</span>, you'll notice a large bone coming from the left, which limits the time you have to finish the attack.</p>
+						<p>Thankfully, getting to the second <span class="b">platform</span> only requires moving off the edge of the first - you'll land right on it, without having to do an otherwise tricky jump.</p>
+						<p>After a small hop to the third of these <span class="b">platforms</span>, a large bone will come from the right, forcing you to squeeze above it, landing on the clear ground below. You'll have to wait for the perfect moment, as the ceiling prohibits a larger jump.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk6ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 6: <span class="b">Simple Platforms 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk7" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk7ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 7: <span class="b">Sliding Platforms<span></div></img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk7ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk7Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/ZZp3ouXDmks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>This ends up being one of <span class="b">Shams</span>' hardest attacks due to its random nature.</p>
+						<p>Sets of <span class="b">platforms</span> come in two rows, dividing the play field into three rows for you to stand in.</p>
+						<p>In the top and bottom rows, bones come from the right, while the middle row has bones coming from the left.</p>
+						<p>These bones sweep across the entire row, forcing you to vacate to one of the surrounding rows.</p>
+						<p>I recommend disregarding the top row entirely. You can avoid the entire attack by just moving between the bottom two rows.</p>
+						<p>Once you've exited the bottom row, try getting back to it as soon as the coast is clear. Doing this will save you the trouble and brainpower of having to deal with the moving <span class="b">platforms</span>.</p>
+						<p>Note the movement pattern here - stay in one row, moving with the bones, until you're forced to move to the other row, switching directions. You'll notice this ends up making a big circle pattern. Recognizing this will come in handy for later attacks.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk7ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 7: <span class="b">Sliding Platforms<span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk8" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk8ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 8: <span class="b">Platform Hops 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk8ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk8Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/mXGvYjZmrnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>In this attack, you'll start on a single moving <span class="b">platform</span> above a 'Bone Ocean'.</p>
+						<p>This joyride is interrupted by three columns of bones that force you to weave between the gaps.</p>
+						<p>If you know the attack well, you'll know when to jump and when to sit in place on the platform, but, since I know you, I'll save you the trouble and tell you outright.</p>
+						<p>When moving to the right, jump to pass through the gaps of the first two columns, coming to a rest on the right side of the <span class="b">platform</span> to cruise through the third.</p>
+						<p>Then, once you're past the third column, line yourself up with the right side of the <span class="b">platform</span>.</p>
+						<p>Lining it up right isn't as precise as you might expect, and you can push against the right wall of the <span class="r">Bullet Board</span> help with this.<br>Doing this, you'll simply cruise back through the bones, no problem.</p>
+						<p>Notably, this attack is timed such that once you're back in between the left and middle columns, you can simply do a full jump directly upwards to run out the clock, saving you the trouble of dodging the left column again.</p>
+						<p>[Vertical Looping Bones: <span class="p">5 Innate KR</span>] ['Bone Ocean': <span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk8ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 8: <span class="b">Platform Hops 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk9" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk9ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 9: <span class="b">Blaster Platforms</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk9ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk9Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/TrUOv6ChddU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>The same as the <span class="b">Sliding Platforms</span> attack, but with <span class="gray">Gaster Blasters</span> instead of bones.</p>
+						<p>Again, you can get by with only using the bottom two rows, alternating between them as you're about to get blasted, and sticking to the bottom row.</p>
+						<p>If you're on the middle row and are about to be hit, do a very small jump to get yourself off the <span class="b">platform</span>, before falling down to the bottom row.</p>
+						<p>If you stay on the <span class="b">platform</span>, it can be hard to get the momentum to fall off quick enough.</p>
+						<p>[<span class="p">10 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk9ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 9: <span class="b">Blaster Platforms</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk10" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk10ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 10: <span class="b">Platform Hops 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk10ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk10Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/3DGZC7WLDcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>A continuation of the <span class="b">Platform Hops</span> attack, with the left and right columns having tighter gaps for you to squeeze through.</p>
+						<p>Again, here's the strats:</p>
+						<p>To dodge the left column, do a full jump, catching the gap as it's high in the air.</p>
+						<p>Dodge the middle column by doing a small hop through the gap heading down.</p>
+						<p>Dodge the right column by doing a full jump, catching the gap as you're heading up. This may seem like a bad idea, but the hitboxes are pretty forgiving, and doing full jumps like this gives you as much time as possible to get your bearings.</p>
+						<p>On the return trip, line yourself up with the right side of the <span class="b">platform</span>, but once you're close to the right column, quickly race to the other side to get through the small gap.</p>
+						<p>Afterwards, simply line yourself up with the left side of the <span class="b">platform</span>, allowing you to cruise through the middle column and run out the clock by jumping straight up again.</p>
+						<p>[Vertical Looping Bones: <span class="p">5 Innate KR</span>] ['Bone Ocean': <span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk10ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 10: <span class="b">Platform Hops 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk11" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk11ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 11: <span class="b">Small Hops 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk11ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk11Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/LijZQkzmETU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>The <span class="b">Small Hops</span> attack again, but quite a bit faster.</p>
+						<p>Unfortunately, there's not much advice to give aside from 'git gud'.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk11ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 11: <span class="b">Small Hops 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk12" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk12ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 12: <span class="b">Horizontal Bone Slide</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk12ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk12Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/dKFeGRy25vI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>Now we get back to that circle motion I mentioned earlier.</p>
+						<p>In this attack, large bones above move to the left, while small bones below move to the right.</p>
+						<p>Stay on the ground, moving to the right with the small bones, before doing a full jump to the left, moving with the big bones. You may need to shift a little bit to the side so you don't hit a small bone as you're falling back down.<br>Rinse and repeat.</p>
+						<p>Depending on how full your jumps are, you'll either clear the entire thing with only two jumps, or you may need to do an extra one or two.</p>
+						<p>Try to limit the amount of jumps you have to do, whilst also being safe.</p>
+						<p>For me, the sweet spot is doing two mostly full jumps, and then doing an extra small jump over two small bones at the end.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk12ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 12: <span class="b">Horizontal Bone Slide</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk13" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk13ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 13: <span class="b">Random Hops 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk13ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk13Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/RW-TSdlwwjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>A continuation of the <span class="b">Random Hops</span> attack from earlier.</p>
+						<p>Provided you've attacked him every single turn since the beginning of the fight, this is the last attack you'll see before the halfway point.</p>
+						<p>Like <span class="b">Small Hops 2</span>, there's not much advice I can give aside from 'git gud'.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk13ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 13: <span class="b">Random Hops 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk14" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk14ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 14: <span class="b">Faster Blaster Platforms</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk14ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk14Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/TgDH-00X8yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>A faster version of the <span class="b">Blaster Platforms</span> attack.</p>
+						<p>The same advice as last time still applies.</p>
+						<p>Notably, you won't see this attack at all unless you've used a turn to <span class="g">ACT</span>, heal, or <span class="y">SPARE</span>.</p>
+						<p>[<span class="p">10 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk14ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 14: <span class="b">Faster Blaster Platforms</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<p><b animSubType="wave">From here until you attack him for the 13th time, <span class="b">Jevil Deltarune</span> reuses his attacks, randomly choosing from one of these four</b>:<br><span class="b">Small Hops 2</span>, <span class="b">Horizontal Bone Slide</span>, <span class="b">Random Hops 2</span>, and <span class="b">Faster Blaster Platforms</span>.</p>
+				<p>Anyway, this here's the halfway point - if you want to duck out to avoid spoilers for the rest of the fight, this is a great place to stop.</p>-->
+				<!-- <p>In the meantime, have a Gaster GIF.</p>
+				<img src="../assets/images/gaster.gif" class="inline unframed" title="If you're reading this guide, chances are you don't even know who this guy is, so I don't know why I bothered."> --> <!-- Realized this kinda didn't make sense for the target audience of this guide. Thought about giving it some text referring to that, but i decided to just cut it. He's still here in spirit. -->
+				
+				<div id="atkSpare" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atkSpareButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><div>Attack N/A: Spare</div></h3>
+						<p>(<span id="atkSpareToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atkSpareContent" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/gN1vfGyrVzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>Once you've attacked <span class="b">Raisin Brans</span> 13 times, he'll <span class="y">SPARE</span> you.</p>
+						<p>For as long as he's sparing you, <span class="g">ACT</span>ing and using <span class="p">ITEM</span>s does not progress the fight, nor cause him to attack.</p>
+						<p>Use this time to take a breather and heal if necessary - it amounts to a free turn.</p>
+						<p>I recommend using the worst healing items you have, as you can use multiple in a row with no consequence.</p>
+						<p>To progress the fight, just start attacking again.</p>
+					</div>
+					
+					<button id="atkSpareButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack N/A: Spare - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk15" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk15ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 15: Mini Attacks 1</div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk15ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk15Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/HtY8p7URmk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>This is where this guide gets (even more) complicated.</p>
+						<p>Occasionally, <span class="b">Ness Earthbound</span> will perform a set of multiple small attacks, randomly selected from a pool, comprised mostly of shorter versions of <span class="b">Lucas Motherthree</span>'s other attacks.</p>
+						<p>This first set has five attacks, and appears just after attacking <span class="b">Sandy Cheeks</span> once he <span class="y">SPARE</span>s you.</p>
+						<p>For all of the following 'Mini Attacks', only move up and down unless specified. It's easy to accidently move left or right when you shouldn't, which is very dangerous and hard to recover from.</p>
+						
+						<h3 class="heartB">Mini Attack 1: <span class="b">Mini Bone Jump</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/WF51XcSYRv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>In this attack, bones will quickly rush towards you from both sides, with a bunch of bones covering the floor, and followed by large bones stretching from the floor to the ceiling.</p>
+							<p>To dodge it, you must jump directly upwards over the approaching floor bones.</p>
+							<p>[<span class="p">6 Innate KR</span>]</p>
+						
+						<h3 class="heartB">Mini Attack 2: <span class="b">Mini Bone Mountain</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/lylTbuPG1pg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>In this attack, you start on the far side of the <span class="r">Bullet Board</span>, with a mountain of bones rushing towards you.</p>
+							<p>(it looks like this; I couldn't figure out how to describe it)<br>-> <span class="g">[</span>,,,,,||||| <img src="../assets/images/icons/heartR.png" width="16" height="16" class="unframed inline"><span class="g"> ]</span></p>
+							<p>To jump over the large bones, do a full jump, and once you're above them, move sideways directly towards them to fully clear them.</p>
+							<p>After jumping over the large bones, don't worry about clearing the small bones; the clock will run out before you fall into them.</p>
+							<p>[<span class="p">6 Innate KR</span>]</p>
+						
+						<h3 class="heartB">Mini Attack 3: <span class="b">Mini Blue Bones</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/FBcBUTkDT80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>Very similar to the first 'Mini Attack', except it's preceeded by two large <span class="b">blue bones</span>, forcing you to wait for them to pass before jumping over the small bones.</p>
+							<p>[<span class="p">6 Innate KR</span>]</p>
+						
+						<h3 class="heartB">Mini Attack 4: <span class="b">Mini Hops</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/RQC1b1MDTDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>A mini version of the <span class="b">Small Hops</span> attack.</p>
+							<p>Do note you only have to jump through two gaps before the attack ends.</p>
+							<p>[<span class="p">6 Innate KR</span>]</p>
+						
+						<h3 class="heartB">Mini Attack 5: <span class="b">Random Mini Hops</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/BVI2T50mynw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>A mini version of the <span class="b">Random Hops</span> attack.</p>
+							<p>You only need to jump through two gaps before the attack ends.</p>
+							<p>[<span class="p">6 Innate KR</span>]</p>
+						
+					</div>
+					
+					<button id="atk15ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 15: Mini Attacks 1 - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atkMB1" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atkMB1ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><div>Attack N/A: Menu Bones 1</div></h3>
+						<p>(<span id="atkMB1ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atkMB1Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/WBsPSsZpDjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>Once <span class="b">Yams Pumpkinale</span> <span class="y">SPARE</span>s you, any further attacks will be met with retaliation in the menu!</p>
+						<p>First, there'll be a single bone, repeatedly jumping over where your soul will be when you select an option.</p>
+						<p>Something important to note is that while these menu bones can damage you and inflict <span class="p">KR</span>, they can't actually kill you.<br>Obviously, try to avoid them if you can, but if you're already at <span class="g">1 HP</span>, you don't need to worry.</p>
+						<p>In fact, you might want to take the opportunity to learn the pattern or take a breather while you can - such opportunities are rare in this half of the fight.</p>
+						<p>Additionally, the top menu bones deal only <span class="p">1 KR</span> per frame, but only if you're above <span class="g">60 HP</span> (<span class="p">KR</span>-inflicted <span class="g">HP</span> included).</p>
+						<p>To avoid the first menu bones, wait until the bone passes over and heads back to the left, before quickly selecting the options.</p>
+						<p>To attack, simply press the confirm button again as soon as possible (hint: on a keyboard, both <kbd>Z</kbd> and <kbd>Enter</kbd> function as the <kbd>Confirm</kbd> key - you can press one with one hand and then press the other with your other hand).</p>
+						<p>If you're healing, you can simply select the first option like above, or quickly menu to the next item.</p>
+					</div>
+					
+					<button id="atkMB1ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack N/A: Menu Bones 1 - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk16" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk16ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div>Attack 16: <span class="r">Faster Blasters</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk16ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk16Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/YpTD6-uD48Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>A faster version of the <span class="r">Gaster Blasters</span> attack.</p>
+						<p>Like the last one, it -</p>
+						<p>Wait, what do you mean it appears before the second one?</p>
+						<p>[...]</p>
+						<p>That doesn't make sense, this one's way harder!</p>
+						<p>[...]</p>
+						<p>Okay, whatever you say.</p>
+						<p>If you couldn't tell from my hilarious bit, this attack is actually harder than its 'upgraded' version.</p>
+						<p>You'll start in the middle of a large <span class="r">Bullet Board</span> while small, fast <span class="gray">Gaster Blasters</span> randomly appear and shoot towards you, forcing you to dodge them similar to <span class="y">Undyne the Undying</span>'s <span class="r">Random Spears</span> attack.</p>
+						<p>This attack is probably <span class="b">Hands Brotherkill</span>'s hardest attack aside from his Finale attack, and requires experience, skill, and a bit of luck.</p>
+						<p>I recommend dodging it by making a large circle motion around the edges of the <span class="r">Bullet Board</span>, making sure to change direction or wait when doing otherwise would get you killed.</p>
+						<p>[<span class="p">10 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk16ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 16: <span class="r">Faster Blasters</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk17" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk17ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 17: Mini Attacks 2</div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk17ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk17Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/1XAP0CerGJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>The second volley of 'Mini Attacks'.</p>
+						<p>It's slightly faster than the first volley, and features a different set of five 'Mini Attacks':</p>
+						
+						<h3 class="heartR">Mini Attack 6: <span class="r">Mini Bone Hallway</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/0jSiczYtepU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>A part of the Intro attack, turned into its own 'Mini Attack'.</p>
+							<p>You'll start at one side of the <span class="r">Bullet Board</span>, and must navigate an oncoming Bone Hallway, making a curving motion.</p>
+							<p>Like usual, don't move left or right. Moving up and down is more than sufficient to dodge it, and moving left or right can complicate things.</p>
+							<p>[<span class="p">6 Innate KR</span>]</p>
+						
+						<h3 class="heartR">Mini Attack 7: <span class="r">Cross Blasters</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/RfH70iw-nvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>Four <span class="gray">Gaster Blasters</span> will suddenly appear, making a + (cross) shape, forcing you to the corners of the <span class="r">Bullet Board</span>.</p>
+							<p>You need to move sideways during this one, but be sure to stay still before the attacks ends - you don't want to accidentally move during the next attack!</p>
+							<p>[<span class="p">10 Innate KR</span>]</p>
+							
+						<h3 class="heartR">Mini Attack 8: <span class="r">Diagonal Blasters</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/NHDcvqotink" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>The same as the last attack, except it makes an X shape, forcing you to one of the walls of the <span class="r">Bullet Board</span>. You can NOT move sideways during this attack. It's prohibited and felonious.</p>
+							<p>[<span class="p">10 Innate KR</span>]</p>
+						
+						<h3 class="heartB">Mini Attack 9: <span class="b">Mini Bone Slide</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/Y9RKlR_JkT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>A miniature version of the <span class="b">Horizontal Bone Slide</span> attack.</p>
+							<p>It's the same as the full version, but it ends before a second jump is necessary.</p>
+							<p>Do note that it can face either direction, forcing you to react to its orientation.</p>
+							<p>[<span class="p">6 Innate KR</span>]</p>
+							
+						<h3 class="heartB">Mini Attack 10: <span class="b">Platform Parkour</span></h3>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/8vvyC6Ozpr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+							<p>The hardest mini attack, bar none. You start on top of the upper of two <span class="b">platforms</span>, above a 'Bone Ocean'. A bone comes towards you from either the left or right, forcing you off of the upper <span class="b">platform</span> and onto the one below.</p>
+							<p>While that happens, a second bone is headed from the opposite direction towards the lower <span class="b">platform</span>, forcing you to jump off of that <span class="b">platform</span> as well.</p>
+							<p>Like the Bone Slide attacks, the key is to make a circle motion - move off of the upper <span class="b">platform</span>, then turn back to land on the lower <span class="b">platform</span>, jumping off of it as soon as possible.</p>
+							<p>Do note that you don't have to jump off of the top <span class="b">platform</span>. It's easier to just slide off without jumping.</p>
+							<p>Provided you jump from the lower <span class="b">platform</span> without hitting either of the top two bones, you're safe, as the attack will end before you fall below.</p>
+							<p>[<span class="p">6 Innate KR</span>]</p>
+						
+					</div>
+					
+					<button id="atk17ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 17: Mini Attacks 2 - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atkMB2" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atkMB2ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><div>Attack N/A: Menu Bones 2</div></h3>
+						<p>(<span id="atkMB2ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atkMB2Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/8HcA_Xx0ibo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>After the third time you attack after <span class="b">Shads Killerwhale</span> <span class="y">SPARE</span>s you, you'll be met with bones on the bottom options of the menu, sweeping over them.</p>
+						<p>These bones have an alternating pattern, where the first and third buttons are covered, then the second and fourth buttons are covered, repeat.</p>
+						<p>It's sorta like the Bone Slide attacks - stay on one until you can't, then switch to another.</p>
+						<p>Once you've selected an option though, you're safe. You can duck into the <span class="c">FIGHT</span>, <span class="g">ACT</span>, or <span class="p">ITEM</span> menus if you need a breather, before heading back out into the great unknown.</p>
+						<p>Do note that, unlike any other of <span class="b">Fat Skeleton</span>'s attacks, the bottom menu bones do not inflict any <span class="p">KR</span> at all.</p>
+					</div>
+					
+					<button id="atkMB2ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack N/A: Menu Bones 2 - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk18" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk18ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 18: <span class="b">Gravity Slam 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk18ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk18Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/ygysrU5t-UE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>In my opinion, this attack and its upgraded versions are <span class="b">Smear Campaign</span>'s hardest attack.</p>
+						<p>You'll be thrown towards a wall of the <span class="r">Bullet Board</span>, and upon landing a set of bones will come out of the wall you were thrown into, forcing you to quickly react and jump out of the way.</p>
+						<p>It's already very difficult to react to, and in later iterations of the attack a full jump is required, further diverting your attention.</p>
+						<p>Of course, you'll only have to deal with that if you don't do the Pro Gamer Strats!</p>
+						<p>The super secret trick that trivializes the attack is as follows:</p>
+						<p>hold all four arrow keys at the same time.</p>
+						<p>Yeah, that's literally it.</p>
+						<p>It's basically free.</p>
+						<p>Of course, if you're some sort of PLEBIAN and use a controller or a keyboard that doesn't accept that many inputs at once, you're gonna have to suck it up and dodge it the normal way.</p>
+						<p>Regardless of how you dodge it though, do note that there are 9 <span class="b">Gravity Slams</span> per attack, and that once it's over, you'll have to start dodging menu bones again.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk18ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 18: <span class="b">Gravity Slam 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk19" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk19ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 19: <span class="b">Gravity Slam 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk19ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk19Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/vqa1EDwq7Vc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>Same as above, except a bit faster.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk19ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 19: <span class="b">Gravity Slam 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atkMB3" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atkMB3ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><div>Attack N/A: Menu Bones 3</div></h3>
+						<p>(<span id="atkMB3ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atkMB3Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/U0__Vg5F8Bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>Unfortunately, this is where taking a breather becomes taking a beating.</p>
+						<p>After he <span class="y">SPARE</span>s you and you've attacked him five times, you'll be met with a combination of the previous sets of menu bones for the rest of the fight.</p>
+						<p>You'll have to swap between menu buttons and quickly select your choice to avoid all of them.</p>
+						<p>Here's my strategy:</p>
+						<p>The second you enter the menu, switch to the <span class="g">ACT</span> button.</p>
+						<p>Then, once the menu bones over the <span class="c">FIGHT</span> and <span class="p">ITEM</span> buttons are gone, switch to the one you want to use, and wait for the top bone to pass by.</p>
+						<p>Then, quickly press confirm twice to attack, or menu to the <span class="p">ITEM</span> you want to use.</p>
+					</div>
+					
+					<button id="atkMB3ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack N/A: Menu Bones 3 - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk20" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk20ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div>Attack 20: <span class="r">Gaster Blasters</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk20ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk20Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/BUHiwjpvhzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>An, erm, easier version of the <span class="r">Faster Blasters</span> attack.</p>
+						<p>It's probably supposed to be harder because of the increased size of the blasters, but their size doesn't matter as much as their speed in this instance.</p>
+						<!--This is not intended to be a dick joke. It wouldn't be funny, anyway.-->
+						<p>Regardless, the increased size is considerable, and it's still a tough attack, especially if you get cornered.</p>
+						<p>[<span class="p">10 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk20ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 20: <span class="r">Gaster Blasters</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk21" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk21ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div>Attack 21: <span class="r">Vertical Bone Slide</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk21ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk21Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/HzQfEoHN_GY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>In this attack, the <span class="r">Bullet Board</span> is divided vertically into two halves, with bones on the right sweeping upward, and bones on the left sweeping downward.</p>
+						<p>As was probably revealed by what I called this attack, it's actually just a vertical version of the previous Bone Slide attacks.</p>
+						<p>With that, dodge it using the same circle motion you've been using all this time.</p>
+						<p>Move up with the right-hand bones for a little, then switch and move down with the left-hand bones.</p>
+						<p>You can make the circle motion as big as you feel comfortable with, but I recommend a very small one, as shown above in the video.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk21ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 21: <span class="r">Vertical Bone Slide</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk22" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk22ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 22: Mini Attacks 3</div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk22ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk22Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/PObXpUKQ0Ok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>The third volley of 'Mini Attacks'.</p>
+						<p>This time, it's even faster, has 6 attacks, and includes all ten 'Mini Attacks'. It doesn't introduce any of its own, though.</p>
+					</div>
+					
+					<button id="atk22ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 22: Mini Attacks 3 - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk23" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk23ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 23: <span class="b">Gravity Slam 3</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk23ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk23Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/F38ObSeEmWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>Another set of <span class="b">Gravity Slams</span>.</p>
+						<p>It's the same as <span class="b">Gravity Slam 2</span>, except the bones are taller, requiring a more precise jump.</p>
+						<p>Provided you've been attacking every turn, this is the very last attack you'll see before the 'Finale'.</p>
+						<p>[<span class="p">6 Innate KR</span>]</p>
+					</div>
+					
+					<button id="atk23ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 23: <span class="b">Gravity Slam 3</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<p><b animSubType="wave">From here until you attack him for the 23rd time, <span class="b">Suds Rentalane</span> reuses his attacks, randomly choosing from one of these three</b>:<br><span class="b">Gravity Slam 3</span>, Mini Attacks 3, and <span class="r">Gaster Blasters</span>.</p>
+				
+				<div id="atk24" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk24ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 24: Finale</div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
+						<p>(<span id="atk24ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk24Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/JBMLwHRWeno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>Without practice, this is by far <span class="b">LAN Connection</span>'s hardest attack, as it's a conglomeration of numerous difficult attacks, thrown at you at breakneck speed.</p>
+						<p>If you're really feeling stuck on this one, it's not a bad idea to use that '<a href="https://jcw87.github.io/c2-sans-fight/" target="blank">Bad Time Simulator</a>' I mentioned earlier.<br>It's much more managable with practice and when knowing what to expect.</p>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>First up is a set of four <span class="b">Gravity Slams</span>, all in random directions.<br>Even if you're using the cheese strat, you should still be prepared to quickly set up for the next attack.</p>
+						<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>Next up is a short vertical <span class="r">Bone Slide</span>, which can be tricky to dodge depending on which wall you were last slammed into.</p>
+						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>Next, you're thrown against the left wall, and then jettisoned down an elongated <span class="r">Bullet Board</span>.<br>As you're flying to the right, you'll first encounter a curved Bone Hallway, dodged just as the others, by waving back and forth as it comes at you.</p>
+						<p>Next, the 'Turbo Tunnel' appears.<br>Sets of bones appear that block portions of the <span class="r">Bullet Board</span>, requiring you to dodge up and down just like the Bone Hallway, albeit with much more precise timing.</p>
+						<p>For both of these, if you're on a keyboard, I recommend switching to moving up and down with two fingers and alternating with them, as opposed to moving your middle finger between the arrow keys every time.</p>
+						<p>Now, once that nightmare is over, things get slightly easier.</p>
+						<p>Marginally.</p>
+						<p>Eh. It's debatable.</p>
+						<p>Once you hit the right side of the <span class="r">Bullet Board</span>, you'll have to jump away to dodge the <span class="b">Gravity Slam</span> bones that come out of the right wall.<br>Note that simply holding <kbd>Left</kbd> the entire time will cause you to fall back into the bones; You'll have to wait a little bit to avoid damage.</p>
+						<p>After that, you're repeatedly teleported to various <span class="r">Bullet Boards</span>, with indicators warning you of upcoming Bone Stabs (like <span class="b">Gravity Slams</span> but skipping straight to having to jump).<br>For the first one, jump directly upwards.<br>For the second one, jump down and to the right.<br>For the third one, jump up and to the left.<br>For the fourth and final one, jump down and to the right.</p>
+						<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
+						<p>After that, get into position to play <i>Ring Around the Rosy</i> with a ring of <span class="gray">Gaster Blasters</span>.<br><span class="gray">Gaster Blasters</span> sequentially appear in a counter-clockwise ring shape, making a sort of spinning middle bar that damages you.<br>You'll have to move in a tight counter-clockwise circle, running away from the newer Gaster Blasters, and towards the older ones.<br>Try to make as tight of a circle as possible without getting hit, and rack up that <span class="fight">TP</span>!</p>
+						<p>Oh, right.<br>Wrong game.</p>
+						<p>[<span class="b">Gravity Slams</span>, Bone Slide, Bone Hallway, Turbo Tunnel, and Bone Stabs: <span class="p">6 Innate KR</span>] [<span class="gray">Gaster Blaster Ring</span>: <span class="p">10 Innate KR</span>]</p>
+						<p>Anyway, once you've outlasted the <span class="gray">Gaster Blaster Ring</span>, you're free to go.<br>At this point, <span class="b">Quote Cavestory</span> uses his <span class="r">Special Attack</span>, that being slamming you against the walls, and then doing nothing until you give up.<br>Do note that the wall slams can't actually kill you. If you're on <span class="g">1 HP</span>, they won't do any damage.<br>After that, you'll have to figure out how to deal with his <span class="r">Special Attack</span>!</p>
+						<p>What?</p>
+						<p>No, I'm not gonna tell you how to do it.<br>Figure it out on your own, dummy.</p>
+					</div>
+					<button id="atk24ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 24: Finale - Click to Contract)</p>
+					</button>
+				</div>
+			
+		</section>
+		
+		<section id="invAndKarma">
+			
+			<h2>On the Topic of <span class="p">INV</span> and <span class="p">KARMA</span></h2>
+				
+				<p>If you're anything like me, discovering the niche specifics of random things in <i>Undertale</i> is a highly enjoyable experience, not to mention a vaguely useful one from a theorycrafting/speedrunning perspective.</p>
+				<p>This section will cover <span class="p">INV</span> and <span class="p">KARMA</span> in detail, explaining the intricacies of things that only the most brain-rotten of <i>Undertale</i> fans would care for.</p>
+				
+				<h3>What's <span class="p">INV</span>?</h3>
+					<p>Your <span class="p">INV STAT</span> represents how long you're invincible after taking damage.</p>
+					<p>Your <span class="p">INV</span> starts at <span class="p">30</span> (1 second of invincibility), but you can get some more by equipping the <span class="p">Torn Notebook</span> or <span class="p">Cloudy Glasses</span>, bought from <span class="y">Gerson</span>'s shop in Waterfall.</p>
+					<p>The in-game descriptions of the <span class="p">Torn Notebook</span> and <span class="p">Cloudy Glasses</span> <strong animSubType="wave">say</strong> they give <span class="p">6</span> and <span class="p">9 INV</span> respectively, but upon equipping them, you'll notice that they clearly increase your <span class="p">INV STAT</span> by much more than just <span class="p">15</span> (1/2 of a second).</p>
+					<p>So... what's up with that?</p>
+					<p>Well, to put it bluntly, the statistics the game gives you are <em animSubType="wave">blatently false</em>, and have literally nothing to do with the actual <span class="p">INV STAT</span>.</p>
+					<p>Diving into the code, we can confirm the
+						<span class="poppup">
+							<span class="poppupTrigger">
+								<span class="p">Torn Notebook</span>
+							</span>
+							<span class="poppupAside">
+								(Shown as<br><kbd>global.weapon == 45</kbd><br> in the image below)
+							</span>
+						</span>
+						<em animSubType="wave">actually</em> gives you an extra <span class="p">15 INV</span>, while the
+						<span class="poppup">
+							<span class="poppupTrigger">
+								<span class="p">Cloudy Glasses</span>
+							</span>
+							<span class="poppupAside">
+								(Shown as<br><kbd>global.armor == 44</kbd><br> in the image below)
+							</span>
+						</span>
+						give you an extra <span class="p">30 INV</span>.<br>Together, they provide <span class="p">45 INV</span>, giving you a total of <span class="p">75 INV</span>, or 2.5 seconds of invincibility after taking damage.</p>
+					<img src="../assets/images/gmlCode/invscript.png" width="239" height="226" title="Line 50:
+global.inv = 30
+Lines 55 through 62:
+if (global.armor == 44)
+  global.inv += 30
+if (global.armor == 64)
+  global.inv += 15
+if (global.weapon == 45)
+  global.inv += 15
+if (global.inv < 15)
+  global.inv = 15">
+					<p>(<kbd>gml_Object_obj_battlecontroller_Step_0</kbd>)
+						<span class="poppup">
+							<span class="poppupTrigger">
+								(?)
+							</span>
+							<span class="poppupAside">
+								As an aside, this code reveals that <span class="p">INV</span> is always kept at a minimum of <span class="p">15</span> (despite this being impossible to see in-game).<br><br>It also reveals that <span class="p">INV</span> works differently against <span class="y">Undyne the Undying</span> and Muffet, the latter of which relates to the lore of the <span class="p">Purple SOUL</span>.
+							</span>
+						</span>
+					</p>
+					
+					<h3>Okay, but how does <span class="p">INV</span> work against <span class="b"><span>Spans</span></span>?</h3>
+						<img src="../assets/images/gmlCode/invscript2.png" width="398" height="379" title="lines 1-24:
+inv_check = 0
+inv_timer += 1
+if (global.inv >= 45 && inv_timer >= 5)
+{
+  inv_check = 1
+  inv_timer = 0
+}
+if (global.inv >= 60 && inv_timer >= 4)
+{
+  inv_check = 1
+  inv_timer = 0
+}
+if (global.inv >= 75 && inv_timer >= 3)
+{
+  inv_check = 1
+  inv_timer = 0
+}
+if (lac >= 4 && global.hp <= 10 && inv_timer >= 2)
+{
+  inv_check = 1
+  inv_timer = 0
+}
+if (inv_check == 0)
+  damageturn = 0">
+						<p>(<kbd>gml_Object_obj_sansb_body_Draw_0</kbd>)</p>
+						<p>This is the code that's largely responsible for how <span class="p">INV</span> works against <span class="b">Grains Andtheseeds</span>. It's a little more complicated than the last one, but here's how I think it works:</p>
+						<p><kbd>inv_timer</kbd> (which starts at <kbd>0</kbd>) is increased by <kbd>1</kbd> every frame.</p>
+						<p>If you don't have increased <span class="p">INV</span>, then this doesn't do anything - you never get any i-frames.<br>If you do, though, then you'll be given one frame of invincibility every time the counter reaches a certain number, dependent on your <span class="p">INV</span>:</p>
+						<ul>
+							<li>If you have <span class="p">45 INV</span>, this number is <kbd>5</kbd></li>
+							<li>If you have <span class="p">60 INV</span>, this number is <kbd>4</kbd></li>
+							<li>If you have <span class="p">75 INV</span>, this number is <kbd>3</kbd></li>
+						</ul>
+						<p>Effectively, you're immune to <span class="b">Direct Damage</span> (<strong animSubType="wave">not</strong> <span class="p">KARMA</span>) 1/5 of the time when using the <span class="p">Torn Notebook</span>, 1/4 of the time when wearing the <span class="p">Cloudy Glasses</span>, and 1/3 of the time when using both the <span class="p">Torn Notebook</span> and the <span class="p">Cloudy Glasses</span>.</p>
+					
+					<h3>What's <span class="p">KARMA</span>?</h3>
+						<p>When you're first hit by an attack, you'll be hit for <span class="b">1 DMG</span> and accrue a sizeable amount of <span class="p">KARMA</span>, dependent on the attack's
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="p">Innate KR</span>.
+								</span>
+								<span class="poppupAside">
+									How much any given attack has is shown in the <span class="b">Attacks</span> section.
+								</span>
+							</span>
+						<br>Afterwards, for as long as you're in contact with the attack, you'll take an additional <span class="b">1 DMG</span> and <span class="p">1 KR</span> per frame, for a total of <span class="b">30 Direct Damage</span> and <span class="p">30 KARMA</span> per second.
+							<span class="poppup">
+								<span class="poppupTrigger">
+									(?)
+								</span>
+								<span class="poppupAside">
+									For example, let's say you're hit by an attack that has <span class="p">6 Innate KR</span>, and are in contact with the attack for a third of a second (10 frames).<br><br>On the first frame, you'll be hit for <span class="b">1 DMG</span> and accrue <span class="p">6 KR</span>.<br><br>You'll then take another <span class="b">1 DMG</span> and <span class="p">1 KR</span> on each of the following 9 frames, for a total of <span class="b">9 DMG</span> and <span class="p">9 KR</span>.<br><br>Overall, you'll take <span class="b">25 DMG</span>: <span class="b">10</span> from <span class="b">Direct Damage</span>, and <span class="p">15</span> from <span class="p">KARMA</span>.</span>
+								</span>
+							</span>
+						</p>
+						<p>When you have <span class="p">KR</span>, it is slowly converted to damage at a <span class="p">1 KR</span>:<span class="b">1 DMG</span> ratio.</p>
+					
+					<h3>How do <span class="p">INV</span> and <span class="p">KARMA</span> interact?</h3>
+						<p>Like this, <em animSubType="wave">obviously</em>:</p>
+						<img src="../assets/images/gmlCode/invscript3.png" width="492" height="800" title="lines 1549-1599:
+if (global.km > 40)
+    global.km = 40
+if (global.km > global.hp)
+    global.km = (global.hp - 1)
+if (global.km > 0 && global.hp > 1)
+{
+  km_t += 1
+  if (prevhp == global.hp)
+  {
+    km_bonus = 0
+    if (global.inv >= 45)
+      km_bonus = choose(0, 1)
+    if (global.inv >= 60)
+      km_bonus = choose(0, 1, 1)
+    if (global.inv >= 75)
+      km_bonus = 1
+    if (km_t >= (1 + km_bonus) && global.km >= 40)
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (km_t >= (2 + (km_bonus * 2)) && global.km >= 30)
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (km_t >= (5 + (km_bonus * 3)) && global.km >= 20)
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (km_t >= (15 + (km_bonus * 5)) && global.km >= 10)
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (km_t >= (30 + (km_bonus * 10)))
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (global.hp <= 0)
+      global.hp = 1
+  }
+  prevhp = global.hp
+}">
+						<p>(<kbd>gml_Object_obj_sansb_body_Draw_0</kbd>)</p>
+						<p>This code is <em animSubType="wave">even more</em> complicated, but here's how my <strong animSubType="rainbow">smooth brain</strong> interprets it:</p>
+						<ol>
+							<p>Your <span class="p">KARMA</span> is capped at <span class="p">40</span>, and then to 1 less than your current <span class="g">HP</span>; you can't have more than <span class="p">40 KR</span>, nor more <span class="p">KR</span> than <span class="g">HP</span>.</p>
+							<p>If you have some amount of <span class="p">KR</span> and aren't dead, <kbd>km_t</kbd> (henceforth '<span class="r">KARMA Timer</span>') increases by <span class="r">1</span> every frame.</p>
+							<ul>
+								<li>If you aren't using any <span class="p">INV</span>-boosting items, then <kbd>km_bonus</kbd> (henceforth '<span class="r">KARMA Timer Bonus</span>') is set to <span class="r">0</span>.</li>
+								<li>If you have <span class="p">45 INV</span>, then the <span class="r">KARMA Timer Bonus</span> is set to either <span class="r">0</span> or <span class="r">1</span>, with a 50/50 chance for either.</li>
+								<li>If you have <span class="p">60 INV</span>, then the <span class="r">KARMA Timer Bonus</span> has a 1/3 chance of being set to <span class="r">0</span>, and a 2/3 chance of being set to <span class="r">1</span>.</li>
+								<li>If you have <span class="p">75 INV</span>, then the <span class="r">KARMA Timer Bonus</span> is set to <span class="r">1</span>.</li>
+							</ul>
+							<p>Depending on your current <span class="p">KR</span>, the <span class="r">KARMA Timer</span> is compared to one of several time limits. Once it meets that time limit, you'll take <span class="b">1 Damage</span>, lose <span class="p">1 KR</span>, and the <span class="r">KARMA Timer</span> will be set back to <span class="r">0</span>.</p>
+							<ul>
+								These time limits are as follows:
+								<p><span class="p">40+ KR</span>: 1 frame for <span class="p">KR</span> to tick down (<span class="p">30 KR</span> per second)<br>With the <span class="r">KARMA Timer Bonus</span>: 2 frames (<span class="p">15 KR</span> per second)</p>
+								<p><span class="p">30</span>-<span class="p">39 KR</span>: 2 frames for  <span class="p">KR</span> to tick down (<span class="p">15 KR</span> per second)<br>With the <span class="r">KARMA Timer Bonus</span>: 4 frames (<span class="p">7.5 KR</span> per second)</p>
+								<p><span class="p">20</span>-<span class="p">29 KR</span>: 5 frames for  <span class="p">KR</span> to tick down (<span class="p">6 KR</span> per second)<br>With the <span class="r">KARMA Timer Bonus</span>: 8 frames (<span class="p">3.75 KR</span> per second)</p>
+								<p><span class="p">10</span>-<span class="p">19 KR</span>: 15 frames for  <span class="p">KR</span> to tick down (<span class="p">2 KR</span> per second)<br>With the <span class="r">KARMA Timer Bonus</span>: 20 frames (<span class="p">1.5 KR</span> per second)</p>
+								<p><span class="p">0</span>-<span class="p">9 KR</span>: 30 frames for  <span class="p">KR</span> to tick down (<span class="p">1 KR</span> per second)<br>With the <span class="r">KARMA Timer Bonus</span>: 40 frames (<span class="p">0.75 KR</span> per second)</p>
+							</ul>
+						</ol>
+						<p>In short, and as mentioned earlier, <span class="p">KARMA</span> drains faster as you have more of it, and slower as you have more <span class="p">INV</span>.</p>
+					
+					<h3><b animSubType="shake">BUT WAIT JUST A [30 frames] !<br>THERE'S MORE!</b></h3>
+						<p>Not <em animSubType="wave">only</em> is it super complicated, but it's <strong animSubType="wave">also</strong> bugged!</p>
+						<p>Looking at the code again:</p>
+						<img src="../assets/images/gmlCode/invscript3.png" width="492" height="800" title="lines 1553-1599:
+if (global.km > 40)
+    global.km = 40
+if (global.km > global.hp)
+    global.km = (global.hp - 1)
+if (global.km > 0 && global.hp > 1)
+{
+  km_t += 1
+  if (prevhp == global.hp)
+  {
+    km_bonus = 0
+    if (global.inv >= 45)
+      km_bonus = choose(0, 1)
+    if (global.inv >= 60)
+      km_bonus = choose(0, 1, 1)
+    if (global.inv >= 75)
+      km_bonus = 1
+    if (km_t >= (1 + km_bonus) && global.km >= 40)
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (km_t >= (2 + (km_bonus * 2)) && global.km >= 30)
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (km_t >= (5 + (km_bonus * 3)) && global.km >= 20)
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (km_t >= (15 + (km_bonus * 5)) && global.km >= 10)
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (km_t >= (30 + (km_bonus * 10)))
+    {
+      km_t = 0
+      global.hp -= 1
+      global.km -= 1
+    }
+    if (global.hp <= 0)
+      global.hp = 1
+  }
+  prevhp = global.hp
+}">
+						<p>(<kbd>gml_Object_obj_sansb_body_Draw_0</kbd>)</p>
+						<p>The code you see here is from the first part of <span class="b">Trans Cringefail</span>'s in-battle
+							<span class="poppup">
+								<span class="poppupTrigger">
+									Draw Event.
+								</span>
+								<span class="poppupAside">
+									In GameMaker Language (GML), a Draw Event is how an object represents ('draws') itself on-screen.<br><br>If it seems strange that this code is inside of a Draw Event instead of a Step Event (the gameplay counterpart to Draw Events), then you'd be right.<br><br>I have no idea why Toby Fox made it this way.
+								</span>
+							</span>
+						</p>
+						<p>As Draw Events are run every frame, the code that governs the <span class="r">KARMA Timer</span> is run every 1/30th of a second. This would be fine on its own, if it weren't for the fact that the code that sets the <span class="r">KARMA Timer Bonus</span> is <em animSubType="wave">also</em> run every frame.</p>
+						<p>This means that while you have only one <span class="p">INV</span>-boosting item equipped (I.e, you have <span class="p">45</span> or <span class="p">60 INV</span>), <kbd>km_bonus</kbd> is randomly set to either <kbd>0</kbd> or <kbd>1</kbd> <b animSubType="wave">30 times per second</b>.</p>
+						<p>You may have realized the problem.</p>
+						<p>If <kbd>km_bonus</kbd> is randomized each frame, then the variables that depend on it (such as the time limit that <kbd>km_t</kbd> needs to reach) will <em animSubType="wave">also</em> be random each frame.<br>Given that <kbd>km_t</kbd> only needs to be above the time limit for a single frame, these random fluctuations are more than enough to cause <span class="p">KARMA</span> to tick down and reset the timer.</p>
+					
+					<h4>Effectively:</h4>
+						<p>The code is <em animSubType="wave">supposed</em> to mean that, when you equip only one <span class="p">INV</span>-boosting item, whether any given point of <span class="p">KARMA</span> takes longer to tick down is random.</p>
+						<p>What ends up <em animSubType="wave">actually</em> happening is that, once the <span class="r">KARMA Timer</span> passes the
+							<span class="poppup">
+								<span class="poppupTrigger">
+									minimum time limit,
+								</span>
+								<span class="poppupAside">
+									(That being the time limit if you weren't using any <span class="p">INV</span>-boosting items)
+								</span>
+							</span>
+						there's a chance for <span class="p">KARMA</span> to tick down <em animSubType="wave">each frame</em> until the
+							<span class="poppup">
+								<span class="poppupTrigger">
+									maximum time limit
+								</span>
+								<span class="poppupAside">
+									(That being the time limit if you were using both <span class="p">INV</span>-boosting items)
+								</span>
+							</span>
+						is reached.</p>
+						<p>Ultimately, wearing only one <span class="p">INV</span>-boosting item barely affects the rate at which <span class="p">KARMA</span> is converted to damage.</p>
+			
+		</section>
+		
+		<section id="funFacts">
+			
+			<h2>Fun Factoids</h2>
+				<p>Various fun facts and extraneae regarding the fight:</p>
+				<ul>
+					<li>As previously mentioned, provided you hit <span class="b">Heads Ortails</span> at every opportunity, you won't ever see the '<span class="b">Faster Blaster Platforms</span>' attack.</li>
+					<li>The first and third sets of menu bones are usually dodged by waiting to select the option. If you're using the Linux or Mac version 1.001 however, it's possible to dodge the attack by pressing <kbd>Z</kbd> or <kbd>Enter</kbd> on one frame, and then pressing the other the next frame, which doesn't give the top bone an opportunity to hit you.</li>
+					<li>The Temmie Armor, which grants <span class="p">15 INV</span>, is usually unobtainable in the <span class="r">No Mercy</span> route. Due to the fact that the code doesn't differentiate between <em animSubType="wave">how</em> you get the <span class="p">INV</span>, the Temmie Armor still grants an amount of protection against <span class="b">Samsung Galaxy</span>'s attacks.</li>
+					<li>Similarly, both the Temmie Armor and the <span class="g">Stained Apron</span> restore <span class="g">1 HP</span> every other turn, and if cheated in, they could both be marginally useful in their own right.</li>
+					<li>'<span class="r">Cross Blasters</span>' and '<span class="r">Diagonal Blasters</span>' are technically considered the same 'Mini Attack' in the code, but are different enough for me to separate them in the previous list.</li>
+					<li>Contrary to popular belief, the Instant Noodles healing <span class="g">90 HP</span> is not unique to the <span class="b">Fools Golderpail</span> fight. It's actually a product of a battle state called <span class="r">Serious Mode</span>, which is active against <span class="r">Toriel</span>, <span class="r">Asgore</span>, <span class="r">Asriel</span>, <span class="y">Undyne the Undying</span>, and of course, <span class="b">Tans</span>.</li>
+					<li><span class="p">KR</span> is never stated to stand for '<span class="p">Karmic Retribution</span>', either in-game or in the code - that's just a fanon misconception.</li>
+					<li>The part of the 'Finale' attack that I referred to as the 'Turbo Tunnel' appears to be a reference to the obstacle of the same name from <i>Battle Toads</i>; it's infamous for being ridiculously difficult and precise, much like the <i>Undertale</i> version.</li>
+					<li>While you're being slammed against the walls after the 'Finale' attack, holding into a wall that you're falling parallel to will cause you to take <span class="b">1 Damage</span> per frame.</li>
+					<li>Pope Francis of the Holy Catholic Church has fought <span class="b">Mans Undermale</span>. It's true; my absent scientist father who exclusively wears turtlenecks works at the Vatican.</li>
+				</ul>
+			
+		</section>
+		
+		<section id="speedrunning">
+			
+			<h2 class="o">Speedrunning</h2>
+				<p>In the <span class="r">Genocide</span> category of <i>Undertale</i>, <span class="b">Sans Deltarune</span> functions as the final skill-check between you and your (hypothetical) PB.</p>
+				<p>Of course, you'll have the <span class="b">Ballet Shoes</span> and <span class="r">Bandage</span> equipped, unless you've equipped another armor for safety.</p>
+				
+				<p>Three things are important to get a good fight:</p>
+				<ol>
+					<p><em animSubType="wave">Equip the</em> <span class="b"><b animSubType="wave">Ballet Shoes</b></span>:<br>The <span class="g">Burnt Pan</span> or <span class="p">Torn Notebook</span> may be tempting, but the amount of time you lose to the longer attack animations isn't really worth it.<br>Plus, if you need either of those to be safe during the fight, you should probably put in a bit more practice - you should be <b animSubType="wave">very confident</b> in fighting <span class="b">Clash of Clans</span> before running <span class="r">Geno</span>.</p><!--Git Gud-->
+					<p>Don't waste any turns doing anything other than attacking:<br>Aside from when he <span class="y">SPARE</span>s you, healing will waste a turn, which is a lot of time to lose, especially against <span class="b">Hans Olo</span>.<br>Of course, if you absolutely need to heal, it's better to do so than die. Do recall that after you heal, the cursor will still be on the <span class="p">ITEM</span> option. Try not to heal again, or worse, reequip the <span class="g">Burnt Pan</span>.</p>
+					<p><em animSubType="rainbow">MASH</em>:<br>The attack minigame and the battle dialogue can be mashed, as neither are important to the fight. The opening and ending monologues aren't mashable though, so don't bother; just press <kbd>Z</kbd>.<br>Do note that as battle dialogue, <span class="b">Some Dumbass</span>' monologue can be mashed at 30 TBPS.</p>
+				</ol>
+				
+				<h3>Safety Concerns:</h3>
+				<ul>
+					<li>You should probably heal at a <span class="r">SAVE Point</span> some time before the fight. The Judgement Hall <span class="r">SAVE Point</span> is fine, especially if you need a safety <span class="r">SAVE</span>, but the <span class="r">SAVE</span> in front of <span class="r">Asgore</span>'s House is better, as you don't need to go out of your way to interact with it.</li>
+					<li>You might want to equip the <span class="p">Cloudy Glasses</span>: they're good safety for <span class="b">Bronze Platemail</span>, and aren't too out of the way.<br>If you do pick them up, you should equip them at the same time you equip the <span class="b">Ballet Shoes</span> just before <span class="y">Mettaton NEO</span>, as opposed to right away.<br>You already have to menu there, and equipping them early can make it harder to flee from extra CORE encounters.</li>
+					<li>You also might find it worth it to get the Pie, as it's another <span class="g">MAX Heal</span> like the Instant Noodles. Do note that the Instant Noodles are easier to get, though; the only reason why you should get the Pie over the Noodles is to have extra safety for <span class="y">Undyne</span>, and if you don't do <a href="https://youtu.be/eUaOHWOKYyM" target="_blank">Early <span class="g">Burnt Pan</span></a>.</li>
+				</ul>
+				<p><a href="utu.html#speedrunning">See Also: My <span class="r">Guide to Undyne the Undying</span> (<span class="o">Speedrunning Section</span>)</a></p>
+			
+		</section>
+		
+		<section id="conclusion">
+			
+			<h2>Conclusion</h2>
+				<p>And that concludes this overly long and comprehensive guide to defeating <span class="b">Sans Undertail</span>.</p>
+				<p>I hope this guide helps with the fight, and that you learned something new about the complicated inner-workings of the battle mechanics.<br>Thanks for reading!</p>
+			
+		</section>
+		
+	</body>
+	
+</html>

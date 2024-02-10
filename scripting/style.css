@@ -1,0 +1,1026 @@
+/* Notes */
+
+
+/* Index */
+/*
+1. Variables
+2. Fonts
+	Defines font faces and the base font specifications.
+3. Reset
+	General settings, including setting all margins/borders/paddings to 0.
+4. Sectioning
+	Defines header, #mainNav, section, and footer elements
+5. Sidebar
+	Defines the aside element
+6. Buttons, Dropdowns, and Poppups
+	Defines button elements and the like
+7. Audio, Video, and Images
+	Defines audio, iframe, and img elements
+8. Headings, Paragraphs, and Lists
+	defines h, p, ol, ul, and li elements
+9. Inline Elements
+	Defines inline text elements such as i, b, and span
+10. Animations
+	Handles animations and animation classes
+11. Precise Margins
+	Defines vertical margins for elements that need the specificty.
+12. Color Classes
+	Defines custom color classes
+13. Manual Overrides
+	Janky !important overrides to bodge things together
+*/
+
+
+/* ID, Class, Variable, and Attribute Reference */
+/*
+#top
+	Reserved for the html element. For linking to the *very* top of the page.
+	
+#mainNav
+	Reserved for nav elements that *aren't* in the aside.
+	
+.sans, .paps,
+	Gives the specified font to an element.
+	
+.dropDown
+	Defines elements that will be hidden until a button with a class that matches the element's ID is clicked.
+	
+.poppup, .poppupTrigger, .poppup[Aside/Image/Text/Caption], .poppupImage[640/40/etc.]
+	Defines a hover-activated poppup message.
+	
+.inline; .unframed
+	Applied to img and iframe elements to remove their border/block display.
+	
+.flexHeading
+	Applied to an element that contains a single line of text, allowing img elements to be aligned with said text. Meant for headings and such, with margins to match. Very janky; avoid using if possible.
+
+.heart[color]
+	Gives the element's bullet point a specific heart color.
+	
+.animType[animation name]
+	Gives an element the associated animation/
+	
+.animOffset[#]x[#]
+	Horribly disgusting list of animation offsets
+	
+.[color], .elem[element]
+	Gives an element the associated color.
+	
+.MO_[property]_[value]
+	Overrides the usual value of the specified property. Potential for over-reliance; avoid using if possible. For more information.
+*/
+
+
+/* Syntaxes */
+/*
+<button class="[Specific ID">
+	[Text in button]
+</button>
+
+<div id="[Specific ID]" class="dropDown" DDBoxType="" DDBoxOpenOnLink="" DDBoxScroll="">
+	[Content]
+</div>
+*/
+
+
+
+h2 img {
+	align-self: center;
+}
+
+
+/* 1. Variables */
+
+
+:root {
+	--R: #FF0000;
+	--O: #FCA600;
+	--Y: #FFFF00;
+	--G: #00C000;
+	--C: #42FCFF;
+	--B: #0099FF;
+	--P: #D535D9;
+	--Pink: #FFADC9;
+	--Gray: #AAAAAA;
+	
+}
+
+/**/
+.flexCardContainer {
+	display: flex;
+}
+
+.flexCard {
+	display: block;
+}
+
+
+.flexCardContainer {
+	flex-flow: row wrap;
+	align-content: space-around;
+	justify-content: center;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.flexCard {
+	flex: 0 1 400px;
+	height: 600px;
+	margin: 5px;
+	border-width: 2px;
+}
+/**/
+
+
+/* 2. Fonts */
+
+
+@font-face {
+	font-family: "8bitoperator";
+	src: url(../assets/8bitoperator_jve.ttf);
+}
+html {
+	font-family: "8bitoperator", Verdana;
+	font-size: 25px;
+	vertical-align: 0;
+	text-transform: none;
+} /* 8Bitoperator - Used by default */
+
+
+@font-face {
+	font-family: "Comic Sans";
+	src: url(../assets/fnt_comicsans.ttf);
+}
+.sans {
+	font-family: "Comic Sans", "8bitoperator", Verdana;
+	font-size: 25px;
+	vertical-align: 0;
+	text-transform: lowercase;
+} /* Comic Sans - For .sans class elements */
+
+
+@font-face {
+	font-family: "Papyrus";
+	src: url(../assets/fnt_papyrus.ttf);
+}
+.paps {
+	font-family: "Papyrus", "8bitoperator", Verdana;
+	font-size: 25px;
+	vertical-align: 0;
+	text-transform: uppercase;
+} /* Papyrus - For .paps class elements */
+
+
+
+
+/* 3. Reset */
+
+
+* {
+	background-color: transparent;
+	color: inherit;
+}
+html {
+	background-color: black;
+	color: white;
+} /* Color */
+
+
+* {
+	font: inherit;
+	font-weight: normal !important;
+	text-align: inherit;
+	line-height: 1em;
+}
+html {
+	text-align: center;
+} /* Text */
+
+
+* {
+	margin: 0 0 0 0; /* TOP - RIGHT - BOTTOM - LEFT */
+	border: 0 white solid; /* SIZE COLOR STYLE */
+	padding: 0;
+} /* Box Model */
+
+
+
+
+/* 4. Sectioning */
+
+
+body, header, nav#mainNav, section, footer {
+	display: block;
+}
+
+
+header {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+nav#mainNav, section {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+footer {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+header, nav#mainNav, section, footer {
+	margin-left: 20px;
+	margin-right: calc(10px + 2px + 250px + 2px + 20px);
+} /* [margin from section to aside + aside border L + aside width + aside border R + margin from aside to right] */
+
+
+header, nav#mainNav, section, footer {
+	border-width: 2px;
+}
+
+
+
+
+/* 5. Sidebar */
+
+
+nav:not(#mainNav) {
+	display: block;
+}
+
+
+nav:not(#mainNav) {
+	width: 250px;
+	border-width: 2px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+} /* Positioned 20px to the sides of the screen, emulating the sectioning elements with 20px margins. */
+
+
+
+
+/* 6. Buttons, Dropdowns, and Poppups */
+
+.dropDownContainer  {
+	display: block;
+}
+.dropDownButtonTop {
+	display: block;
+}
+.dropDownContent, .dropDownButtonBottom {
+	display: none;
+}
+.dropDownContainer[dropDownBoxDefault="open"] > :is(.dropDownContent, .dropDownButtonBottom) {
+	display: block;
+}
+.dropDownContainer:target[dropDownBoxDefault="openOnLink"] > :is(.dropDownContent, .dropDownButtonBottom) {
+	display: block
+}
+
+
+:not(section).dropDownContainer[dropDownBoxSize="100%"] {
+	margin-left: 1px;
+	margin-right: 1px;
+	border-width: 2px;
+}
+:not(section).dropDownContainer[dropDownBoxSize="80%"] {
+	margin-left: 10%;
+	margin-right: 10%;
+	border-width: 2px;
+}
+:not(section).dropDownContainer[dropDownBoxSize="70%"] {
+	margin-left: 15%;
+	margin-right: 15%;
+	border-width: 2px;
+}
+.dropDownButtonTop, .dropDownButtonBottom {
+	width: calc(100% - 2px);
+	margin-left: 1px;
+	margin-right: 1px;
+	border-width: 1px;
+}
+.dropDownContainer[dropDownBoxDefault="closed"] > .dropDownButtonTop {
+	border-width: 0px;
+}
+
+
+.poppup {
+	display: inline-block;
+}
+.poppupAside, .poppupCaption, .poppupImage {
+	display: block;
+}
+
+
+.poppup {
+	position: relative;
+}
+.poppupTrigger:not(a) {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+}
+.poppupAside {
+	width: 240px;
+	position: fixed;
+	top: 22px;
+	right: 22px;
+	bottom: 22px;
+	padding: 5px;
+}
+.poppupCaption {
+	position: absolute;
+	bottom: calc(1.5em);
+	border-width: 2px;
+	padding: 5px;
+	padding-bottom: 15px;
+}
+.poppupCaption img {
+	margin-bottom: 15px;
+}
+.poppupImage {
+	position: absolute;
+	bottom: calc(1.5em);
+}
+.poppupImage640 {
+	left: calc(50% - 322px);
+}
+.poppupImage40 {
+	left: calc(50% - 22px);
+}
+.poppupText {
+	position: absolute;
+	bottom: calc(1.5em);
+	border-width: 2px;
+	padding: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+.poppupAside, .poppupCaption, .poppupImage, .poppupText {
+	background-color: black;
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s, visibility 0.3s;
+	font-size: 0.9em;
+}
+.poppupLong {
+	font-size: 0.85em;
+}
+.poppup:hover :is(.poppupAside, .poppupCaption, .poppupImage, .poppupText) {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+/* 7. Audio, Video, and Images */
+
+
+img:not(.inline), iframe {
+	display: block;
+}
+img.inline {
+	display: inline-block;
+}
+
+
+:is(img, iframe):not(.unframed) {
+	border-width: 2px;
+}
+:is(img, iframe).unframed {
+	border-width: 0px;
+}
+:is(img, iframe):not(.inline) {
+	margin-left: auto;
+	margin-right: auto;
+}
+:is(img, iframe).inline.unframed {
+	position: relative;
+	height: calc(.75em);
+	width: auto;
+	top: 0.1em;
+}
+:is(img, iframe).inline:not(.unframed) {
+	position: relative;
+	height: calc(.75em - 4px);
+	width: auto;
+	top: 0.1em;
+}
+
+
+
+/* 8. Headings, Paragraphs, and Lists */
+
+
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+}
+.flexHeading {
+	display: flex;
+}
+.flexHeading > * {
+	display: inline-block;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin-right: 10%;
+	margin-left: 10%;
+}
+.flexHeading {
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	white-space: pre;
+}
+.flexHeading > * {
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	border-width: 0px;
+}
+
+
+h1 {font-size: 2.2em;}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.6em;}
+h4 {font-size: 1.4em;}
+
+
+
+
+p, ol, ul {
+	display: block;
+}
+li, :is(ol, ul) > p {
+	display: list-item;
+}
+
+
+:not(ol, ul) > p {
+	margin-right: 10%;
+	margin-left: 10%;
+}
+:not(nav) > :is(ol, ul) {
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+
+ul {
+	list-style: disc inside url(../assets/images/icons/heartW16px.png);
+}
+ol {
+	list-style: decimal inside;
+}
+:is(ol, ul) :is(ol, ul) {
+	font-size: 0.9em;
+}
+li, :is(ol, ul) > p {
+	list-style: inherit;
+}
+.heartR {list-style-image: url(../assets/images/icons/heartR16px.png);}
+.heartO {list-style-image: url(../assets/images/icons/heartO16px.png);}
+.heartY {list-style-image: url(../assets/images/icons/heartY16px.png);}
+.heartG {list-style-image: url(../assets/images/icons/heartG16px.png);}
+.heartC {list-style-image: url(../assets/images/icons/heartC16px.png);}
+.heartB {list-style-image: url(../assets/images/icons/heartB16px.png);}
+.heartP {list-style-image: url(../assets/images/icons/heartP16px.png);}
+.heartPink {list-style-image: url(../assets/images/icons/heartPink16px.png);}
+.heartGray {list-style-image: url(../assets/images/icons/heartGray16px.png);}
+.heartRainbow {list-style-image: url(../assets/images/icons/heartRainbow16px.png);}
+.heartW {list-style-image: url(../assets/images/icons/heartW16px.png);}
+
+
+
+
+/* 9. Inline Text */
+
+
+span, a, i, b, em, strong {
+	display: inline;
+}
+kbd {
+	display: inline-block;
+}
+
+
+kbd {
+	min-width: .8em;
+	margin: 1px 3px 1px 1px;
+	border-width: 2px;
+	border-color: var(--R);
+	padding: 0px 1px 1px 3px;
+}
+
+
+a {
+	color: inherit;
+	text-decoration-color: white;
+}
+i {
+	font-style: italic;
+}
+b, em, strong {
+	font-style: inherit !important;
+}
+kbd {
+	color: var(--R);
+}
+
+
+
+
+/* 10. Animations */
+
+
+.animTypeBounceWave, :is(b)[animSubType="float"] {
+	position: relative;
+	animation-name: bounceWave;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 2.5s;
+} /* Many animations (such as this one) are used in conjunction with emphasis.js. See it for details. */
+@keyframes bounceWave {
+	0% {top: 0px;}
+	2.5% {top: -3px;}
+	5% {top: -4px;}
+	7.5% {top: -3px;}
+	10% {top: 0px;}
+	12.5% {top: -1.5px;}
+	15% {top: -2px;}
+	17.5% {top: -1.5px;}
+	20% {top: 0px;}
+	22.5% {top: -0.5px;}
+	25% {top: -1px;}
+	27.5% {top: -0.5px;}
+	30% {top: 0px;}
+}
+
+
+.animTypeWeakWave, :is(em)[animSubType="float"] {
+	position: relative;
+	animation-name: weakWave;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
+@keyframes weakWave {
+	0% {top: 0px;}
+	12.5% {top: -2px;}
+	25% {top: -3px;}
+	37.5% {top: -2px;}
+	50% {top: 0px;}
+	62.5% {top: 2px;}
+	75% {top: 3px;}
+	87.5% {top: 2px;}
+	100% {top: 0px;}
+}
+
+
+.animTypeStrongWave, :is(strong)[animSubType="float"] {
+	position: relative;
+	animation-name: strongWave;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+}
+@keyframes strongWave {
+	0% {top: 0px;}
+	12.5% {top: -2px;}
+	25% {top: -3px;}
+	37.5% {top: -2px;}
+	50% {top: 0px;}
+	62.5% {top: 2px;}
+	75% {top: 3px;}
+	87.5% {top: 2px;}
+	100% {top: 0px;}
+}
+
+
+.animTypeRainbow {
+	position: relative;
+	animation-name: rainbow;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+}
+
+
+@keyframes rainbow {
+	0% {color: var(--R);}
+	14.2% {color: var(--O);}
+	28.6% {color: var(--Y);}
+	42.9% {color: var(--G);}
+	57.2% {color: var(--C);}
+	71.5% {color: var(--B);}
+	85.8% {color: var(--P);}
+	100% {color: var(--R);}
+}
+
+
+.animTypeRainbowWave {
+	position: relative;
+	animation-name: rainbowWeakWave;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
+@keyframes rainbowWeakWave {
+	0% {top: 0px; color: var(--R);}
+	12.5% {top: -2px;}
+	14.2% {color: var(--O);}
+	25% {top: -3px;}
+	28.6% {color: var(--Y);}
+	37.5% {top: -2px;}
+	42.9% {color: var(--G);}
+	50% {top: 0px;}
+	57.2% {color: var(--C);}
+	62.5% {top: 2px;}
+	71.5% {color: var(--B);}
+	75% {top: 3px;}
+	85.8% {color: var(--P);}
+	87.5% {top: 2px;}
+	100% {top: 0px; color: var(--R);}
+}
+
+
+.animTypeRainbowStrongWave {
+	position: relative;
+	animation-name: rainbowStrongWave;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+}
+@keyframes rainbowStrongWave {
+	0% {top: 0px; color: var(--R);}
+	12.5% {top: -2px;}
+	14.2% {color: var(--O);}
+	25% {top: -3px;}
+	28.6% {color: var(--Y);}
+	37.5% {top: -2px;}
+	42.9% {color: var(--G);}
+	50% {top: 0px;}
+	57.2% {color: var(--C);}
+	62.5% {top: 2px;}
+	71.5% {color: var(--B);}
+	75% {top: 3px;}
+	85.8% {color: var(--P);}
+	87.5% {top: 2px;}
+	100% {top: 0px; color: var(--R);}
+}
+
+
+.animTypeShake0 {
+	position: relative;
+	animation-name: shake0;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes shake0 {
+	0% {top: 0px;}
+	0.5% {top: 2px;}
+	1% {top: 0px;}
+	20% {top: 0px;}
+	20.5% {top: 2px;}
+	21% {top: 0px;}
+	50% {top: 0px;}
+	50.5% {top: 2px;}
+	51% {top: 0px;}
+	70% {top: 0px;}
+	70.5% {top: 2px;}
+	71% {top: 0px;}
+}
+.animTypeShake1 {
+	position: relative;
+	animation-name: shake1;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes shake1 {
+	0% {top: 0px;}
+	0.5% {top: -2px;}
+	1% {top: 0px;}
+	20% {top: 0px;}
+	20.5% {top: 2px;}
+	21% {top: 0px;}
+	35% {top: 0px;}
+	35.5% {top: -2px;}
+	36% {top: 0px;}
+	60% {top: 0px;}
+	60.5% {top: 2px;}
+	61% {top: 0px;}
+	75% {top: 0px;}
+	75.5% {top: -2px;}
+	76% {top: 0px;}
+}
+.animTypeShake2 {
+	position: relative;
+	animation-name: shake2;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes shake2 {
+	0% {top: 0px;}
+	0.5% {top: -2px;}
+	1% {top: 0px;}
+	15% {top: 0px;}
+	15.5% {top: -2px;}
+	16% {top: 0px;}
+	40% {top: 0px;}
+	40.5% {top: -2px;}
+	41% {top: 0px;}
+	55% {top: 0px;}
+	55.5% {top: -2px;}
+	56% {top: 0px;}
+	75% {top: 0px;}
+	75.5% {top: -2px;}
+	76% {top: 0px;}
+}
+.animTypeShake3 {
+	position: relative;
+	animation-name: shake3;
+	animation-duration: 7s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes shake3 {
+	0% {top: 0px;}
+	0.5% {top: -2px;}
+	1% {top: 0px;}
+	15% {top: 0px;}
+	15.5% {top: 2px;}
+	16% {top: 0px;}
+	25% {top: 0px;}
+	25.5% {top: -2px;}
+	26% {top: 0px;}
+	45% {top: 0px;}
+	45.5% {top: 2px;}
+	46% {top: 0px;}
+	60% {top: 0px;}
+	60.5% {top: -2px;}
+	61% {top: 0px;}
+	85% {top: 0px;}
+	85.5% {top: 2px;}
+	86% {top: 0px;}
+}
+
+
+.animOffset0x25 {animation-delay: 0.00s;}
+.animOffset1x25 {animation-delay: -0.25s;}
+.animOffset2x25 {animation-delay: -0.50s;}
+.animOffset3x25 {animation-delay: -0.75s;}
+.animOffset4x25 {animation-delay: -1.00s;}
+.animOffset5x25 {animation-delay: -1.25s;}
+.animOffset6x25 {animation-delay: -1.50s;}
+.animOffset7x25 {animation-delay: -1.75s;}
+.animOffset8x25 {animation-delay: -2.00s;}
+.animOffset9x25 {animation-delay: -2.25s;}
+.animOffset10x25 {animation-delay: -2.50s;}
+.animOffset11x25 {animation-delay: -2.75s;}
+.animOffset12x25 {animation-delay: -3.00s;}
+.animOffset13x25 {animation-delay: -3.25s;}
+.animOffset14x25 {animation-delay: -3.50s;}
+.animOffset15x25 {animation-delay: -3.75s;}
+.animOffset16x25 {animation-delay: -4.00s;}
+.animOffset17x25 {animation-delay: -4.25s;}
+.animOffset18x25 {animation-delay: -4.50s;}
+.animOffset19x25 {animation-delay: -4.75s;}
+.animOffset20x25 {animation-delay: -5.00s;}
+.animOffset21x25 {animation-delay: -5.25s;}
+.animOffset22x25 {animation-delay: -5.50s;}
+.animOffset23x25 {animation-delay: -5.75s;}
+.animOffset24x25 {animation-delay: -6.00s;}
+.animOffset25x25 {animation-delay: -6.25s;}
+.animOffset26x25 {animation-delay: -6.50s;}
+.animOffset27x25 {animation-delay: -6.75s;}
+
+
+.animOffset0x10 {animation-delay: -0.00s;}
+.animOffset1x10 {animation-delay: -0.10s;}
+.animOffset2x10 {animation-delay: -0.20s;}
+.animOffset3x10 {animation-delay: -0.30s;}
+.animOffset4x10 {animation-delay: -0.40s;}
+.animOffset5x10 {animation-delay: -0.50s;}
+.animOffset6x10 {animation-delay: -0.60s;}
+.animOffset7x10 {animation-delay: -0.70s;}
+.animOffset8x10 {animation-delay: -0.80s;}
+.animOffset9x10 {animation-delay: -0.90s;}
+.animOffset10x10 {animation-delay: -1.00s;}
+.animOffset11x10 {animation-delay: -1.10s;}
+.animOffset12x10 {animation-delay: -1.20s;}
+.animOffset13x10 {animation-delay: -1.30s;}
+.animOffset14x10 {animation-delay: -1.40s;}
+.animOffset15x10 {animation-delay: -1.50s;}
+.animOffset16x10 {animation-delay: -1.60s;}
+.animOffset17x10 {animation-delay: -1.70s;}
+.animOffset18x10 {animation-delay: -1.80s;}
+.animOffset19x10 {animation-delay: -1.90s;}
+.animOffset20x10 {animation-delay: -2.00s;}
+.animOffset21x10 {animation-delay: -2.10s;}
+.animOffset22x10 {animation-delay: -2.20s;}
+.animOffset23x10 {animation-delay: -2.30s;}
+.animOffset24x10 {animation-delay: -2.40s;}
+.animOffset25x10 {animation-delay: -2.50s;}
+.animOffset26x10 {animation-delay: -2.60s;}
+.animOffset27x10 {animation-delay: -2.70s;}
+.animOffset28x10 {animation-delay: -2.80s;}
+.animOffset29x10 {animation-delay: -2.90s;}
+
+
+
+
+/* 11. Precise Margins */
+
+/* Make sure to check each size's statements and last commas when updating! */
+
+
+:is(header, nav, section, footer) > :not(button, .dropDownContainer, .flexCardContainer):first-child,
+:not(button, ol, ul, li) > :is(h1, h2, h3, h4, h5, h6, .flexHeading),
+:is(p, ol, ul, li) + :is(img:not(.inline), iframe),
+:is(header, nav#mainNav, section, footer) > .dropDownButtonBottom,
+.poppupAside :is(img, iframe, audio):first-child
+{
+	margin-top: 25px;
+}
+:is(header, nav#mainNav, section, footer) > :not(button, .dropDownContainer, .flexCardContainer):last-child
+{
+	margin-bottom: 25px;
+} /* Heading Size (25px) */
+
+
+:not(button, ol, ul) > :is(ol, ul) + :is(p, ol, ul, .dropDownContainer),
+:not(button, ol, ul) > p + :is(p, .dropDownContainer),
+:not(button, ol, ul) > .dropDownContainer + :is(p, ol, ul),
+:is(button, .dropDownContent):not(header, nav, section, footer) > :not(.dropDownContainer):first-child,
+:is(p, ol, ul) + .flexCardContainer
+{
+	margin-top: 15px;
+}
+:is(button, .dropDownContent):not(header, nav, section, footer) > :not(.dropDownContainer):last-child,
+:is(ol, ul) > :not(li)
+{
+	margin-bottom: 15px;
+} /* Paragraph Size */
+
+
+:not(button, ol, ul) > :is(h1, h2, h3, h4, h5, h6, .flexHeading, img:not(.inline), iframe) + :is(p, ol, ul, img:not(.inline), iframe, .dropDownContainer, .flexCardContainer),
+:not(button, ol, ul) > p + :is(ol, ul),
+:not(nav:not(#mainNav)) > :is(ol, ul) li + *,
+button * + *,
+.flexCardContainer:first-child
+{
+	margin-top: 5px;
+}
+.flexCardContainer:last-child
+{
+	margin-bottom: 5px;
+} /* Subtitle Size */
+
+
+
+.dropDownContainer + :is(.dropDownContainer, .flexCardContainer),
+button,
+.dropDownContent,
+.dropDownContainer:first-child
+{
+	margin-top: 1px;
+}
+button,
+.dropDownContent,
+.dropDownContainer:last-child
+{
+	margin-bottom: 1px;
+} /* Button Size */
+
+
+li
+{
+	margin-bottom: 0.08em;
+} /* Line Size */
+
+
+
+
+/* 12. Color Classes */
+
+
+.r {color: var(--R);}
+.o {color: var(--O);}
+.y {color: var(--Y);}
+.g {color: var(--G);}
+.c {color: var(--C);}
+.b {color: var(--B);}
+.p {color: var(--P);}
+.pink {color: var(--Pink);}
+.gray {color: var(--Gray);}
+
+
+.elemBlade {color: #EC8D24;}
+.elemCat {color: #4EDDE4;}
+.elemChaos {color: #5940B1;}
+.elemColorR {color: #E10000;}
+.elemColorO {color: #E17000;}
+.elemColorY {color: #FFFF00;}
+.elemColorG {color: #00C000;}
+.elemColorB {color: #42FCFF;}
+.elemColorP {color: #D535D9;}
+.elemColorW {color: #FFFFFF;} /* these are for the COLOR element, to be clear */
+.elemDark {color: #50406F;}
+.elemDeath {color: #717171;}
+.elemDreams {color: #FF4040;}
+.elemDust {color: #99D9EA;}
+.elemElec {color: #FFE900;}
+.elemFight {color: #E76B00;}
+.elemFire {color: #FF7500;}
+.elemHeart {color: #ED1C24;}
+.elemHoly {color: #FEFF78;}
+.elemHope {color: #116EFF;}
+.elemIce {color: #00C8E6;}
+.elemJewel {color: #00E2BC;}
+.elemMouse {color: #7555DB;}
+.elemOrder {color: #C3C3C3;}
+.elemPuppet {color: #660000;}
+.elemPuzzle {color: #0096D7;}
+.elemRabbit {color: #AE6ACF;}
+.elemRude {color: #CC4DFD;}
+.elemScythe {color: #666666;} /* UEE HEE HEE! HOW PUNNY I BE! */
+.elemStar {color: #FFFF00;}
+.elemVirus {color: #FF4FDC;}
+
+
+
+
+/* 13. Manual Overrides */
+
+
+.MO_background-color_black {background-color: black !important;}
+.MO_background-color_white {background-color: white !important;}
+.MO_background-color_gray {background-color: gray !important;}
+.MO_background-color_pink {background-color: pink !important;}
+
+.MO_display_block {display: block !important;}
+.MO_display_inline-block {display: inline-block !important;}
+.MO_display_inline {display: inline !important;}
+.MO_display_none {display: none !important;}
+
+.MO_margin-top_30 {margin-top: 30px !important;}
+.MO_margin-top_15 {margin-top: 15px !important;}
+.MO_margin-top_5 {margin-top: 5px !important;}
+.MO_margin-top_1 {margin-top: 1px !important;}
+.MO_margin-top_0 {margin-top: 0px !important;}
+.MO_margin-top_big {margin-top: 15% !important;}
+.MO_margin-top_medium {margin-top: 10% !important;}
+.MO_margin-top_small {margin-top: 5% !important;}
+
+.MO_margin-right_30 {margin-right: 30px !important;}
+.MO_margin-right_15 {margin-right: 15px !important;}
+.MO_margin-right_5 {margin-right: 5px !important;}
+.MO_margin-right_1 {margin-right: 1px !important;}
+.MO_margin-right_0 {margin-right: 0px !important;}
+.MO_margin-right_big {margin-right: 15% !important;}
+.MO_margin-right_medium {margin-right: 10% !important;}
+.MO_margin-right_small {margin-right: 5% !important;}
+
+.MO_margin-bottom_30 {margin-bottom: 30px !important;}
+.MO_margin-bottom_15 {margin-bottom: 15px !important;}
+.MO_margin-bottom_5 {margin-bottom: 5px !important;}
+.MO_margin-bottom_1 {margin-bottom: 1px !important;}
+.MO_margin-bottom_0 {margin-bottom: 0px !important;}
+.MO_margin-bottom_big {margin-bottom: 15% !important;}
+.MO_margin-bottom_medium {margin-bottom: 10% !important;}
+.MO_margin-bottom_small {margin-bottom: 5% !important;}
+
+.MO_margin-left_30 {margin-left: 30px !important;}
+.MO_margin-left_15 {margin-left: 15px !important;}
+.MO_margin-left_5 {margin-left: 5px !important;}
+.MO_margin-left_1 {margin-left: 1px !important;}
+.MO_margin-left_0 {margin-left: 0px !important;}
+.MO_margin-left_big {margin-left: 15% !important;}
+.MO_margin-left_medium {margin-left: 10% !important;}
+.MO_margin-left_small {margin-left: 5% !important;}
+
+.MO_margin_1 {margin: 1px !important;}
+.MO_margin_0 {margin: 0px !important;}
+
+.MO_border-width_2 {border-width: 2px !important;}
+.MO_border-width_1 {border-width: 1px !important;}
+.MO_border-width_0 {border-width: 0px !important;}
+
+.MO_border-style_solid {border-style: solid !important;}
+.MO_border-style_dashed {border-style: dashed !important;}
+
+.MO_border-color_white {border-color: white !important;}
+.MO_border-color_inherit {border-color: inherit !important;}
+
+.MO_position_relative {position: relative;}
+.MO_top_20 {top: 20px;}
+
+.MO_space_500 {height: 500px;}
+.MO_space_1000 {height: 1000px;}

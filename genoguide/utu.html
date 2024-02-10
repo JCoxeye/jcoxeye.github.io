@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html id="top">
+	
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Genoguide - The Undying</title>
+		<link rel="stylesheet" href="../scripting/style.css">
+		<script src="../scripting/dropDown.js"></script>
+		<script src="../scripting/emphasis.js"></script>
+		<script src="../scripting/poppupPositionFix.js"></script>
+		<script>
+			window.onload = (event) =>
+			{
+				emphasis();
+				dropDown();
+				poppupPositionFix();
+			};
+		</script>
+	</head>
+	
+	<body>
+		
+		<nav>
+			
+			<h2>Navigation</h2>
+				<ul>
+					<p>| <a href="../index.html">Back to Home</a> |</p>
+					<li>| <a href="genoguide.html" class="r">The Genoguide</a> |</li>
+					<ol>
+						<li>| <span class="r">Boss Guide 1</span> |</li>
+						<li>| <a href="mttneo.html" class="r">Boss Guide 2</a> |</li>
+						<li>| <a href="sans.html" class="r">Boss Guide 3</a> |</li>
+					</ol>
+					<li>| <a href="#top">Top</a> |</li>
+					<li>| <a href="#equipment" class="p">Equipment</a> |</li>
+					<li>| <a href="#consumables" class="g">Consumables</a> |</li>
+					<li>| <a href="#attacks" class="b">Dodging Attacks</a> |</li>
+					<li>| <a href="#level" class="r">Level (of Violence)</a> |</li>
+					<li>| <a href="#preparation" class="p">Extra Preparation</a> |</li>
+					<li>| <a href="#speedrunning" class="o">Speedrunning</a> |</li>
+					<li>| <a href="#conclusion">Conclusion</a> |</li>
+				</ul>
+			
+		</nav>
+		
+		<header>
+			
+			<h1><span class="b">JCoxeye</span>'s Guide to Fighting <span class="y">Undyne the Undying</span></h1>
+				<p>This will be a comprehensive guide to defeating <span class="y">Undyne the Undying</span>, including strategies relating to leveling, equipment, using consumables, and dodging attacks.</p>
+			
+		</header>
+		
+		<section id="preface">
+			
+			<h2 class="y">Preface</h2>
+				<p>As you're no doubt aware, <span class="y">Undyne the Undying</span> is a pretty difficult boss.</p>
+				<p>She has fast and complicated attacks, which require a large amount of memorization and skill. There's no substitute for being good at the game, but '<strong animSubType="wave">git gud</strong>' and '<em animSubType="wave">bash your head against the wall until you get it</em>' aren't very helpful in terms of advice.</p>
+				<p><b animSubType="shake">That's where this guide comes in.</b></p>
+				<p>This guide assumes you have played <i>Undertale</i>'s <span class="g">True Pacifist</span> route to completion, have started a <span class="r">Genocide</span>/<span class="r">No Mercy</span> route, and are looking for a comprehensive explanation/strategy guide for the fight with <span class="y">Undyne the Undying</span>.</p>
+				<p>This guide limits spoilers for the remainder of the <span class="r">No Mercy</span> route, but it does have a section related to speedrunning, found at the bottom of the page.</p>
+				<p>The following sub-sections will be organized by their relevence to the average player.</p>
+			
+		</section>
+				
+		<section id="equipment">
+			
+			<h2 class="p">Equipment</h2>
+				<p>
+					Of all of the equipment available up to <span class="y">Undyne the Undying</span>, four stand out among the rest:
+				</p>
+				<ul>
+					<li>
+						<span class="b">Ballet Shoes</span> (<span class="c">7 AT</span>), found in the
+							<span class="poppup">
+								<span class="poppupTrigger">
+									Glowing Blue Marsh room
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/itemLocations/balletShoes.gif" width="640" height="480">
+								</span>
+							</span>
+						in Waterfall.
+					</li>
+					<li>
+						<span class="b">Old Tutu</span> (<span class="b">10 DF</span>), found in the
+							<span class="poppup">
+								<span class="poppupTrigger">
+									Falling Rocks room
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/itemLocations/oldTutu.gif" width="640" height="480">
+								</span>
+							</span>
+						near the beginning of Waterfall.
+					</li>
+					<li>
+						<span class="p">Torn Notebook</span> (<span class="c">2 AT</span>, <span class="p">6 INV</span>), sold by <span class="y">Gerson</span> in
+							<span class="poppup">
+								<span class="poppupTrigger">
+									his Shop
+								</span>
+								<span class="poppupImage poppupImage640">
+									<img src="../assets/images/rooms/waterfallCrossroads.png" width="640" height="480">
+								</span>
+							</span>
+						for <span class="y">55 G</span>.
+					</li>
+					<li>
+						<span class="p">Cloudy Glasses</span> (<span class="b">5 DF</span>, <span class="p">9 INV</span>), sold by <span class="y">Gerson</span> in his Shop for <span class="y">30 G</span>.
+					</li>
+				</ul>
+				<p>
+					Note that once you fall into the dump, backtracking to get the <span class="b">Ballet Shoes</span> and <span class="b">Old Tutu</span> becomes impossible.
+				</p>
+				<p>
+					As you can see, the <span class="b">Ballet Shoes</span> and <span class="b">Old Tutu</span> provide better <span class="c">ATK</span> and <span class="b">DEF</span>, but the <span class="p">Torn Notebook</span> and <span class="p">Glasses</span> provide extra <span class="p">INV</span>.
+					<br>
+					You may be wondering what these <span class="r">STAT</span>s do in practice. Well, I'll tell you!
+				</p>
+				<p>
+					The following assume an <span class="r">LV</span> of <span class="r">10</span>. Note that <span class="y">Undyne the Undying</span> has <span class="g">23000 HP</span>:
+				</p>
+				
+				<h3><span class="c">AT</span>:</h3>
+					<h4><span class="b">Ballet Shoes</span>:</h4>
+						<ul>
+							<li><span class="c">~1700 Damage</span> for a perfect attack</li>
+							<li><span class="c">~1500 Damage</span> for a good attack</li>
+							<li><span class="c">~1100 Damage</span> for an okay attack</li>
+							<li><span class="c">~600 Damage</span> for a bad attack</li>
+						</ul>
+						<p>I can't accurately guess how good you'll be with the <span class="b">Ballet Shoes</span>, but by my guess, assuming you don't use any turns to heal, it'll probably take about ~18 turns (you'll see ~17 attacks). If you're good with the <span class="b">Ballet Shoes</span>, you can expect to see about 15-16 attacks.</p>
+					
+					<h4><span class="p">Torn Notebook</span>:</h4>
+						<ul>
+							<li><span class="c">~1400 Damage</span> for a perfect attack</li>
+							<li><span class="c">~1150 Damage</span> for a good attack</li>
+							<li><span class="c">~850 Damage</span> for an okay attack</li>
+							<li><span class="c">~600 Damage</span> for a bad attack</li>
+						</ul>
+						<p>Again, I can't be sure of your skill level, but I think it'll probably take about ~21 turns (you'll see ~20 attacks). If you're good with the <span class="p">Torn Notebook</span>, you can expect to see 17-18 attacks.</p>
+				
+				<h3><span class="b">DF</span>:</h3>
+					
+					<h4><span class="b">Old Tutu</span>:</h4>
+						<p><span class="b">8</span>-<span class="b">12 Damage</span> per hit, with an average of <span class="b">~9.75 Damage</span> (you'll die after taking ~5.75 hits).</p>
+					
+					<h4><span class="p">Cloudy Glasses</span>:</h4>
+						<p><span class="b">8</span>-<span class="b">13 Damage</span> per hit, with an average of <span class="b">~10.5 Damage</span> (you'll die after taking ~5.33 hits).</p>
+				
+				<h3><span class="p">INV</span>:</h3>
+					<p>Your <span class="p">INV STAT</span> determines how long you're invincible after being hit by an attack. Each point of <span class="p">INV</span> is one frame that you're invincible.</p>
+					<p>As <i>Undetale</i> runs at thirty frames per second, each point of <span class="p">INV</span> is 1/30th of a second of invincibility.</p>
+					<p>You normally have <span class="p">30 INV</span>, but against <span class="y">Undyne the Undying</span>, you have one less <span class="p">INV</span> per <span class="r">LV</span>, meaning you'll probably have about <span class="p">~20 INV</span>.</p>
+					<p>Based on
+						<span class="poppup">
+							<span class="poppupTrigger">
+								their descriptions,
+							</span>
+							<span class="poppupAside">
+								<span class="p">Torn Notebook</span>:<br>'* "Torn Notebook" - Weapon AT 2<br>* Contains illegible scrawls.<br>* Increases INV by 6.'<br><br><span class="p">Cloudy Glasses</span>:<br>'* "Cloudy Glasses" - Armor DF 6<br>* Glasses marred with wear.<br>* Increases INV by 9.'<br>'* (After you get hit by an attack, you stay invulnerable for longer)'
+							</span>
+						</span>
+						one might assume that the <span class="p">Torn Notebook</span> and <span class="p">Glasses</span> would give <span class="p">6</span> and <span class="p">9 INV</span> respectively, but that's actually not the case.<br>In reality, they give <span class="p">15</span> and <span class="p">30 INV</span> respectively - a <em animSubType="wave">very</em> potent buff that will save your, uh, grass.</p>
+					<p>Wearing both will give you <span class="p">45 INV</span>, which will over <strong animSubType="wave">triple</strong> your <span class="p">INV STAT</span>. The <span class="p">Glasses</span> alone will still give you over <b animSubType="wave">twice</b> the <span class="p">INV</span>, so wearing them is still more than worth it even without the <span class="p">Torn Notebook</span>.</p>
+				
+				<h3 class="p">Equipment Closing Thoughts</h3>
+					<p>
+						Having either the <span class="p">Torn Notebook</span> or <span class="p">Cloudy Glasses</span> adds <em animSubType="wave">loads</em> of i-frames, and having both adds even more, so the extra <span class="p">INV</span> is almost always worth it in <em animSubType="wave">some</em> capacity.
+					</p>
+					<p>
+						With that said, the extra attacks you'll have to endure by using the <span class="p">Torn Notebook</span> instead of the <span class="b">Ballet Shoes</span> can get you killed, especially given how much harder the attacks start getting.
+					</p>
+					<p>
+						Since the <span class="p">Glasses</span> add more <span class="p">INV</span> anyway, if you're gonna use only one <span class="p">INV</span> boosting item, it should probably be the <span class="p">Glasses</span>.
+					</p>
+					<h4>As for the three remaining sets (<span class="b">Shoes</span> + <span class="b">Tutu</span>, <span class="b">Shoes</span> + <span class="p">Glasses</span>, <span class="p">Notebook</span> + <span class="p">Glasses</span>):</h4>
+						<ul>
+							<li>I would recommend using the <span class="b">Shoes</span> and <span class="p">Glasses</span>. The <span class="b">Ballet Shoes</span> reduce the turn length of the battle by a lot, and the extra i-frames are a lifesaver.</li>
+							<li>If you don't get too much use out of the extra i-frames, getting hit by spaced out attacks, try using the <span class="b">Shoes</span> and <span class="b">Tutu</span> instead.</li>
+							<li>Alternatively, if you find yourself dying too quickly, getting hit by a bunch of attacks in a row, try using the <span class="p">Notebook</span> and <span class="p">Glasses</span> instead.</li>
+						</ul>
+			
+		</section>
+		
+		<section id="consumables">
+			
+			<h2 class="g">Consumables</h2>
+				<p>Here's two lists of all of the relevant consumables, in order of <span class="g">HP</span> gained, separated by whether or not you can backtrack to get them:</p>
+				<h3>Items you can backtrack to get:</h3>
+					<ul>
+						<li>Astronaut Food: <span class="g">Heals 21 HP</span>, can only be obtained twice, from the cooler in the dump.</li>
+						<li>Crab Apples: <span class="g">Heals 18 HP</span>, from <span class="y">Gerson</span>'s Shop for <span class="y">25 G</span>.</li>
+						<li>Sea Tea: <span class="g">Heals 10 HP</span>, increases <span class="o">SPEED</span> (movement speed in <span class="r">Red SOUL Mode</span>), from <span class="y">Gerson</span>'s Shop for <span class="y">18 G</span>.</li>
+					</ul>
+				
+				<h3>Items you can't backtrack to get:</h3>
+					<ul>
+						<li>
+							Pie: Heals <span class="g">MAX HP</span>, can only be obtained once, from
+								<span class="poppup">
+									<span class="poppupTrigger">
+										<span class="r">Toriel</span>'s home.
+									</span>
+									<span class="poppupImage poppupImage640">
+										<img src="../assets/images/itemLocations/pie.gif" width="640" height="480">
+									</span>
+								</span>
+						</li>
+						<li>
+							Snowman Pieces: Heals <span class="g">45 HP</span>, can only be obtained thrice, from
+								<span class="poppup">
+									<span class="poppupTrigger">
+										the Snowman partly through Snowdin Forest.
+									</span>
+									<span class="poppupImage poppupImage640">
+										<img src="../assets/images/rooms/snowmanCliff.png" width="640" height="480">
+									</span>
+								</span>
+						</li>
+						<li>
+							Abandoned Quiche: <span class="g">Heals 34 HP</span>, can only be obtained once, from a
+								<span class="poppup">
+									<span class="poppupTrigger">
+										hidden room off of the Bridge Seeds puzzle.
+									</span>
+									<span class="poppupImage poppupImage640">
+										<img src="../assets/images/itemLocations/quiche.gif" width="640" height="480" title="In the Bridge Seeds puzzle, make a bridge leading off of the right side of the screen to find the Abandoned Quiche under a bench.">
+									</span>
+								</span>
+						</li>
+						<li>
+							Spider Cider: <span class="g">Heals 24 HP</span>, from the Spider Bakesale in the Ruins for <span class="y">18 G</span>.
+						</li>
+						<li>
+							Cinnamon Bunnies: <span class="g">Heals 22 HP</span>, stolen from Snowdin Shop.
+						</li>
+						<li>
+							Dog Salad:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										<span class="g">Heals 2</span>/<span class="g">10</span>/<span class="g">30</span>/<span class="g">MAX HP</span>
+									</span>
+									<span class="poppupAside">
+										Assuming a <span class="g">MAX Heal</span> is <span class="g">~50 HP</span>, the average <span class="g">HP</span> gained from using Dog Salad is <span class="g">~23 HP</span>.
+									</span>
+								</span>
+							at random, occasionally obtained by using
+								<span class="poppup">
+									<span class="poppupTrigger">
+										Dog Residue.
+									</span>
+									<span class="poppupAside">
+										Dog Residue is found by completing the Piano Puzzle partly through Waterfall.
+									</span>
+								</span>
+						</li>
+					</ul>
+				
+				<h3>Which of these are the most useful, you ask?</h3>
+					<p>Well, before we talk about that, let's first discuss the Pie and Snowman Pieces.</p>
+					<p>As you've probably guessed, <span class="y">Undyne the Undying</span> is not the last super difficult fight in the <span class="r">No Mercy</span> route.</p>
+					<p>Without getting into spoiler-ey specifics:<br><strong animSubType="wave">Do not use the Pie.</strong><br>Its <span class="g">MAX HP</span> heal is too good to 'waste' on <span class="y">Undyne</span>.</p>
+					<p>As for the Snowman Pieces:<br>If using the Snowman Pieces is what allows you to defeat <span class="y">Undyne the Undying</span>, use them. It is better to progress than to vainly attempt to save every last bit of <span class="g">HP</span> for later fights.<br>With that said, it's better to avoid using them if you can.</p>
+				
+				<h3>Aside from those, what is the best 'loadout'?</h3>
+					<p>Well, just fill up your inventory with the most powerful healing items you can get your hands on (listed above).<br>Obviously, leave the Pie (and Snowman Pieces if you're saving them) in the box.
+					<p>Leave at <b animSubType="wave">most</b> 1-2 slots open for Sea Tea, if you're gonna use it. As for whether or not you should?<br>It's up to personal preference, but I would recommend taking only one: it helps, but two offers diminishing returns.</p>
+					<p>As for Dog Salad, the possibility of an extra bit of <span class="g">HP</span> isn't worth the added RNG, IMO, but it's definitely not an invalid (or even sub-optimal) strategy, especially if you're gonna replace Crab Apples with it. The real issue is how tedious it is to get...</p>
+			
+		</section>
+		
+		<section id="attacks">
+			
+			<h2 class="b">Dodging Attacks</h2>
+				<p>This is the part of the guide where you get a visual explanation.</p>
+				<p>Here's all of <span class="y">Undyne</span>'s attacks done without getting hit!</p>
+				<p>For these upcoming descriptions, '<span class="g">arrows</span>' refers to <span class="g">Green SOUL mode</span> attacks, and '<span class="r">spears</span>' refers to <span class="r">Red SOUL mode</span> attacks.</p>
+				<p>The small <span class="g">arrows</span> (<span class="c">↑→↓←</span><span class="y">↑→↓←</span>) indicate <b animSubType="wave">which direction you should face for the attack</b> (<em animSubType="wave">not</em> the way the <span class="g">arrows</span> face).</p>
+				
+				<div id="atk1" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk1ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attack 1: <span class="g">Simple Arrows 1</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk1ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk1Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/Q-voLaTjTjU?start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>This attack is a variation of <span class="y">Undyne</span>'s normal starting attack in other routes of the game. It's extended to feature a few partial circle motions.</p>
+						<p class="g">The pattern is:</p>
+						<p class="c">↑ ↑ ↑ → ↓ ← ↑ ← ↓ → ↓ ← ↑</p>
+					</div>
+					
+					<button id="atk1ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 1: <span class="g">Simple Arrows 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk2" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk2ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attack 2: <span class="g">Simple Arrows 2</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk2ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk2Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/6gIKOGoQTFU?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>This is another simple attack. You only need to block left and right.</p>
+						<p class="g">The pattern is:</p>
+						<p class="c">⇐ → ⇐ ⇐ → → ⇐ → → ⇐ → ⇐ → ⇐</p>
+					</div>
+					
+					<button id="atk2ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 2: <span class="g">Simple Arrows 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk3" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk3ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attack 3: <span class="g">Random Arrows</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk3ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk3Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/ht5LOcP_gZ4?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+						<p>This attack is random, but note that each <span class="g">arrow</span> occupies a 'slot'.</p>
+						<p>Use this knowledge to give yourself an idea of when you'll need to switch directions.</p>
+					</div>
+					
+					<button id="atk3ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 3: <span class="g">Random Arrows</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk4" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk4ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed"><div>Attack 4: <span class="r">Random Spears</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk4ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk4Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/SxiugD_jX7s?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>This attack is random, and based entirely on experience and skill. And luck.</p>
+					<p>My only real advice is to not be afraid to make some risky maneuvers.</p>
+					</div>
+					
+					<button id="atk4ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 4: <span class="r">Random Spears</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk5" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk5ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed"><div>Attack 5: <span class="r">Spear Columns</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk5ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk5Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/b70NQ4XZWxI?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>This attack is comprised of three columns. <span class="r">Spears</span> will come out of the bottom, then shoot towards the top, one column at a time.</p>
+					<p>Stay in a single column until a <span class="r">spear</span> appears below you, then move over to an empty column; note that the <span class="r">spears</span> do not deal damage while disappearing.</p>
+					<p>This attack has a slightly difficult, but rewarding cheese strategy, shown below in attack #18.</p>
+					</div>
+					
+					<button id="atk5ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 5: <span class="r">Spear Columns</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk6" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk6ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attack 6: <span class="g">Fast Arrows 1</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk6ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk6Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/jgWX4gsWwBY?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>This is another mostly simple <span class="g">arrow</span> attack, but it tries to fake you out by suddenly sending faster <span class="g">arrows</span> out from the left and right.</p>
+					<p class="g">The pattern is:</p>
+					<p class="c">← ↑ → ↓ ← → ← ↑ ↓</p>
+					</div>
+					
+					<button id="atk6ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 6: <span class="g">Fast Arrows 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk7" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk7ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attack 7: <span class="g">Fast Arrows 2</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk7ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk7Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/KLtbA-LhUyQ?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>This is a super fast <span class="g">arrow</span> attack. Multiple <span class="g">arrows</span> will come from the top, followed by one from either the left or right.</p>
+					<p class="g">The pattern is:</p>
+					<p class="c">↑ ↑ ↑ ↑ ← ↑ ↑ ↑ ↑ → ↑ ↑ ↑ ← ↑ ↑ ↑ → ↑ ↑ ↑</p>
+					</div>
+					
+					<button id="atk7ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 7: <span class="g">Fast Arrows 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk8" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk8ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attack 8: <span class="g">Fast Arrows 3</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk8ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk8Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/iAC7KBqtgFo?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>This attack is comprised of a set of alternating <span class="g">arrows</span> coming from the left and the top that suddenly switch to being yellow <span class="g">arrows</span>.</p>
+					<p class="g">The pattern is:</p>
+					<p><span class="c">← ↑ ← ↑ ← ↑ ← ↑</span> <span class="y">→ ↓ → ↓ → ↓</span></p>
+					</div>
+					
+					<button id="atk8ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 8: <span class="g">Fast Arrows 3</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk910" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk910ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed"><div>Attacks 9 & 10: <span class="r">Spinning Spear Circle 1</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk910ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk910Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/1UmvXKKo1FU?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>Yes, these two attacks are completely identical, and not random.</p>
+					<p>In this attack, <span class="r">spears</span> appear in circles of six, and start spinning towards you.</p>
+					<p>I recommend finding a movement pattern that works, and then sticking with it - the strategy that I use everytime is shown above.</p>
+					</div>
+					
+					<button id="atk910ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attacks 9 & 10: <span class="r">Spinning Spear Circle 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk11" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk11ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attacks 11: <span class="g">Complex Arrows 1</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk11ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk11Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/qGTKi5L2eTs?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>This attack is comprised of <span class="g">arrows</span> making circle motions, followed by a broken circle motion.</p>
+					<p>The first and last circles are comprised of yellow <span class="g">arrows</span>.</p>
+					<p class="g">The pattern is:</p>
+					<p><span class="y">← ↓ → ↑</span> <span class="c">↑ ← ↓ →</span> <span class="y">↑ → ← ↓</span></p>
+					</div>
+					
+					<button id="atk11ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 11: <span class="g">Complex Arrows 1</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk12" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk12ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attacks 12: <span class="g">Complex Arrows 2</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk12ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk12Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/lpoQIOilAUk?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>A mostly simple attack that requires you block left then right, followed by up or down.</p>
+					<p class="g">The pattern is:</p>
+					<p><span class="c">← → ↑</span> <span class="y">↑</span> <span class="c">← → ↓</span> <span class="y">↓</span> <span class="c">← → ↑</span> <span class="y">↑</span> <span class="c">← → ↓</span> <span class="y">↓</span></p>
+					</div>
+					
+					<button id="atk12ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 12: <span class="g">Complex Arrows 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk13" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk13ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attacks 13: <span class="g">Complex Arrows 3</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk13ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk13Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/imw1p7NPook?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>Another mostly simple attack that requires you to block in one direction, followed by the opposite direction.</p>
+					<p class="g">The pattern is:</p>
+					<p><span class="c">←</span> <span class="y">→</span> <span class="c">↓</span> <span class="y">↑</span> <span class="c">→</span> <span class="y">←</span> <span class="c">↑</span> <span class="y">↓</span> <span class="c">←</span> <span class="y">→</span> <span class="c">↓</span> <span class="y">↑</span> <span class="c">→</span> <span class="y">←</span></p>
+					</div>
+					
+					<button id="atk13ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 13: <span class="g">Complex Arrows 3</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk14" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk14ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartG16px.png" class="inline unframed"><div>Attacks 14: <span class="g">Random Arrows</span></div><img src="../assets/images/icons/heartG16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk14ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk14Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/hwbAZ0BfAHU?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>This is the last <span class="g">Green SOUL mode</span>attack. It's basically the same as the last appearance of this attack.</p>
+					</div>
+					
+					<button id="atk14ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 14: <span class="g">Random Arrows</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk15" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk15ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed"><div>Attacks 15: <span class="r">Shooting Spear Circle</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk15ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk15Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/wcDPCvpgEx0?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>In this attack, <span class="r">spears</span> appear in circles of six, then shoot towards you.</p>
+					<p>Note that the <span class="r">spears</span> can't damage you after they converge, and how the <span class="r">spears</span> aren't spinning.</p>
+					<p>My advice is to keep moving, finding gaps in the <span class="r">spear</span> circles. Don't be afraid to hug the walls or cut it close.</p>
+					</div>
+					
+					<button id="atk15ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 15: <span class="r">Shooting Spear Circle</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk16" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk16ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed"><div>Attacks 16: <span class="r">Spinning Spear Circle 2</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk16ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk16Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/kKVsYDukZcY?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>A harder version of the <span class="r">Spinning Spear Circle</span> attack that has 8 <span class="r">spears</span> rather than 6.</p>
+					<p>This is <span class="y">Undyne the Undying</span>'s hardest attack in my opinion. I barely managed to get footage of not getting hit by it.</p>
+					<p>A good strategy is to stay mostly still, and look for openings. Once you've found one, go for it, making sure to account for the spinning of the <span class="r">spears</span> (remember that the <span class="r">spears</span>' spinning slows down as they closer to you).</p>
+					<p>You could try to make a consistant strategy like the last version of this attack, but that's made difficult due to how long it takes to show up; personally, I end up just winging it.</p>
+					</div>
+					
+					<button id="atk16ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 16: <span class="r">Spinning Spear Circle 2</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk17" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk17ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed"><div>Attacks 17: <span class="r">Random Spears</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk17ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk17Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/CDiKqTThnfs?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>This attack is the same as the one from earlier, except much faster due to the progression of the fight. My advice is the same as last time.</p>
+					</div>
+					
+					<button id="atk17ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 17: <span class="r">Random Spears</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<div id="atk18" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
+					<button id="atk18ButtonTop" class="dropDownButtonTop">
+						<h3 class="flexHeading"><img src="../assets/images/icons/heartR16px.png" class="inline unframed"><div>Attacks 18: <span class="r">Spear Columns</span></div><img src="../assets/images/icons/heartR16px.png" class="inline unframed"></h3>
+						<p>(<span id="atk18ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+					</button>
+					
+					<div id="atk18Content" class="dropDownContent">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/0CjUrODUPLA?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+					<p>Like the last attack, this attack is a retread of earlier, but faster.</p>
+					<p>This time, I show this attack's cheese strategy:<br>by moving to the (almost) pixel-perfect spot shown, you won't even need to dodge.</p>
+					<p>This is made easier by holding the 'back' button (<kbd>X</kbd> by default): it slows down your movement, making it easier to get into just the right position.</p>
+					<p>I would recommend trying to dodge the attack normally if you're not used to dodging the attack this way, though.<br>It's better to expend a bit more effort dodging than trying and failing to do a cheese strat.</p>
+					</div>
+					
+					<button id="atk18ButtonBottom" class="dropDownButtonBottom">
+						<p>(Attack 18: <span class="r">Spear Columns</span> - Click to Contract)</p>
+					</button>
+				</div>
+				
+				<h3><b animSubType="wave">From here on out, <span class="y">Undyne</span> reuses her attacks in this order</b>:</h3>
+				<p>
+					<span class="r">Simple Spear Circle</span>; <span class="r">Spinning Spear Circle 2</span>; <span class="r">Random Spears</span>; <span class="r">Spear Columns</span>; Repeat.
+				</p>
+			
+		</section>
+		
+		<section id="level">
+			
+			<h2 class="r">Level (of Violence)</h2>
+				<p>If you progress normally through the <span class="r">No Mercy</span> route, your <span class="r">LV</span> will usually about <span class="r">10</span>. If you go out of your way to kill enemies with high <span class="r">EXP</span> rewards, you may get up to <span class="r">LV 12</span>, or if you do the opposite, as low as <span class="r">LV 9</span>.</p>
+				<p>So, what do these differences <em animSubType="wave">do</em>?</p>
+				<h3>Well, <span class="r">LV</span> determines your base <span class="g">HP</span>, <span class="c">AT</span>, and <span class="b">DF</span>. At <span class="r">LV 1</span></span>, you have:</h3>
+					<ul>
+						<li><span class="g">20 HP</span>, with an extra <span class="g">4 HP</span>
+							<span class="poppup">
+								<span class="poppupTrigger">
+									per <span class="r">LV</span>
+								</span>
+								<span class="poppupAside">
+									<span class="r">LV 1</span>: <span class="g">20 HP</span><br><span class="r">LV 2</span>: <span class="g">24 HP</span><br>.<br>.<br>.<br><span class="r">LV 9</span>: <span class="g">52 AT</span><br><span class="r">LV 10</span>: <span class="g">56 AT</span><br><span class="r">LV 11</span>: <span class="g">60 AT</span><br>.<br>.<br>.<br><span class="r">LV 19</span>: <span class="g">92 HP</span><br><span class="r">LV 20</span>: <span class="g">99 HP</span><br><br>(<span class="r">LV 20</span> breaks the pattern)
+								</span>
+							</span>
+						</li>
+						<li><span class="c">10 AT</span>, with an extra <span class="c">2 AT</span>
+							<span class="poppup">
+								<span class="poppupTrigger">
+									per <span class="r">LV</span>
+								</span>
+								<span class="poppupAside">
+									<span class="r">LV 1</span>: <span class="c">10 AT</span><br><span class="r">LV 2</span>: <span class="c">12 AT</span><br>.<br>.<br>.<br><span class="r">LV 9</span>: <span class="c">26 AT</span><br><span class="r">LV 10</span>: <span class="c">28 AT</span><br><span class="r">LV 11</span>: <span class="c">30 AT</span><br>.<br>.<br>.<br><span class="r">LV 19</span>: <span class="c">46 AT</span><br><span class="r">LV 20</span>: <span class="c">48 AT</span><br><br>(Entering battle at <span class="r">LV 20</span> sets your <span class="c">ATK</span> to <span class="c">30</span>, though this isn't possible to see in-game)
+								</span>
+							</span>
+						</li>
+						<li><span class="b">10 DF</span>, with an extra <span class="b">1 DF</span>
+							<span class="poppup">
+								<span class="poppupTrigger">
+									per <span class="r">4 LV</span>s
+								</span>
+								<span class="poppupAside">
+									<span class="r">LV</span> <span class="r">1</span>-<span class="r">4</span>: <span class="b">10 DF</span><br><span class="r">LV</span> <span class="r">5</span>-<span class="r">8</span>: <span class="b">11 DF</span><br><span class="r">LV</span> <span class="r">9</span>-<span class="r">12</span>: <span class="b">12 DF</span><br><span class="r">LV</span> <span class="r">13</span>-<span class="r">16</span>: <span class="b">13 DF</span><br><span class="r">LV</span> <span class="r">17</span>-<span class="r">20</span>: <span class="b">14 DF</span><br><br>(Entering battle at <span class="r">LV 20</span> sets your <span class="b">DEF</span> to <span class="b">30</span>, though this isn't possible to see in-game)
+								</span>
+							</span>
+						</li>
+					</ul>
+				
+				<h3>You may notice, however, that if you go into your <span class="r">STAT</span>s menu, it will look something like this:</h3>
+					<img src="../assets/images/stats.png" width="258" height="310" title="The stats menu lists the following: LV is 10. HP is 56 out of 56. A.T. is 18 with 7 in parenthesis. D.F. is 2 with 10 in parenthesis. Weapon is Ballet Shoes. Armor is Old Tutu." class="unframed">
+					<p>The numbers on the left are your <em animSubType="wave">base</em> <span class="r">STAT</span>s (the numbers I gave in the above paragraph), while the numbers on the right are your <em animSubType="wave">equipment</em> <span class="r">STAT</span>s.</p>
+					<p>To find your "true" <span class="r">STAT</span>s, add them together, then add <span class="r">10</span>.</p>
+					<p>Why add <span class="r">10</span>?</p>
+					<p>Because the <span class="r">STAT</span>s menu lies to you.</p>
+					<p>No, really: it says your base <span class="c">AT</span> and <span class="b">DF</span> are <span class="r">10</span> lower than they should be, making it seem like you start at <span class="c">0 AT</span> and <span class="b">0 DF</span>.<br>Why it does this, I do not know.</p>
+					<p>Anyway, the <em animSubType="wave">actual</em> base attack and defense for this example are <span class="c">28 AT</span> and <span class="b">12 DF</span>. Accounting for equipment <span class="r">STAT</span>s, the <span class="c">AT</span> is <span class="c">35</span>, and the <span class="b">DF</span> is <span class="b">22</span>.</p>
+					<p>Obviously, the higher your <span class="r">LV</span>, the higher your <span class="g">HP</span>, <span class="c">AT</span>, and <span class="b">DF</span>, and the easier the fight will be.</p>
+			
+		</section>
+		
+		<section id="preparation">
+			
+			<h2 class="c">Playing up to Undyne the Undying</h2>
+				<p>If you're <em animSubType="wave">really</em> struggling against <span class="y">Undyne the Undying</span>, you might (keyword: <strong animSubType="wave">MIGHT</strong>) want to <b animSubType="wave"><span class="r">Reset</span> entirely</b>, in order to get the best items possible.</p>
+				<p>If you <em animSubType="wave">really do</em> want to get the biggest edge possible, <span class="r">Reset</span>, and play from the beginning of the game:</p>
+				<ul>
+					<li>Buy as much Spider Cider as possible with the <span class="y">GOLD</span> you have. You can buy some even after killing Toriel.</li>
+					<li>
+						If you encounter Loox, try picking on him for some
+							<span class="poppup">
+								<span class="poppupTrigger">
+									extra <span class="r">EXP</span>.
+								</span>
+								<span class="poppupAside">
+									Killing Loox gives an extra <span class="r">5 EXP</span> each time you've picked on him, up to an extra <span class="r">15 EXP</span>.
+								</span>
+							</span>
+					</li>
+					<li><b animSubType="wave">Make sure to get the Pie by going to sleep once you enter Toriel's home.</b></li>
+					<br>
+					<li>Once you get to Snowdin, put all the Spider Cider and Pie in the box.</li>
+					<li>Just before Papyrus' Invisible Electricity Maze, go up from the Frozen Lake room to get the three Snowman Pieces.</li>
+					<li>In Snowdin Town, steal as many Cinnamon Bunnies as you need for <span class="y">Undyne the Undying</span>.</li>
+					<li>Aside from the Quiche, you'll have 7 inventory slots for healing against her; you should have a combined total of 7 jugs of Spider Cider and Cinnamon Bunnies in your box.</li>
+					<br>
+					<li>Once you get to Waterfall, go behind the upper waterfall in the Falling Rocks room to get the <span class="b">Old Tutu</span>.</li>
+					<li>Afterwards, in the large Bridge Seed Puzzle room, build a bridge to the right to get the Abandoned Quiche.</li>
+					<li>Once you enter the Glowing Blue Marsh area after the telescope room, go to the left to find the <span class="b">Ballet Shoes</span>.</li>
+					<li>Once you've exhausted Waterfall's <span class="r">Kill Count</span> (<span class="r">18</span>), do some inventory management in front of and in <span class="y">Gerson</span>'s Shop.</li>
+					<li>In the box, you should have the Pie, Snowman Pieces, and whatever equipment you're not using.</li>
+					<li>You should buy the <span class="p">Torn Notebook</span> and <span class="p">Glasses</span> even if you're not using them; they're helpful later in the run, after <span class="y">Undyne the Undying</span>.</li>
+					<li>In your inventory, you should have the Quiche, and 7 jugs of Spider Cider/Cinnamon Bunnies. Fill any empty slots with Astronaut Food/Crab Apples.</li>
+					<li>Replace 1 or 2 of your least powerful healing items with some Sea Tea, if you're using it.</li>
+				</ul>
+				<p>At this point, you should be as prepared as possible for <span class="y">Undyne the Undying</span>. Note that if you want to change equipment, the last box you can find is the one in front of <span class="y">Gerson</span>'s Shop.</p>
+			
+		</section>
+		
+		<section id="speedrunning" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="formFit">
+			
+			<button id="speedrunningButtonTop" class="dropDownButtonTop">
+				<h2 class="o">Speedrunning</h2>
+					<p>(Spoilers! - <span id="speedrunningToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+				
+			<div id="speedrunningContent" class="dropDownContent">
+				<p>Let's say you've already beaten <span class="y">Undyne the Undying</span>, and are looking to speedrun <i>Undertale</i>.</p>
+				<p>Given that you're just starting out, you'll probably be running either the <span class="y">Neutral Glitchless</span> or <span class="r">Genocide</span> categories of the game.<br>In that case, you'll not only have to fight <span class="y">Undyne the Undying</span>, but you'll also have to get good at it.</p>
+				<p>As you may already be aware, if you're being optimal, you'll have the <span class="b">Ballet Shoes</span> and <span class="r">Bandage</span> while fighting <span class="y">Undyne the Undying</span>, and you'll be at <span class="r">LV 10</span>.</p>
+				<p>To get an optimal fight, you'll need to do 2 things:</p>
+				<ol>
+					<p>Deal as much damage as you can to kill <span class="y">Undyne the Undying</span> as fast as possible:<br>a 14-turn fight is optimal, and in doing so you'll skip having to sit through her last few attacks.<br>If you miss it, you'll see the <span class="r">Random Arrows</span> attack, which is unfortunate, but perfectly acceptable unless you're trying to squeeze every last inch out of the fight.<br>The <span class="r">Simple Spear Circle</span> attack right after however, is <strong animSubType="wave">very</strong> lengthy - try to avoid seeing this attack if at all possible.</p>
+					<li>Not get hit while in the <span class="g">Green SOUL</span> mode:<br>Internally, <span class="y">Undyne</span> has a 'Challenge' statistic, which keeps track of how fast the arrows are in the <span class="g">Green SOUL</span> mode.<br>Getting hit lowers the challenge level, slows the arrows down, and makes all of her <span class="g">Green SOUL</span> mode attacks take longer.</li>
+				</ol>
+				<h3>Outside of the fight itself:</h3>
+				<ul>
+					<li>You can <span class="r">SAVE</span> in the hallway with Echo Flowers just before the bridge room if you're not super confident. Even if you don't <span class="r">SAVE</span>, taking the safety heal might be a good idea anyway.</li>
+					<li>When you enter the bridge room, make sure to move down a pixel to avoid getting stuck on the bridge!<br><b animSubType="shake">(I'm getting angry just thinking about that stupid bridge...)</b></li>
+					<li>You can mash the attack indicators to hit Monster Kid - the accuracy doesn't matter.</li>
+					<li>All of Monster Kid and <span class="y">Undyne</span>'s pre-fight dialogue is mashable, but <em animSubType="wave">not</em> the dialogue when <span class="y">Undyne</span> first transforms, <em animSubType="wave">nor</em> the dialogue when you deal the final hit, so don't bother mashing through it.</li>
+				</ul>
+				<h3>If you need some safety for the fight:</h3>
+				<ul>
+					<li>You can get the Snowman Pieces in Snowdin.<br>If you get these, grind for an extra encounter before and after going into the Snowman room.</li>
+					<li>You can get the <span class="b">Old Tutu</span> at the beginning of Waterfall.<br>If you get it, you won't be able to run away from encouters as easily, most notably Vulkin and Tsundereplane later in <span class="y">Neutral Glitchless</span>, or extra enemies in the CORE in <span class="r">Genocide</span>.</li>
+					<li>If you're looking for an intermediate safety strat, try buying the <span class="p">Glasses</span> and a couple of Crab Apples from <span class="y">Gerson</span>.<br>If you buy these, note that the <span class="p">Glasses</span> also make fleeing harder, but not as hard as with the <span class="b">Tutu</span>. They'll also help later with some extra defense and <span class="p">INV</span>.</li>
+				</ul>
+				<h3>Oh, and one more thing:</h3>
+				<p>If you use a healing item in battle, when the enemy finishes their attack, the curser will still be on the <span class="p">ITEM</span> option. If you're used to quickly pressing <kbd>Z</kbd> and <kbd>Enter</kbd> to attack, the you'll end up selecting and using the first item in your inventory.</p>
+				<p>At best, you'll waste the Pie/Instant Noodles (and a turn), and at worst, you'll eat the Spider Donut in <span class="y">Neutral Glitchless</span>.</p>
+				<p><b animSubType="shake">Do not eat the Spider Donut in <span class="y">Neutral Glitchless</span>.</b></p>
+				<p>Doing so will force you to kill Muffet and watch her ~20 second long death animation.</p>
+				<p><a href="sans.html#speedrunning">See Also: My <span class="b">Guide to Sans</span> (<span class="o">Speedrunning Section</span>)</a></p>
+			</div>
+			
+			<button id="speedrunningButtonBottom" class="dropDownButtonBottom">
+				<p>(<span class="o">Speedrunning</span> - Click to Contract)</p></p>
+			</button>
+			
+		</section>
+		
+		<section id="conclusion">
+			
+			<h2>Conclusion</span></h2>
+			<p>And that concludes this overly long and comprehensive guide to defeating <span class="y">Undyne the Undying</span>.<br>I hope this guide will help you with fighting <span class="y">Undyne the Undying</span>, and I also hope that it wasn't too long or incomprehensible.<br>Thanks for reading (and bearing with me)!</p>
+			
+		</section>
+		
+	</body>
+	
+</html>

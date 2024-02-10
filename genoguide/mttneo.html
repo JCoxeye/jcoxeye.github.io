@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html id="top">
+	
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Genoguide - Mettaton NEO</title>
+		<link rel="stylesheet" href="../scripting/style.css">
+		<script src="../scripting/emphasis.js"></script>
+		<script src="../scripting/dropDown.js"></script>
+		<script src="../scripting/poppupPositionFix.js"></script>
+		<script>
+			window.onload = (event) =>
+			{
+				emphasis();
+				dropDown();
+				poppupPositionFix();
+			};
+		</script>
+	</head>
+	
+	<body>
+		
+		<nav>
+			<h2>Navigation</h2>
+				<ul>
+					<p>| <a href="../index.html">Back to Home</a> |</p>
+					<li>| <a href="genoguide.html" class="r">The Genoguide</a> |</li>
+					<ol>
+						<li>| <a href="utu.html" class="r">Boss Guide 1</a> |</li>
+						<li>| <span class="r">Boss Guide 2</span> |</li>
+						<li>| <a href="sans.html" class="r">Boss Guide 3</a> |</li>
+					</ol>
+					<li>| <a href="#top">Top</a> |</li>
+					<li>| <a href="#guide">Guide</a> |</li>
+					<li>| <a href="#conclusion">Conclusion</a> |</li>
+				</ul>
+		</nav>
+		
+		<header>
+			
+			<h1><span class="b">JCoxeye</span>'s Guide to Fighting <span class="y">Mettaton NEO</span></h1>
+			
+		</header>
+		
+		<section id="guide">
+			
+			<h2>Press the <span class="c">FIGHT</span> button and attack him.</h2>
+				<p>...Okay, fine, there's <em animSubType="wave">slightly</em> more to say regarding <span class="y">Mettaton NEO</span> than that.</p>
+				<p>A common misconception is that it's possible to not do enough damage to him, failing the <span class="r">Genocide</span>/<span class="r">No Mercy</span> route.</p>
+				<p>This is not possible, as
+					<span class="poppup">
+						<span class="poppupTrigger">
+							<span class="r">Murder Level 15</span>
+						</span>
+						<span class="poppupAside">
+							The <span class="r">Murder Level</span> is an internal variable that keeps track of progress through the <span class="r">No Mercy</span> route.
+						</span>
+					</span>
+					causes him to take upwards of
+					<span class="poppup">
+						<span class="poppupTrigger">
+							<span class="c">900,000 Damage</span>
+						</span>
+						<span class="poppupAside">
+							Specifically, at <span class="r">Murder Level 15</span>, he's coded to take <span class="c">900,000</span> to <span class="c">999,999 damage</span>.<br><br>At <span class="r">Murder Level 14</span> or below, he instead takes <span class="c">34,000</span> to <span class="c">37,289 damage</span>.
+						</span>
+					</span>
+					when hit, regardless of accuracy.</p>
+				<p>The only time fighting <span class="y">Mettaton NEO</span> will fail to progress the <span class="r">No Mercy</span> route is when you haven't exhausted Hotland and the CORE's
+					<span class="poppup">
+						<span class="poppupTrigger">
+							<span class="r">Kill Count</span>,
+						</span>
+						<span class="poppupAside">
+							The '<span class="r">Kill Count</span>' is another internal variable that keeps track of how many monsters you've killed in an area.
+						</span>
+					</span>
+					haven't killed Muffet, or haven't killed the Royal Guards.</p>
+				<p>Also, if you <span class="p">CHECK</span> him, you'll get some unique flavor text, both from the
+					<span class="poppup">
+						<span class="poppupTrigger">
+							<span class="p">CHECK</span> itself
+						</span>
+						<span class="poppupAside">
+							'* METTATON NEO - 90 ATK 9 DEF<br>* Dr. Alphys's greatest invention.'
+						</span>
+					</span>
+					and from the new battle
+					<span class="poppup">
+						<span class="poppupTrigger">
+							flavor text.
+						</span>
+						<span class="poppupAside">
+							'* Stage lights are blaring.'
+						</span>
+					</span>
+				</p>
+			
+		</section>
+		
+		<footer id="conclusion">
+			
+			<h2>...And that's all for this guide!</h2>
+				<p>I hope you found it useful in defeating <span class="y">Mettaton NEO</span> and expanding your knowledge of
+				<span class="poppup">
+					<span class="poppupTrigger">
+						<i>Undertale (2015)</i>!
+					</span>
+					<span class="poppupAside">
+						<i>Undertale</i> is a 2015 2D role-playing video game created by American indie developer Toby Fox. The player controls a child who has fallen into the Underground: a large, secluded region under the surface of the Earth, separated by a magical barrier. The player meets various monsters during the journey back to the surface, although some monsters might engage the player in a fight. The combat system involves the player navigating through mini-bullet hell attacks by the opponent. They can opt to pacify or subdue monsters in order to spare them instead of killing them. These choices affect the game, with the dialogue, characters, and story changing based on outcomes.<br>Outside of artwork and character designs by Temmie Chang, Fox developed the entirety of the game by himself, including the script and music. The game took inspiration from several sources, including the <i>Brandish</i>, <i>Mario & Luigi</i>, and <i>Mother</i> role-playing game series, bullet hell shooter series <i>Touhou Project</i>, role-playing game <i>Moon: Remix RPG Adventure</i>, and British comedy show <i>Mr. Bean</i>. <i>Undertale</i> was originally meant to be two hours in length and was set to be released in mid-2014, but received delays.<br>The game was released for OS X and Windows in September 2015. It was also ported to Linux in July 2016, PlayStation 4 and PlayStation Vita in August 2017, the Nintendo Switch in September 2018, and Xbox One in March 2021. The game was acclaimed for its thematic material, intuitive combat system, musical score, originality, story, dialogue, and characters. The game sold over one million copies and was nominated for multiple accolades and awards. Several gaming publications and conventions listed <i>Undertale</i> as game of the year, and others have since listed it as one of the greatest video games. Two chapters of a related game, <i>Deltarune</i>, were released in 2018 and 2021.<br><br>Source: <a href="https://en.wikipedia.org/wiki/Undertale" target="_blank"><i>Wikipedia Page on Undertale, circa April 2023</i></a>
+					</span>
+				</span>
+			</p>
+			
+		</footer>
+		
+	</body>
+	
+</html>

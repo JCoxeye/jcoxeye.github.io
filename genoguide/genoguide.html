@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html id="top">
+	
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JCoxeye's Genoguide</title>
+		<link rel="stylesheet" href="../scripting/style.css">
+		<script src="../scripting/dropDown.js"></script>
+		<script src="../scripting/emphasis.js"></script>
+		<script src="../scripting/poppupPositionFix.js"></script>
+		<script>
+			window.onload = (event) =>
+			{
+				emphasis();
+				dropDown();
+				poppupPositionFix();
+			};
+		</script>
+	</head>
+	
+	<body>
+		
+		<nav>
+			
+			<h2>Navigation</h2>
+				<ul>
+					<p>| <a href="../index.html">Back to Home</a> |</p>
+					<li>| <span class="r">The Genoguide</span> |</li>
+					<ol>
+						<li>| <a href="utu.html" class="r">Boss Guide 1</a> |</li>
+						<li>| <a href="mttneo.html" class="r">Boss Guide 2</a> |</li>
+						<li>| <a href="sans.html" class="r">Boss Guide 3</a> |</li>
+					</ol>
+					<li>| <a href="#top">Top</a> |</li>
+					<li>| <a href="#Preface">Preface</a> |</li>
+					<li>| <a href="#Part_0" class="r">Part 0</a> |</li>
+					<li>| <a href="#Part_1" class="c">Part 1</a> |</li>
+					<li>| <a href="#Part_2" class="b">Part 2</a> |</li>
+					<li>| <a href="#Part_3" class="p">Part 3</a> |</li>
+					<li>| <a href="#Part_4" class="o">Part 4</a> |</li>
+					<li>| <a href="#Part_5" class="y">Part 5</a> |</li>
+					<li>| <a href="#Part_6" class="g">Part 6</a> |</li>
+					<li>| <a href="#Part_7" class="r">Part 7</a> |</li>
+					<p>| <a href="#conclusion">Conclusion</a> |</p>
+				</ul>
+			
+		</nav>
+		
+		<header>
+			
+			<h1>A Step-by-step Guide to the <span class="r">Genocide</span>/<span class="r">No Mercy</span> Route</h1>
+				<p>By <span class="b">JCoxeye</span></p>
+			
+		</header>
+		
+		<section id="Preface">
+			
+			<h2>Preface</h2>
+				<p>This will be a comprehensive, step-by-step guide to <i>Undertale</i>'s <span class="r">Genocide</span>/<span class="r">No Mercy</span> route.</p>
+				<p>There are lots of guides to the <span class="r">No Mercy</span> route you can find <b animSubType="wave">online</b>, but most lack finer details and comprehensive explanations (even the ones that claim to cover such topics).</p>
+				<p>That's where this guide comes in.</p>
+				<p>This guide assumes you have played the <span class="g">True Pacifist</span> route to completion, and have yet to finish the <span class="r">No Mercy</span> route.</p>
+			
+		</section>
+		
+		<section id="Part_0" class="dropDownContainer" dropDownBoxHasBottomButton="true" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
+			
+			<button id="Part_0ButtonTop" class="dropDownButtonTop">
+				<h2 class="r">Part 0: Introduction</h2>
+				<p>(Basics - <span id="Part_0ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="Part_0Content" class="dropDownContent">
+				<p>To start, one must first understand the basic premise of the <span class="r">No Mercy</span> route:<br>The objective is to kill as many monsters as possible, exhausting the '<span class="r">Kill Count</span>' of each area, and leveling up.</p>
+				<p>Importantly, fighting the boss will lock you out of encountering any more monsters in the area, meaning you must kill everyone <strong animSubType="wave">before</strong> fighting the boss of the area.</p>
+				<p>Now, let's cover a few misconceptions, as with <i>Undertale</i> (and the <span class="r">No Mercy</span> route in particular), there are quite a few.<br>Here are the big ones:
+				<ul>
+					<li>Getting a certain amount of <span class="r">EXP</span> and <span class="r">LV</span> is <b animSubType="wave">not</b> required; depending on your actions, you can accrue varying amounts of either and still finish the <span class="r">No Mercy</span> route. All that matters is killing everything.</li>
+					<li>The name '<span class="r">Chara</span>' is <b animSubType="wave">not</b> required for the <span class="r">No Mercy</span> route.</li>
+					<li><span class="y">Sparing</span> most regular enemies is perfectly acceptable. There <strong animSubType="wave">are</strong> certain enemies you have to kill upon encountering, but those are the exceptions, rather than the rule.</li>
+				</ul>
+				<p>Now, 'killing everyone' in an <span class="r">RPG</span> with random encounters may seem strange: how can you kill 'everything' if there isn't a limit on the monsters you can encounter?</p>
+				<p>Well, simple.<br>There is.</p>
+				<p>Each area has a '<span class="r">Kill Count</span>':</p>
+				<p>The Ruins has a <span class="r">Kill Count</span> of <span class="r">20</span>, Snowdin has a <span class="r">Count</span> of <span class="r">16</span>, Waterfall has <span class="r">18</span>, while Hotland and the CORE share a <span class="r">Kill Count</span> of <span class="r">40</span>.<br>
+					<span class="poppup">
+						<span class="poppupTrigger">
+							Each monster
+						</span>
+						<span class="poppupAside">
+							Certain monsters, namely bosses, mini-bosses, and special characters, do <b animSubType="wave">not</b> contribute to any <span class="r">Kill Count</span>; these exceptions will be covered when they come up.
+						</span>
+					</span>
+				you kill contributes to the <span class="r">Kill Count</span>.</p>
+				<p>Once you've exhausted the <span class="r">Kill Count</span>, further encounters will be
+					<span class="poppup">
+						<span class="poppupTrigger">
+							replaced
+						</span>
+						<span class="poppupAside">
+							Notably, it's possible to kill more monsters than the <span class="r">Kill Count</span> implies; for example, by encountering two monsters at once while the <span class="r">Kill Count</span> is at <span class="r">1 left</span>, you'll be able to kill one more monster than usual (this doesn't do anything, mind you).
+						</span>
+					</span>
+				by an empty screen; seeing this screen is a good way to double-check whether you've successfully killed everything.</p>
+				<p>Obviously, exhausting the <span class="r">Kill Count</span> requires a fair amount of grinding, which can be pretty tedious if you don't know what you're doing.</p>
+				<p>A key concept to understand is that, after getting an encounter in a room, the next encounter takes significantly longer to appear.</p>
+				<p>By leaving and re-entering the room, you reset the '<span class="r">Step Count</span>' to the next encounter, which saves an <em animSubType="wave">immeasurable</em> amount of time over the course of the game.</p>
+				<p>Additionally, by holding <kbd>Up</kbd> and <kbd>Down</kbd> at the same time (really only possible on a keyboard), you can preform a glitch (exploit?) which causes <span class="r">Frisk</span> to repeatedly walk up and down against an upper wall.</p>
+				<p>This counts as movement, and progresses the <span class="r">Step Count</span> to the next encounter. A misconception among many fans is that this speeds up getting encounters. It doesn't; it only makes it easier to keep moving.</p>
+				<p>Now, on to the route itself.</p>
+			</div>
+			
+			<button id="Part_0ButtonBottom" class="dropDownButtonBottom">
+				<p>(End of <span class="r">Part 0</span> - Click to Contract)</p>
+			</button>
+			
+		</section>
+		
+		<section id="Part_1" class="dropDownContainer" dropDownBoxHasBottomButton="true" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
+			
+			<button id="Part_1ButtonTop" class="dropDownButtonTop">
+				<h2 class="c">Part 1: The Beginning</h2>
+				<p>(The Ruins - <span id="Part_1ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="Part_1Content" class="dropDownContent">
+				<p>
+					The Ruins, with a <span class="r">Kill Count</span> of <span class="r">20</span>, start off the route with less of a bang and more of a honk of despair, introducing <span class="r">The Player</span> to the tedium of grinding for kills.
+				</p>
+				<p>
+					The first Froggit encountered in the
+						<span class="poppup">
+							<span class="poppupTrigger">
+								Spike Maze
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/rooms/spikemaze.png" width="640" height="480">
+							</span>
+						</span>
+					room does <em animSubType="wave">not</em> contribute to the <span class="r">Kill Count</span>, <em animSubType="wave">nor</em> is it required to kill to continue, but it's best to kill it regardless: it gives <span class="r">10 EXP</span> and <span class="y">20 GOLD</span>, much more than the average Froggit.
+					<br>
+					Picking on Loox can also net you some more <span class="r">EXP</span>, if you need it.
+				</p>
+				<!-- resisting the urge to make an entire step-by-step guide to make the route as easy as possible, in addition to this guide -->
+				<p><span class="gray">Napstablook</span> also doesn't count towards the <span class="r">Kill Count</span>, and can even be <span class="y">SPARE</span>-d. Do note that when <span class="gray">Napstablook</span> is defeated via violence and awards '-1 Experience Point', it doesn't actually affect your <span class="r">EXP</span>.</p>
+				<p>If you've already exhausted the <span class="r">Kill Count</span> before encountering <span class="gray">Napstablook</span>, they'll simply dissappear upon approach; if you don't feel like fighting them, exhaust the <span class="r">Kill Count</span> beforehand.</p>
+				<p><span class="r">Toriel</span> is the boss of the Ruins, and so you'll stop encountering monsters upon defeating her, either by killing her or <span class="y">SPARE</span>-ing her.<br>This means you'll have to exhaust the <span class="r">Kill Count</span> <em animSubType="wave">before progressing</em>.</p>
+				<p>To be clear, you can enter her home, get the pie, and even
+						<span class="poppup">
+							<span class="poppupTrigger">
+								encounter her,
+							</span>
+							<span class="poppupAside">
+								 Most interestingly, because <span class="r">Toriel</span> contributes to the Ruins <span class="r">Kill Count</span>, it's possible to exhaust it <b animSubType="wave">by killing her</b>, which <em animSubType="wave">still allows you to continue the route</em>!<br>I was surprised too, but it's the truth!<br><br>Notably, because you haven't yet exhausted the <span class="r">Kill Count</span> when you fight her this way, you're also not yet on the <span class="r">No Mercy</span> route, so she doesn't die in one hit, nor does she do her unique dialogue. Again, this still allows you to continue the route, despite what common sense may imply.
+							</span>
+						</span>
+					before going back to grinding and proceeding with the <span class="r">No Mercy</span> route.</p>
+				<p>Anyway, it's probably best to grind in the Perspective Puzzle's last room: it's the last room with encounters, it's right next to where you get the <span class="c">Toy Knife</span>, and the <span class="r">SAVE Point</span> in front of <span class="r">Toriel</span>'s house is right next-door.</p>
+				<p>Once you've exhausted the Ruins <span class="r">Kill Count</span>, head to <span class="r">Toriel</span>'s house, <b animSubType="wave">grab the Pie by sleeping in the bed</b>, and tell that <em animSubType="rainbow">G.O.A.T.</em> to <em animSubType="rainbow">G.T.F.O.</em>!</p>
+				<p>Oh, and before you leave, you might want to stock up on Spider Cider after killing <span class="r">Toriel</span>; of all of the infinitely obtainable <span class="g">consumables</span>, Spider Cider <span class="g">heals</span> the most <span class="g">HP</span> until you can get Legendary Heroes from the <span class="y">MTT</span> Resort.</p>
+			</div>
+			
+			<button id="Part_1ButtonBottom" class="dropDownButtonBottom">
+				<p>(End of <span class="c">Part 1</span> - Click to Contract)</p>
+			</button>
+			
+		</section>
+		
+		<section id="Part_2" class="dropDownContainer" dropDownBoxHasBottomButton="true" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
+			
+			<button id="Part_2ButtonTop" class="dropDownButtonTop">
+				<h2 class="b">Part 2: Perfect Weather for a Game of Murder</h2>
+				<p>(Snowdin - <span id="Part_2ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="Part_2Content" class="dropDownContent">
+					<p>Moving into Snowdin, you'll finally be shown the <span class="r">Kill Count</span> in-game (ex; '<span class="r">16 left.</span>') whenever you <span class="r">SAVE</span>.<br>Upon exhausting the <span class="r">Kill Count</span>, it'll say
+						<span class="poppup">
+							<span class="poppupTrigger">
+								'Determination.',
+							</span>
+							<span class="poppupAside">
+								Contrary to popular belief, this line is <b animSubType="wave">not</b> highlighted in red.
+							</span>
+						</span>
+					which can be used as a benchmark to know you're finished grinding.</p>
+				<p>Snowdin has a <span class="r">Kill Count</span> of <span class="r">16</span>, but numerous monsters do not contribute to the <span class="r">Kill Count</span>, and/or have special conditions:
+				<ul>
+					<p>Unlike other random encounters, Lesser Dog <em animSubType="wave">must be killed</em>; do not <span class="y">SPARE</span> or <span class="y">FLEE</span> from Lesser Dog, nor the rest of the Canine Unit. Lesser Dog <b animSubType="wave">does</b> contribute to the <span class="r">Kill Count</span>, however.</p>
+					<p>Doggo, Dogamy, Dogaressa, and Greater Dog all <em animSubType="wave">must be killed</em>, although they <b animSubType="wave">don't</b> contribute to the <span class="r">Kill Count</span>.</p>
+					<p>Jerry is a near unmissable encounter, and <b animSubType="wave">does</b> contribute to the <span class="r">Kill Count</span>, but killing it may be annoying; Jerry takes <b animSubType="wave">10 hits to kill</b>.<br>It's best to <span class="y">SPARE</span> Jerry unless it's your last kill, especially given it's low <span class="r">EXP</span> rewards.</p>
+					<p>Glyde also contributes to the <span class="r">Kill Count</span>, but unlike Jerry, they're worth quite a lot of <span class="r">EXP</span>, meaning they might be worth the kill despite the effort required to
+							<span class="poppup">
+								<span class="poppupTrigger">
+									encounter
+								</span>
+								<span class="poppupAside">
+									Glyde can be encountered in the Mysterious Place, but the room has a very high <span class="r">Step Count</span>, meaning it takes several minutes on end to encounter them.<br><br>Importantly, unlike all other encounter functions in the game, the post-battle <span class="r">Step Count</span> of the Glyde Encounterer <i>[sic]</i> is <em animSubType="wave">lower</em> than its pre-battle step count, meaning it's actually <em animSubType="wave">faster</em> to stay in the room after encoutering them.<br><br>This is likely because of how the code is copied from the Gyftrot Encounterer and Snowdin Encounterer.<br>As an aside, the encounter functions are actually very interesting; I might make a write-up on that sometime in the future.
+								</span>
+							</span>
+					them.</p>
+				</ul>
+				<p><b animSubType="wave">Now on to the 'point of no return' here:</b></p>
+				<p>Defeating
+						<span class="poppup">
+							<span class="poppupTrigger">
+								<span class="b">Papyrus</span>
+							</span>
+							<span class="poppupAside">
+								Notably, unlike <span class="r">Toriel</span>, <span class="b">Papyrus</span> does <b animSubType="wave">not</b> contribute to the Snowdin <span class="r">Kill Count</span>, so killing him with '<span class="r">1 Left</span>' does <b animSubType="wave">not</b> allow you to progress through the <span class="r">No Mercy</span> route.
+							</span>
+						</span>
+					is what prevents Snowdin encounters, so he's the point of no return.</p>
+				<p>
+					Do note that <b animSubType="wave">encountering</b> him is fine.
+					<br>
+					When you die to <span class="b">Papyrus</span>, you are simply thrown into his shed, without getting a proper <span class="r">Game Over</span>.
+					<br>
+					Once you exit the shed, you can resume grinding at your leisure.
+				</p>
+				<p>
+					The point of no return is <em animSubType="wave">defeating</em> him, either by <span class="y">SPARE</span>-ing him or killing him.
+				</p>
+				<p>
+					To be clear, it's perfectly fine to enter Snowdin Town, <span class="r">SAVE</span>, buy from the shop, chat with the locals, and lose to <span class="b">Papyrus</span>, even if you haven't exhausted the <span class="r">Kill Count</span>.
+					<br>
+					In fact, entering Snowdin Town and then going back to grind in the
+						<span class="poppup">
+							<span class="poppupTrigger">
+								 Gauntlet of Deadly Terror 
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/rooms/gauntletOfDeadlyTerror.png" width="640" height="480">
+							</span>
+						</span>
+					is actually the preferred way to grind in Snowdin, as it has a relatively low <span class="r">Step Count</span> and is right next to the <span class="r">SAVE Point</span>.
+				</p>
+				<p>
+					You have to leave and re-enter the Gauntlet of Deadly Terror at least once for encounters to resume after the cutscene, anyway.
+				</p>
+				<p>
+					Once you've killed <span class="b">Papyrus</span>, head into Waterfall, but not before getting a few Cinnamon Bunnies (stolen from the Snowdin General Store), in addition to your collection of Spider Cider. In the box, you should have about 7 of them combined.
+				</p>
+				<p>
+					Also make <em animSubType="wave">absolutely sure</em> to get the Snowman Pieces from the Snowman
+						<span class="poppup">
+							<span class="poppupTrigger">
+								partly through Snowdin;
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/rooms/snowmanCliff.png" width="640" height="480">
+							</span>
+						</span>
+					the Snowman doesn't contribute to the <span class="r">Kill Count</span> or anything, but the healing will be useful for later.
+				</p>
+			</div>
+			
+			<button id="Part_2ButtonBottom" class="dropDownButtonBottom">
+				<p>(End of <span class="b">Part 2</span> - Click to Contract)</p>
+			</button>
+			
+		</section>
+		
+		<section id="Part_3" class="dropDownContainer" dropDownBoxHasBottomButton="true" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
+			
+			<button id="Part_3ButtonTop" class="dropDownButtonTop">
+				<h2 class="p">Part 3: Perseverance</h2>
+				<p>(Waterfall - <span id="Part_3ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="Part_3Content" class="dropDownContent">
+				<p>
+					Waterfall has a <span class="r">Kill Count</span> of <span class="r">18</span>, and has numerous scripted encounters.<br>Despite this, there's little to nothing to keep in mind; just kill everything you come across, as there's no enemies worth saving for later.
+				</p>
+				<p>
+					<b animSubType="wave">Do remember to pick up the</b>
+						<span class="poppup">
+							<span class="poppupTrigger">
+								<b class="b" animSubType="wave">Dusty Tutu</b>
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/itemLocations/oldTutu.gif" width="640" height="480">
+							</span>
+						</span>
+					<b animSubType="wave">and</b>
+						<span class="poppup">
+							<span class="poppupTrigger">
+								<b animSubType="wave" class="b">Ballet Shoes</b>,
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/itemLocations/balletShoes.gif" width="640" height="480">
+							</span>
+						</span>
+					as they have good <span class="r">STATs</span> for your purposes.
+				</p>
+				<p>
+					It's best to grind in the
+						<span class="poppup">
+							<span class="poppupTrigger">
+								Echo Flowers Hallway
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/rooms/echoFlowersHallway.png" width="640" height="480">
+							</span>
+						</span>
+					between <span class="y">Gerson</span>'s shop and the Mushroom Maze, as it has the lowest <span class="r">Step Count</span> of any of the rooms this far into Waterfall. Don't worry about the point of no return here; the game
+						<span class="poppup">
+							<span class="poppupTrigger">
+								outright tells you
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/waterfallPointOfNoReturn.png" width="640" height="480">
+							</span>
+						</span>
+					when you shouldn't proceed.
+				</p>
+				<p>
+					With that, you should be golden until Hotland.
+				</p>
+				<p>
+					<a href="utu.html">If (and <em animSubType="rainbow">only</em> if!) you need any more help for the remainder of Waterfall, click here.</a><br>Don't worry, you'll know it when you need some help.
+				</p>
+			</div>
+			
+			<button id="Part_3ButtonBottom" class="dropDownButtonBottom">
+				<p>(End of <span class="p">Part 3</span> - Click to Contract)</p>
+			</button>
+			
+		</section>
+		
+		<section id="Part_4" class="dropDownContainer" dropDownBoxHasBottomButton="true" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
+			
+			<button id="Part_4ButtonTop" class="dropDownButtonTop">
+				<h2 class="o">Part 4: The Incinerator</h2>
+				<p>(Hotland & The CORE - <span id="Part_4ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="Part_4Content" class="dropDownContent">
+				<p>
+					Unlike other areas, the CORE is considered a sub-area of Hotland, and therefore shares its <span class="r">Kill Count</span> of <span class="r">40</span> with the rest of the area.
+				</p>
+				<p>
+					This time, the point of no return is the cutscene where <span class="y">Mettaton</span> confronts you right after entering
+						<span class="poppup">
+							<span class="poppupTrigger">
+								the door at the end of the CORE Bridge. 
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/rooms/coreEnd.png" width="640" height="480">
+							</span>
+						</span>
+					By taking the elevator at the entrance of the CORE, you'll end up right next to the doorway.<br>Although you can technically enter the room without triggering the cutscene, it's very easy to do so accidently, so you shouldn't head in until you've exhausted the <span class="r">Kill Count</span>.
+				</p>
+				<p>
+					In Hotland, RG 01, RG 02, and Muffet are the three encounters to keep note of. Like the Canine Unit, you <em animSubType="wave">must kill them to proceed with the <span class="r">No Mercy</span> route</em>, and they <em>don't</em> contribute to the <span class="r">Kill Count</span>.
+				</p>
+				<p>
+					You might also want to pick up the Instant Noodles from <span class="y">Alphys</span>'s fridge - in certain situations, it can heal for up to <em class="g" animSubType="wave">90 HP</em>.
+				</p>
+				<p>
+					Aside from that, don't worry about anything else in Hotland Proper; the CORE is where the route really continues.
+				</p>
+				<p>
+					The best place to grind is at the right side of the
+						<span class="poppup">
+							<span class="poppupTrigger">
+								 CORE Bridge,
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/rooms/coreBridge.png" width="640" height="480">
+							</span>
+						</span>
+					right outside of the <span class="r">SAVE</span> room before <span class="y">Mettaton</span>'s Stage.<br>Once you've hit <span class="r">7 left</span>, head to the
+						<span class="poppup">
+						
+							<span class="poppupTrigger">
+								 <span class="o">Warrior's Path</span> 
+							</span>
+							<span class="poppupImage poppupImage640">
+								<img src="../assets/images/rooms/warriorsPathRoute.gif" width="640" height="480">
+							</span>
+						</span>
+					to get into the scripted encounters there; this will save some time by not having you grind for more encounters at such a low <span class="r">Kill Count</span>.
+				</p>
+				<p>
+					Once you've exhausted the <span class="r">Kill Count</span>, try your hand at fighting <span class="y">Mettaton</span>.<br>If you fail, here's a guide: <a href="mttneo.html" class="r">Geno Boss Guide 2</a>.
+				</p>
+			</div>
+			
+			<button id="Part_4ButtonBottom" class="dropDownButtonBottom">
+				<p>(End of <span class="o">Part 4</span> - Click to Contract)</p>
+			</button>
+			
+		</section>
+		
+		<section id="Part_5" class="dropDownContainer" dropDownBoxHasBottomButton="true" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
+			
+			<button id="Part_5ButtonTop" class="dropDownButtonTop">
+				<h2 class="y">Part 5: The Moment You've All Been Waiting For</h2>
+				<p>(End-game - <span id="Part_5ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="Part_5Content" class="dropDownContent">
+				<p>With <span class="y">Mettaton</span> out of the way, all that stands between you and the ending you've worked so hard for is the Castle.</p>
+				<p>Take the elevator out of the CORE, traverse the Castle, and proceed through to the
+					<span class="poppup">
+						<span class="poppupTrigger">
+							Judgement Hall.
+						</span>
+						<span class="poppupAside">
+							Technically, it's called the Last Corridor; 'Judgement Hall' is a fanon name.
+						</span>
+					</span>
+				</p>
+				<p>You likely already know what's next.<br>Let's get to the point.</p>
+				<p>Here's the guide.<br><a href="sans.html" class="r">Geno Boss Guide 3</a></p>
+			</div>
+			
+			<button id="Part_5ButtonBottom" class="dropDownButtonBottom">
+			<p>(End of <span class="y">Part 5</span> - Click to Contract)</p>
+			</button>
+			
+		</section>
+		
+		<section id="Part_6" class="dropDownContainer" dropDownBoxHasBottomButton="true" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
+			
+			<button id="Part_6ButtonTop" class="dropDownButtonTop">
+				<h2 class="g">Part 6: Picking up the Pieces</h2>
+				<p>(After the End (Spoilers!) - <span id="Part_6ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="Part_6Content" class="dropDownContent">
+				<h3><strong animSubType="rainbow">Well, THAT happened! XP</strong></h3>
+					<p>Now that you've finished the game and destroyed the world, there is yet more to discuss regarding the <span class="r">No Mercy</span> route, even barring lore, gameplay opinions, and thematic importance.</p>
+					<p>In particular, the whole 'destroyed the world' thing wasn't a joke.<br>It's well and truly gone, and even redownloading the game won't do a thing.</p>
+					<p>All you're left with is a black wind, and all you can do is
+						<span class="poppup">
+							<span class="poppupTrigger">
+								wait...
+							</span>
+							<span class="poppupAside">
+								...for ten minutes.<br><br>(You have to wait on this screen for 10 minutes)
+							</span>
+						</span>
+					</p>
+					<h4>'<b class="r" animSubType="shake">Do you believe you are above consequence?</b>'</h4>
+						<p>'No.'</p>
+					<h4>'<b class="r" animSubType="shake">Give it to me.</b>'</h4>
+						<p>'Yes.'</p>
+					<h4>'<b class="r" animSubType="shake">Then it is agreed. You will give me your SOUL.</b>'</h4>
+						<p>'Yes.'</p>
+						<p>(Paraphrased)
+							<span class="poppup">
+								<span class="poppupTrigger">
+									(?)
+								</span>
+								<span class="poppupAside">
+									Also, their dialogue isn't actually highlighted in red; that was just for the sake of clarity.
+								</span>
+							</span>
+						</p>
+					<p>Agreeing to their proposition will bring the world back, but at a cost.<br>Obviously, that cost is your <b animSubType="shake"><span class="r">SOUL</span></b>; the very <b animSubType="wave">culmination of your being!</b></p>
+					<p>From now on, all future playthroughs of either the <span class="g">True Pacifist</span> route or the <span class="r">No Mercy</span> route will have their endings altered, with no way to change them back.</p>
+			</div>
+			
+			<button id="Part_6ButtonBottom" class="dropDownButtonBottom">
+				<p>(End of <span class="g">Part 6</span> - Click to Contract)</p>
+			</button>
+			
+		</section>
+		
+		<section id="Part_7" class="dropDownContainer" dropDownBoxHasBottomButton="true" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
+			
+			<button id="Part_7ButtonTop" class="dropDownButtonTop">
+				<h2 class="r">Part 7: Behind the Curtain</h2>
+				<p>(Code (Spoilers!) - <span id="Part_7ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="Part_7Content" class="dropDownContent">
+				<p>Finally, we get to the technical details.<br>If you're a purely casual player, feel free to stop reading; <b animSubType="shake">there's nothing here for you anymore.</b></p>
+				<h3><b animSubType="shake">So</b>, what about your <span class="r">SAVE File</span>?</h3>
+					<p>Upon destroying the world (and <b animSubType="wave">before</b> bringing it back), your <span class="r">SAVE File</span> is deleted, and in its place is <kbd>system_information_962</kbd>.<br>When you launch the game with this file in the <span class="r">SAVE</span> directory, you get the black screen forcing you to wait ten minutes.</p>
+					<p>Upon bringing the world back, <kbd>system_information_962</kbd> is deleted, and <kbd>system_information_963</kbd> is created in its place.<br>This is the file that allows the game to remember if you've done the route before - no matter how many times you complete it or what you do to your <span class="r">SAVE File</span>, this file is
+						<span class="poppup">
+							<span class="poppupTrigger">
+								never removed
+							</span>
+							<span class="poppupAside">
+								That is, until you do another <span class="r">No Mercy</span> route, which temporarily replaces it with <kbd>system_information_962</kbd> again.
+							</span>
+						</span>
+						by the game itself.</p>
+					<p>To restore your <span class="r">SAVE File</span>, go to <i>Undertale</i>'s <span class="r">SAVE</span> directory<br>(<kbd>C:\\users\USERNAME\AppData\local\UNDERTALE\</kbd>), and delete <kbd>system_information_962</kbd> or <kbd>system_information_963</kbd>, whichever is present.</p>
+					<p>If you don't know how to get there, hold <kbd>WIN</kbd> and press <kbd>R</kbd>, type <kbd>%localAppData%\UNDERTALE</kbd> in the search bar, and click <kbd>Okay</kbd>.
+					<!-- I don't know the file directories for versions of the game other than the standard windows version. sorry! -->
+					<p>Oh, and by the way, the contents of the files are irrelevant - only their presence matters.<br>All they say is 'a' for <kbd>system_information_962</kbd> and 'b' for <kbd>system_information_963</kbd>. The files have no extensions though, so you'll have to manually open them with a text editor to see this.</p>
+				
+				<h3>Murder Level</h3>
+					<p>Progress through the <span class="r">No Mercy</span> route is tracked by a variable called the '<span class="r">Murder Level</span>'.<br>It's an entirely under-the-hood statistic that increases to a given value if
+						<span class="poppup">
+							<span class="poppupTrigger">
+								all previous criteria
+							</span>
+							<span class="poppupAside">
+								For example, let's say <span class="r">Murder Level 1</span> requires condition 1, <span class="r">Level 2</span> requires condition 2, etc.<br><br>If you've fulfilled conditions 1-3, you'll be at <span class="r">Murder Level 3</span>.<br><br>From here, if you fulfill condition 5, but <em animSubType="wave">don't</em> fulfill condition 4, you'll still be at <span class="r">Murder Level 3</span>.<br><br>If you then complete condition 4, you'll immediately jump to <span class="r">Murder Level 5</span>.
+							</span>
+						</span>
+					have been fulfilled.</p>
+					<h4>The conditions for each <span class="r">Murder Level</span> are as follows:</h4>
+						<ul>
+							<li>
+								<span class="r">Murder Level 1</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										The Ruins <span class="r">Kill Count</span> is at least <span class="r">20</span>
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[202] >= 20</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 2</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										<span class="r">Toriel</span> is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[45] = 4</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 3</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										Doggo is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[52] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 4</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										Dogamy is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[53] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 5</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										Greater Dog is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[54] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 6</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										Snowdrake is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[57] = 2</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 7</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										The Snowdin <span class="r">Kill Count</span> is at least <span class="r">16</span>
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[203] >= 16</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 8</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										<span class="b">Papyrus</span> is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[67] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 9</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										Shyren is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[81] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 10</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										<span class="gray">Glad Dummy</span> is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[252] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 11</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										The Waterfall <span class="r">Kill Count</span> is at least <span class="r">18</span>
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[204] >= 18</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 12</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										<span class="y">Undyne</span> is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[251] = 1<br>&&<br>global.flag[350] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 13</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										The Royal Guards are dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[402] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 14</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										Muffet is Dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[397] = 1</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 15</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										The Hotland <span class="r">Kill Count</span> is at least <span class="r">40</span>
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[205] >= 40</kbd>
+									</span>
+								</span>
+							</li>
+							<li>
+								<span class="r">Murder Level 16</span>:
+								<span class="poppup">
+									<span class="poppupTrigger">
+										<span class="y">Mettaton</span> is dead
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[425] = 1</kbd>
+									</span>
+								</span>
+								<br>
+								<em animSubType="wave">and</em>
+								<span class="poppup">
+									<span class="poppupTrigger">
+										the '<span class="r">Redemption Flag</span>' hasn't been set
+									</span>
+									<span class="poppupAside">
+										Specifically, <kbd>global.flag[27] = 0</kbd>
+									</span>
+								</span>
+							</li>
+						</ul>
+						<p>The '<span class="r">Redemption Flag</span>' is a 
+							<span class="poppup">
+								<span class="poppupTrigger">
+									flag
+								</span>
+								<span class="poppupAside">
+									Specifically, <kbd>global.flag[27]</kbd>
+								</span>
+							</span>
+						in the code that is set to <kbd>1</kbd> when certain monsters are spared.<br>The <span class="r">Redemption Flag</span> is checked at various points throughout the game, like before <span class="y">Undyne the Undying</span> and <span class="y">Mettaton NEO</span>.<br>If the <span class="r">Redemption Flag</span> has been set to <kbd>1</kbd>, it'll prevent you from progressing through the route, making it necessary to kill the monsters that set it, even aside from the direct requirements of the <span class="r">Murder Level</span>.</p>
+					
+					<h4>The following monsters, when spared, trigger the <span class="r">Redemption Flag</span>:</h4>
+						<ul>
+							<li class="r">Toriel</li>
+							<li>Doggo</li>
+							<li>Lesser Dog</li>
+							<li>Dogamy</li>
+							<li>Greater Dog</li>
+							<li class="b">Papyrus</li>
+							<li>Shyren</li>
+							<li class="gray">Glad Dummy</li>
+							<li>Monster Kid</li>
+							<li>RG 01</li>
+							<li>RG 02</li>
+							<li>Muffet</li>
+						</ul>
+						<p>You may note several oddities here:</p>
+						<ol>
+							<p><span class="r">Toriel</span>, Doggo, Dogamy, Greater Dog, <span class="b">Papyrus</span>, Shyren, <span class="gray">Glad Dummy</span>, RG 01, RG 02, and Muffet all trip the <span class="r">Redemption Flag</span>, despite already being required to progress the <span class="r">Murder Level</span>.<br>Monster Kid also trips the <span class="r">Redemption Flag</span>, even though <span class="y">SPARE</span>-ing them means you can't fight and kill <span class="y">Undyne the Undying</span>, which is already required for <span class="r">Murder Level 12</span>.</p>
+							<p><span class="y">SPARE</span>-ing Dogaressa does <em animSubType="wave">not</em> trip the <span class="r">Redemption Flag</span>, similar to how <span class="r">Murder Level 4</span> only tracks if Dogamy is killed.<br>To be fair though, as Dogamy and Dogaressa can't be killed or spared without the other, it <b animSubType="wave">does</b> make sense to only pay attention to one of their states.</p>
+							<p>On the other hand, the Royal Guards, despite always being spared together, each set the <span class="r">Redemption Flag</span> independently.
+							<br>
+							To make things <em animSubType="wave">even more</em> weirdly redundant, RG 01 and 02 <strong animSubType="wave">do</strong> share a kill state, that being <kbd>global.flag[402]</kbd>.</p>
+						</ol>
+						<p>With all of that in mind, the <span class="r">Redemption Flag</span> is actually more of a super late check to see if you've killed Lesser Dog, seeing as how every other monster to set it doesn't actually <em animSubType="wave">need</em> to in order for the <span class="r">No Mercy</span> route to function correctly.</p>
+						<p>The <span class="r">Redemption Flag</span> isn't <b animSubType="wave">completely</b> useless though, as it <em animSubType="wave">does</em> affect things like dialogue and NPCs disappearing (which we won't get into here because it's <strong animSubType="rainbow">way</strong> too much work to document).</p>
+				
+				<h3>Now that we understand the <span class="r">Murder Level</span> and how it's set to various values, what does it actually <em animSubType="wave">do</em>?</h3>
+					<p>Well, again, I won't get into <strong animSubType="wave">all</strong> of the minute differences here, but I <strong animSubType="wave">will</strong> mention some notable interactions that are dependent on the <span class="r">Murder Level</span> and/or <span class="r">Redemption Flag</span>:</p>
+					<!-- I spent dozens of hours pouring through UT's code to find out about every minute detail of the no mercy route. I eventually got super burnt out, tired, and just plain bored, so i decided to not go into *that* much detail. Trust me, it was for the best -->
+					<ul>
+						<p><span class="r">Murder Level 1</span> is what sets <span class="r">Toriel</span>'s <span class="b">DEF</span> to <span class="b">-9999</span>, allowing you to kill her instantly.</p>
+						<p><span class="r">Murder Level 2</span> is what allows you to take three Snowman Pieces from the Snowman, and see the <span class="r">Kill Count</span> at <span class="r">SAVE Points</span>.<br>It also forces an encounter against Lesser Dog for the third random Snowdin encounter, meaning it isn't possible to simply miss Lesser Dog.</p>
+						<p><span class="r">Murder Level 3</span> causes the Nice Cream Guy to disappear for the rest of the game, provided the <span class="r">Redemption Flag</span> isn't set.<br>Exhausting the Snowdin <span class="r">Kill Count</span> also does this, even when the <span class="r">Redemption Flag</span> is set.<br>The same conditions also cause the Snowdecahedron to have different dialogue, and, interestingly, cause the game to check the state of the <span class="r">No Mercy</span> route.</p>
+						<p><span class="r">Murder Level 3</span> (along with <span class="r">Murder Level 4</span> for the XO Switch Puzzles) is also what tells the game to pre-solve the puzzles throughout Snowdin, provided the <span class="r">Redemption Flag</span> isn't set.</p>
+						<p>If the <span class="r">Murder Level</span> is exactly <span class="r">5</span> when the Snowdin <span class="r">SAVE Point</span> dialogue appears, then the text will read: "<span class="r">*That comedian...</span>", provided the <span class="r">Kill Count</span> hasn't been exhausted.<br>This is to remind you to kill Snowdrake, as he's required to be killed to progress the <span class="r">No Mercy</span> route.</p>
+						<p><span class="r">Murder Level 6</span> does...<br>...basically nothing - its only purpose is to track if Snowdrake has been killed.</p>
+						<p><span class="r">Murder Level 7</span> is what causes all the Snowdin Town NPCs to disappear (aside from Monster Kid).<br>This includes the Ice Wolf, who no longer throws ice into the river.<br>The dissappearance of Snowdin Town NPCs is unnaffected by the <span class="r">Redemption Flag</span>.</p>
+						<p><span class="r">Murder Level 7</span>, like <span class="r">Murder Level 1</span>, is what allows you to one-shot <span class="b">Papyrus</span>. At this point, if you <span class="y">SPARE</span> <span class="b">Papyrus</span>, <span class="b">Sans</span>'ll have different dialogue at his station in Waterfall.<br>This still prevents you from going out to Grillby's with him, though.</p>
+						<p><span class="r">Murder Level 8</span> changes the
+							<span class="poppup">
+								<span class="poppupTrigger">
+									exclamation point icon
+								</span>
+								<span class="poppupImage poppupImage40">
+									<img class="" src="../assets/images/spr_exc.png" width="40px" height="40px">
+								</span>
+							</span>
+						to a
+							<span class="poppup">
+								<span class="poppupTrigger">
+									smiley face icon
+								</span>
+								<span class="poppupImage poppupImage40">
+									<img class="" src="../assets/images/spr_exc_f.png" width="40px" height="44px">
+								</span>
+							</span>
+						upon encountering an enemy, and pre-solves most puzzles in Waterfall.</p>
+						<p><span class="r">Murder Level 12</span> is what changes Hotland and the CORE, slowing their music, and allowing you to one-shot Muffet and the Royal Guards.<br>Additionally, getting a <span class="y">Neutral</span> ending with a <span class="r">Murder Level</span> equal or higher than <span class="r">12</span> is what gives you the <span class="y">Alphys</span> ending, so killing <span class="y">Undyne the Undying</span> guarantees that ending provided you don't finish out the <span class="r">No Mercy</span> route.</p>
+						<!-- this is roughly the point in the guide where I fully succumbed to the brain rot and went on a random tangent looking into encounterers, music generators, npcs disappearing at certain points of the route, and even making a list of every normally accessible room in the entire game and giving them unique names to refer to them by for the sake of consistancy. this project was started on a whim and was supposed to be finished over the weekend. it's been months. please send help. -->
+						<li><span class="r">Murder Level 15</span> is the final relevant check for the <span class="r">No Mercy</span> route; it's what allows <span class="y">Mettaton NEO</span>'s dialogue to progress normally and finish out the route.<br>Killing <span class="y">Mettaton NEO</span> at <span class="r">Murder Level 15</span> sets the protagonist's <span class="r">EXP</span> to <span class="r">50,000</span>, gives
+							<span class="poppup">
+								<span class="poppupTrigger">
+									different dialogue,
+								</span>
+								<span class="poppupAside poppupLong">
+									At <span class="r">Murder Level 15</span>, he says:<br>'GH...'<br>'GUESS YOU DON'T WANT TO JOIN MY FAN CLUB...?'<br><br>At <span class="r">Murder Level 14</span>, he says:<br>'G... GUESS SHE SHOULD HAVE WORKED MORE ON THE DEFENSES...'<br>'...'<br>'YOU MAY HAVE DEFEATED ME... BUT...'<br>'I KNOW. I CAN TELL FROM THAT STRIKE, DARLING.'<br>'YOU WERE HOLDING BACK.'<br>'YES, ASGORE WILL FALL EASILY TO YOU...'<br>'BUT YOU WON'T HARM HUMANITY, WILL YOU?'<br>'YOU AREN'T ABSOLUTELY EVIL.'<br>'IF YOU WERE TRYING TO BE, THEN YOU MESSED UP.'<br>'AND SO LATE INTO THE SHOW, TOO.'<br>'HA... HA. AT LEAST NOW, I CAN REST EASY.'<br>'KNOWING ALPHYS AND THE HUMANS WILL LIVE ON...!'
+								</span>
+							</span>
+						and
+							<span class="poppup">
+								<span class="poppupTrigger">
+									deals more damage
+								</span>
+								<span class="poppupAside">
+									At <span class="r">Murder Level 15</span>, the damage dealt is set to a random number from <span class="c">900,000</span> to <span class="c">999,999</span>, whereas at <span class="r">Murder Level 14</span>, the damage is set to a number from <span class="c">34,000</span> to <span class="c">37,289</span>.
+								</span>
+							</span>
+						than when he's killed at <span class="r">Murder Level 14</span>.</li>
+					</ul>
+			</div>
+			
+			<button id="Part_7ButtonBottom" class="dropDownButtonBottom">
+				<p>(End of <span class="r">Part 7</span> - Click to Contract)</p>
+			</button>
+			
+		</section>
+		
+		<footer id="conclusion">
+			
+			<h2>...And that concludes this guide to <i>Undertale</i>'s <span class="r">Genocide</span>/<span class="r">No Mercy</span> route!</h2>
+				<p>I hope this guide helped you complete the route, or otherwise informed you of something new.</p>
+				<p>
+					<span class="poppup">
+						<span class="poppupTrigger">
+							Thanks for reading!
+						</span>
+						<span class="poppupAside">
+							(I had no idea how to end this, if you couldn't tell...)
+						</span>
+					</span>
+				</p>
+			
+		</footer>
+		
+	</body>
+	
+</html>
