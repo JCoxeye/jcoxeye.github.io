@@ -9,8 +9,8 @@ function emphasis()
 		Table of Tags and animSubTypes:
 			Tag      | ="wave"      | ="rainbow"          | ="shake" | ="float"    
 			---------+--------------+---------------------+----------+-------------
-			<b>      | Single Wave  | Rainbow             | Shake    | Float       
-			<em>     | Weak Waves   | Rainbow Wave        | Shake    | Jump        
+			<b>      | Single Wave  | Rainbow             | Shake    | Jump        
+			<em>     | Weak Waves   | Rainbow Wave        | Shake    | Float       
 			<strong> | Strong Waves | Strong Rainbow Wave | Shake    | Strong Float
 	*/
 	

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>elements  or something</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="scripting/dropDown.js"></script>
+		<script src="scripting/elements.js"></script>
+		<script src="scripting/emphasis.js"></script>
+		<script>
+			window.onload = (event) =>
+			{
+				elements();
+				dropDownBox();
+				emphasis();
+			}
+		</script>
+	</head>
+	
+	<body>
+		
+		<header id="header"><h1><i>Deltarune</i>'s <span class="color">Element System</span></h1>
+		
+			<nav id="main_nav">
+				<h4><a href="index.html">Back to Home</a></h4>
+				<ul>
+					<li><a href="#Preface">Preface</a></li>
+					<li><a href="#What_We_Know">What We Know So Far</a></li>
+					<li><a href="#Element_Index"><span class="color">Element Index</span></a></li>
+					<li><a href="#">t</a></li>
+					<li><a href="#">t</a></li>
+				</ul>
+				<h4><a href="index.html">Back to Home</a></h4>
+			</nav>
+	  
+		</header>
+		
+		<section id="Preface"><h2>Preface</h2>
+			<p>JAVASCRIPT TEST</p>
+			<p><span class="color">Queen</span></p>
+			<p><span class="color">King</span></p>
+			<p><span class="color">Element 2</span> <span class="color">Element 7</span></p>
+			<p><span class="r">C</span><span class="y">o</span><span class="g">l</span><span class="c">o</span><span class="p">r</span></p>
+			<p><span class="color">Color</span></p>
+			<p><span class="color">Colors</span></p>
+			<p><span class="color">Swatch</span></p>
+			<p><span class="color">Swatchling</span></p>
+			<p><span class="color">Swatchlings</span></p>
+			<p>/JAVASCRIPT TEST</p>
+			<p>To the average player of <i>Deltarune</i>, combat is simple.</p>
+			<p>Hit the enemy, their HP decreases.</p>
+			<p>Get hit by the enemy, your HP decreases.</p>
+			<p>But, on closer examination, something interesting comes to light:</p>
+			<h4><i>Deltarune</i> has an <span class="color">Element System</span>.</h4>
+			<p>Indeed, if you were to wear the <span class="color">Frayed Bowtie</span>, <span class="color">Mannequin</span>, or <span class="color">Dealmaker</span>, you'd find yourself taking less damage against <span class="color">Tasque</span>, <span class="color">Tasque Manager</span>, and <span class="color">Spamton NEO</span>.</p>
+			<p>Similarly, the recruits page informs you of the <span class="color">Elements</span> of each recruited enemy.</p>
+			<p>This seems like something we can barely begin to speculate on, but we can shed more light on it by looking through the code for what exactly is going on (see below!).</p>
+			<h3><a href="#header">Back to Top</a></h3>
+		</section>
+		
+		<section id="What_We_Know_So_Far"><h2>What We Know So Far</h2>
+			<p>First, let's list all of the <span class="color">Elements</span> found on the recruits page:</p>
+			<ul>
+				<li><span class="color">Jewel</span> (<span class="color">Rudinn</span> and <span class="color">Rudinn Ranger</span>)</li>
+				<li><span class="color">Heart</span> (<span class="color">Hathy</span> and <span class="color">Head Hathy</span>)</li>
+				<li><span class="color">Order</span> (<span class="color">Ponmen</span>, <span class="color">Ambyu-Lance</span>, and <span class="color">Tasque Manager</span>)</li>
+				<li><span class="color">Rabbit</span> (<span class="color">Rabbick</span>)</li>
+				<li><span class="color">Dust</span> (<span class="color">Rabbick</span>)</li>
+				<li><span class="color">Fight</span> (<span class="color">Bloxer</span> and <span class="color">Werewerewire</span>)</li>
+				<li><span class="color">Mouse</span> (<span class="color">Jigsawry</span>, <span class="color">Maus</span>, and <span class="color">Mauswheel</span></li>
+				<li><span class="color">Puzzle</span> (<span class="color">Jigsawry</span>)</li>
+				<li><span class="color">Blade</span> (<span class="color">Rudinn Ranger</span>)</li>
+				<li><span class="color">Ice</span> (<span class="color">Head Hathy</span>)</li>
+				<li><span class="color">Elec</span> (<span class="color">Ambyu-Lance</span>, <span class="color">Tasque</span>, <span class="color">Werewire</span>, <span class="color">Maus</span>, and <span class="color">Werewerewire</span></li>
+				<li><span class="color">Virus</span> (<span class="color">Poppup</span> and <span class="color">Virovirokun</span>)</li>
+				<li><span class="color">Cat</span> (<span class="color">Tasque</span> and <span class="color">Tasque Manager</span>)</li>
+				<li><span class="color">Color</span> (<span class="color">Swatchlings</span>)</li>
+				<li><span class="color">Chaos</span> (<span class="color">Jevil</span>'s unused recruits entry)</p>
+			</ul>
+			<p>Additionally, <span class="color">Rude</span> and <span class="color">Fire</span> can be assumed to exist through <span class="color">Susie</span>'s <span class="color">Rude Buster</span> spell (described as dealing 'moderate Rude-elemental damage') and that Toriel is near-guaranteed to use <span class="color">Fire</span> magic.</p>
+			<h4>Next, let's take a look at <a href="gml_GlobalScript_scr_armorinfo.txt" target="blank">gml_GlobalScript_scr_armorinfo</a>, the code that determines the effects of armor items:</h4>
+			<p>This script defines the properties of every armor item in the game, including <i>unused</i> armors.</p>
+			<p>I'll spare you the pain of a gigantic image of it all, and simply summarize it's most notable features for our purposes:</p>
+			<ul>
+				<li><b>'<span class="color">MouseToken</span>'</b>: <br> "A golden coin with a once-powerful mousewizard engraved on it." <br> 'armorelementtemp' = 7 <br> 'armorelementamounttemp' = 0.5</li><br>
+				<li><b>'<span class="color">Mannequin</span>'</b>: <br> "It's a mannequin with the clothes permanently attached. Useless" <br> 'armorelementtemp' = 6 <br> 'armorelementamounttemp' = 0.35</li><br>
+				<li><b>'<span class="color">SkyMantle</span>'</b>: <br> "A cape that shimmers fluorescently. Protects against Elec and Holy attacks." <br> 'armorelementtemp' = 1 <br> 'armorelementamounttemp' = 0.5</li><br>
+				<li><b>'<span class="color">FrayedBowtie</span>'</b>: <br> "An old bowtie. It seems to have lost much of its defensive value." <br> 'armorelementtemp' = 6 <br> 'armorelementamounttemp' = 0.15</li><br>
+				<li><b>'<span class="color">Dealmaker</span>'</b>: <br> "Fashionable pink and yellow glasses. Greatly increase $ gained, and...?" <br> 'armorelementtemp' = 6 <br> 'armorelementamounttemp' = 0.4</li><br>
+			</ul>
+			<p>As you can see, the <span class="color">Frayed Bowtie</span>, <span class="color">Mannequin</span>, and <span class="color">Dealmaker</span> all have <span class="color">Element 6</span>, the unused <span class="color">Mouse Token</span> has <span class="color">Element 7</span>, and the unused <span class="color">Sky Mantle</span> has <span class="color">Element 1</span>.</p>
+			<p>Additionally, the <span class="color">Sky Mantle</span>'s description says it defends against <span class="color">Elec</span> <i>and</i> <span class="color">Holy</span> attacks, despite only seeming to defend against <span class="color">Element 1</span>.</p>
+			<p>From this, we can conclude that <span class="color">Elements</span> are listed in an internal numerical index:</p>
+			<ol>
+				<li><span class="color">Mouse</span> is defined as <span class="color">Element 7</span></li>
+				<li><span class="color">Elec</span> <i>and</i> <span class="color">Holy</span> are defined as <span class="color">Element 1</span>, as part of some sort of <span class="color">Elemental Pair</span></li>
+				<li><span class="color">Tasque</span>, <span class="color">Tasque Manager</span>, and <span class="color">Spamton NEO</span>, as well as the <span class="color">Frayed Bowtie</span>, <span class="color">Mannequin</span>, and <span class="color">Dealmaker</span>, are defined as <span class="color">Element 6</span></li>
+				<li>As the only known <span class="color">Element</span> that any of these have in common is <span class="color">Cat</span>, we can conclude that <span class="color">Cat</span> is defined as <span class="color">Element 6</span></li>
+			</ol>
+			<p>Okay!</p>
+			<p>That makes sense.</p>
+			<br>
+			<p><i>Wait, no it doesn't!</i></p>
+			<br>
+			<p>What are <span class="color">Elements</span> 2-5?</p>
+			<p>Why does <span class="color">Spamton NEO</span> have the <span class="color">Cat</span> <span class="color">Element</span>!?</p>
+			<p>What are <span class="color">Elemental Pairs</span>!?!?</p>
+			<p>Where in the code is this supposed '<span class="color">Elemental Index</span>', anyway?</p>
+			<p><b>To answer those questions, let's take a look at gml_GlobalScript_scr_element_damage_reduction:</b></p>
+			<img src="assets/images/gml_GlobalScript_scr_element_damage_reduction.png" width="785" height="425" title="scr_element_damage_reduction = function(argument0, argument1) //gml_Script_scr_element_damage_reduction
+{
+    var ___element = argument0
+    var ___char = argument1
+    var ___reduction = 1
+    if (___element != 0)
+    {
+        for (var ___itemi = 0; ___itemi < 2; ___itemi++)
+        {
+            if (global.itemelement[___char][(___itemi + 1)] != 0)
+            {
+                if (global.itemelement[___char][(___itemi + 1)] == ___element)
+                    ___reduction -= global.itemelementamount[___char][(___itemi + 1)]
+                if (global.itemelement[___char][(___itemi + 1)] == 9)
+                {
+                    if (___element == 2 || ___element == 8)
+                        ___reduction -= global.itemelementamount[___char][(___itemi + 1)]
+                }
+                if (global.itemelement[___char][(___itemi + 1)] == 10)
+                    ___reduction -= global.itemelementamount[___char][(___itemi + 1)]
+            }
+        }
+    }
+    if (___reduction < 0.25)
+        ___reduction = 0.25
+    return ___reduction;
+}
+
+">
+			<p>This script is called in the general damage calculation script, and is the closest we have to an <span class="color">Elemental Index</span>.</p>
+			<p>When called, this script gives returns a damage multiplier value ('___reduction').</p>
+			<p>All of the damage you take is multiplied by this number, which is 1 by default.</p>
+			<p>If you have an item that has an <span class="color">Elemental Resistance</span>, the game will reduce the oncoming damage according to the formula seen above.</p>
+			<h4>It's kinda hard to tell what's going on there, so I'll summarize:</h4>
+			<ul>
+				<li>The amount an equipped armor item with <span class="color">Elemental Resistance</span> reduces an attack's damage by is equal to ('armorelementamounttemp' × 100)%</li><br>
+				<li><span class="color">Elemental Resistances</span> stack additively, with a maximum damage reduction of 75%</li><br>
+				<li>Attacks of <span class="color">Elements</span> 1, 3, 4, 5, 6, or 7 will have their damage reduced if you're wearing an item of that same <span class="color">Element</span>, with no special conditions</li><br>
+				<li>When you're damaged by an <span class="color">Element 0</span> attack, the <span class="color">Elemental Resistance</span> equation is skipped entirely, meaning it can't be resisted no matter what armor you have <br> Like <span class="color">Element 6</span>, this <span class="color">Element</span> <i>is</i> used in-game, as all overworld bullets are set to use <span class="color">Element 0</span>.</li><br>
+				<li><span class="color">Element</span> 2 and 8 attacks are resisted by not only their own <span class="color">Elements</span>, but <i>also</i> <span class="color">Element 9</span> <br> (to be clear, if you wear an item of <span class="color">Element 2</span>, you'll resist <span class="color">Element 2</span>; if you you wear an item of <span class="color">Element 8</span>, you'll resist <span class="color">Element 8</span>; if you wear an item of <span class="color">Element 9</span>, you'll resist <span class="color">Elements</span> 2, 8, <i>and</i> 9)</li><br>
+				<li>Finally, armor that resists against <span class="color">Element 10</span> will <i>also</i> defend against attacks of <i>any <span class="color">Element</span></i>, except for <span class="color">Element 0</span></li><br>
+			</ul>
+			<h4><i>BUT [1OO Kilograms], THERE'S MORE !</i></h4>
+			<p><i>Now</i> we can get to the <i>Deltarune</i> 6th Anniversary <span class="color">Spamton</span> Sweepstakes lore.</p>
+			<p>Near the end of the sweepstakes, '<span class="color">Spamton</span>' gave answers to select questions forwarded to the Fangamer Twitter account, and gave numerous insights into himself and related lore, including <i>Deltarune</i>'s <span class="color">Element System</span>:</p>
+			<p><a href="" target="blank"><img src="assets/images/elements/spamton_qna.png" width="730" height="455" title="A: YOU WANT TO KNOW ABOUT [Cats]!? WHAT AM I, YOUR [favorite search engine]!? FINE, I'LL GIVE YOU SOME [Free tool tips and funny animations!] HAVEN'T YOU HEARD OF [elemental pairs]!? WITH AN [Valuable item], YOU CAN DEFEND AGAINST [Puppet/Cat] OR [Thunder/Light], [Dark/Star]... JUST WATCH OUT FOR THE [$#&*] THAT USE [Death/Scythe]!!! NEVER AGAIN!!!!"></a></p>
+			<h4>From this, we gained three pieces of crucial information:</h4>
+			<ol>
+				<li>The <span class="color">Dark</span>, <span class="color">Star</span>, <span class="color">Death</span>, <span class="color">Scythe</span>, and <span class="color">Puppet</span> <span class="color">Elements</span> were confirmed to exist</li>
+				<li><span class="color">Holy</span> and <span class="color">Elec</span> are not unique in being paired together: <br> <span class="color">Dark</span> is paired with <span class="color">Star</span>, and <span class="color">Death</span> is paired with <span class="color">Scythe</span></li>
+				<li>The <span class="color">Death</span>/<span class="color">Scythe</span> pair is apparently special to <span class="color">Spamton</span> somehow, with him remarking: <br> 'YOU CAN DEFEND AGAINST [Puppet/Cat] OR [Thunder/Light], [Dark/Star]... JUST WATCH OUT FOR THE [$#&*] THAT USE [Death/Scythe]!!!'</li>
+			</ol>
+			<p>Phew, OK. That should be it for now.</p>
+			<p>Now, we have two sets of information.</p>
+			<p>We have a list of known <span class="color">Elements</span>, and some useful information regarding the <span class="color">Element System</span>.</p>
+			<h3>Here's all of what we've covered thus far:</h3>
+			<p>There are (at least) 23 <span class="color">Elements</span>:</p>
+			<ol>
+				<li><span class="color">Fire</span></li>
+				<li><span class="color">Ice</span></li>
+				<li><span class="color">Elec</span></li>
+				<li><span class="color">Holy</span></li>
+				<li><span class="color">Dark</span></li>
+				<li><span class="color">Star</span></li>
+				<li><span class="color">Death</span></li>
+				<li><span class="color">Scythe</span></li>
+				<li><span class="color">Jewel</span></li>
+				<li><span class="color">Heart</span></li>
+				<li><span class="color">Order</span></li>
+				<li><span class="color">Chaos</span></li>
+				<li><span class="color">Fight</span></li>
+				<li><span class="color">Puzzle</span></li>
+				<li><span class="color">Cat</span></li>
+				<li><span class="color">Puppet</span></li>
+				<li><span class="color">Mouse</span></li>
+				<li><span class="color">Rabbit</span></li>
+				<li><span class="color">Virus</span></li>
+				<li><span class="color">Dust</span></li>
+				<li><span class="color">Color</span></li>
+				<li><span class="color">Rude</span></li>
+				<li><span class="color">Blade</span></li>
+			</ol>
+			<p>These <span class="color">Elements</span> correspond to an internal index of 11 <span class="color">Elements</span>:
+			<ul>
+				<li><span class="color">Element 0</span>, which can't be resisted against and is used by overworld bullets</li>
+				<li><span class="color">Element 1</span>, which is known be to be the <span class="color">Holy</span> <i>and</i> <span class="color">Elec</span> <span class="color">Elements</span></li>
+				<li><span class="color">Element 2</span>, which is also resisted by <span class="color">Element 9</span></li>
+				<li><span class="color">Elements</span> 3, 4, and 5, which have no known special properties</li>
+				<li><span class="color">Element 6</span>, which is known be to be the <span class="color">Cat</span> and <span class="color">Puppet</span> <span class="color">Elements</span></li>
+				<li><span class="color">Element 7</span>, which is known be to be the <span class="color">Mouse</span> <span class="color">Element</li>
+				<li><span class="color">Element 8</span>, which is also resisted by <span class="color">Element 9</span></li>
+				<li><span class="color">Element 9</span>, which also resists against <span class="color">Elements</span> 2 and 8</li>
+				<li><span class="color">Element 10</span>, which resists against all <span class="color">Elements</span>, including itself, and excluding <span class="color">Element 0</span></li>
+			</ul>
+			<p>Additionally, as there are more than double as many <span class="color">Elements</span> as there are <span class="color">Element</span> IDs (that we know of), we can conlude that <span class="color">El</span><span class="color">em</span><span class="color">ents</span> are often, if not always paired with another related <span class="color">Element</span>. This is corroborated by how <span class="color">Spamton</span> speaks specifically of '[elemental pairs]' and not just '<span class="color">El</span><span class="color">em</span><span class="color">ents</span>'.</p>
+			<p><span class="color">Elec</span>/<span class="color">Holy</span> is a known pair, as are <span class="color">Cat</span>/<span class="color">Puppet</span> and <span class="color">Dark</span>/<span class="color">Star</span>.</p>
+			<p><span class="color">Death</span>/<span class="color">Scythe</span> is a known pair that <span class="color">Spamton</span> finds especially dangerous.</p>
+			<h3><a href="#header">Back to Top</a></h3>
+		</section>
+		
+		<section id="Element_Index"><h2><span class="color">Element Index</span></h2>
+			<p><i>From here on, this write-up features more of my own conclusions than inarguable or otherwise highly likely facts. Tread with caution!</i></p>
+			<p>First, let's define each <span class="color">Element</span> and what they seem to represent.</p>
+			<p>From there, we'll be able to create likely pairings, and perhaps even speculate on <span class="color">Elements</span> that are yet to be introduced.</p>
+			<!--'I may have gone a little too far in a few places.'-->
+			<p>
+				<a href="#eBoxFire"><span class="color">Fire</span></a> - 
+				<a href="#eBoxIce"><span class="color">Ice</span></a> - 
+				<a href="#eBoxFireIce"><span class="color">Fire</span> and <span class="color">Ice</span></a> - 
+				<a href="#eBoxElec"><span class="color">Elec</span></a> - 
+				<a href="#eBoxHoly"><span class="color">Holy</span></a> - 
+				<a href="#eBoxElecHoly"><span class="color">Elec/Holy</span></a> - 
+				<a href="#eBoxDark"><span class="color">Dark</span></a> - 
+				<a href="#eBoxStar"><span class="color">Star</span></a> - 
+				<a href="#eBoxDarkStar"><span class="color">Dark/Star</span></a> - 
+				<a href="#eBoxDeath"><span class="color">Death</span></a> - 
+				<a href="#eBoxScythe"><span class="color">Scythe</span></a> - 
+				<a href="#eBoxDeathScythe"><span class="color">Death/Scythe</span></a> - <a href="#eBoxJewel"><span class="color">Jewel</span></a> - 
+				<a href="#eBoxHeart"><span class="color">Heart</span></a> - 
+				<a href="#eBoxJewelHeart"><span class="color">Jewel/Heart</span></a> - <a href="#eBoxOrder"><span class="color">Order</span></a> - 
+				<a href="#eBoxChaos"><span class="color">Chaos</span></a> - 
+				<a href="#eBoxOrderChaos"><span class="color">Order/Chaos</span></a> - <a href="#eBoxFight"><span class="color">Fight</span></a> - 
+				<a href="#eBoxPuzzle"><span class="color">Puzzle</span></a> - 
+				<a href="#eBoxFightPuzzle"><span class="color">Fight/Puzzle</span></a> - <a href="#eBoxCat"><span class="color">Cat</span></a> - 
+				<a href="#eBoxPuppet"><span class="color">Puppet</span></a> - 
+				<a href="#eBoxCatPuppet"><span class="color">Cat/Puppet</span></a> - 
+				<a href="#eBoxMouse"><span class="color">Mouse</span></a> - 
+				<a href="#eBoxRabbit"><span class="color">Rabbit</span></a> - 
+				<a href="#eBoxVirus"><span class="color">Virus</span></a> - 
+				<a href="#eBoxDust"><span class="color">Dust</span></a> - 
+				<a href="#eBoxMouseRabbit"><span class="color">1/2</span></a> - 
+				<a href="#eBoxMouseVirus"><span class="color">1/3</span></a> - 
+				<a href="#eBoxMouseDust"><span class="color">1/4</span></a> - 
+				<a href="#eBoxRabbitVirus"><span class="color">2/3</span></a> - 
+				<a href="#eBoxRabbitDust"><span class="color">2/4</span></a> - 
+				<a href="#eBoxVirusDust"><span class="color">3/4</span></a> - 
+				<a href="#eBoxMouseRabbitVirus"><span class="color">1/2/3</span></a> - 
+				<a href="#eBoxMouseRabbitDust"><span class="color">1/2/4</span></a> - 
+				<a href="#eBoxMouseVirusDust"><span class="color">1/3/4</span></a> - 
+				<a href="#eBoxRabbitVirusDust"><span class="color">2/3/4</span></a> - 
+				<a href="#eBoxMouseRabbitVirusDust"><span class="color">1/2/3/4</span></a> - 
+				<a href="#eBoxColor"><span class="color">Color</span></a> - 
+				<a href="#eBoxRude"><span class="color">Rude</span></a> - 
+				<a href="#eBoxBlade"><span class="color">Blade</span></a> - 
+				<a href="#eBoxRudeBlade"><span class="color">RudeBlade</span></a>
+			</p>
+			
+			<span class="dropDownBlockElement" id="eBoxPLACEHOLDER">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/PLACEHOLDER.png"> <span class="color">PLACEHOLDER</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/PLACEHOLDER.png" width="200px">
+					<p><b class="color">PLACEHOLDER</b></p>
+					<p>PLACEHOLDER</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxFireIce">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/fire.png"> <span class="color">Fire</span> <img src="assets/images/elements/ice.png" id="annoyingsize"> <span class="color">Ice</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/fire.png" width="200px">
+					<img src="assets/images/elements/ice.png" width="212px">
+					<p><b class="color">Fire</b> <b>and</b> <b class="color">Ice</span></b></p>
+					<p><span class="color">Fire</span> and <span class="color">Ice</span> are extremely archetypal <span class="color">Elements</span>, often considered the opposites of each other. In JRPGs such as Final Fantasy, Chrono Trigger, and even Pokemon, <span class="color">Fire</span>, <span class="color">Ice</span>, and <span class="color">Electric</span> are considered to be a trio.</p>
+					<p>Of course, in Deltarune, <span class="color">Elec</span> is already paired with <span class="color">Holy</span>, and so <span class="color">Fire</span> and <span class="color">Ice</span> are more likely to be paired or otherwise related to each other.</p>
+					<p><span class="color">Fire</span> and <span class="color">Ice</span> often represent opposing ideas: <span class="color">Fire</span> is chaotic, destructive, loud, and energetic, while <span class="color">Ice</span> is structured, solid, contemplative, and lethargic; provided they aren't paired with each other, <span class="color">Fire</span> and <span class="color">Ice</span> are likely to be paired with another couple of unpaired <span class="color">Elements</span> that are similarly opposed or related, such as:</p>
+					<ul>
+						<li><span class="color">Chaos</span> and <span class="color">Order</span></li>
+						<li><span class="color">Fight</span> and <span class="color">Puzzle</span></li>
+						<li><span class="color">Heart</span> and <span class="color">Jewel</span></li>
+						<li><span class="color">Rude</span> and <span class="color">Blade</span></li>
+						(<span class="color">Chaos</span>, <span class="color">Fight</span>, <span class="color">Heart</span>, and <span class="color">Rude</span> are passionate and loud <span class="color">Elements</span>, similar to <span class="color">Fire</span>; <span class="color">Order</span>, <span class="color">Puzzle</span>, <span class="color">Jewel</span>, and <span class="color">Blade</span> are structured, orderly, and contemplative <span class="color">Elements</span>, similar to <span class="color">Ice</span>)
+					</ul>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxElec">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/elec.png"> <span class="color">Elec</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/elec.png" width="200px">
+					<p><b class="color">Elec</b></p>
+					<p><span class="color">Elec</span> is yet another achetypal <span class="color">Element</span>, usually grouped with <span class="color">Fire</span> and <span class="color">Ice</span> in a trio. It's already paired with <span class="color">Holy</span>, but perhaps we can still find some useful information by observing its relation to the <span class="color">Holy</span> <span class="color">Element</span>.</p>
+					<p>Its pairing with <span class="color">Holy</span> seems rather arbitrary, but going back to JRPG archetypes, lightning and thunder magic is often associated with the sky and the heavens, particularly in <i>Chrono Trigger</i> (a major inspiration for <i>Deltarune</i>), where lightning and heavenly magic were combined into 'Light' ('<span id="kanji">天</span>', roughly 'Heaven' or 'Sky') magic. </p>
+					<p>Even in more western cultures, thunder and lightning are commonly associated with godly power, such as Thor or Zues, who are the gods of thunder in their respective religions. Thor in particular is a hallowing god, whereas Zues is also the god of the sky.</p>
+					<p>...Okay, perhaps that wasn't the most important thought exercise in the world, but at least you may have learned something new!</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxHoly">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/holy.png"> <span class="color">Holy</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/holy.png" width="200px">
+					<p><b class="color">Holy</b></p>
+					<p>Straying into less common <span class="color">Elements</span>, we have <span class="color">Holy</span>, which presumeably pertains to the sky and other heavenly concepts.</p>
+					<p>The concept of holiness is a prevalent theme in <i>Deltarune</i>, with <span class="color">King</span> describing the <span class="color">Knight</span> as the 'Holy Knight, who pulls the fountains from the Earth.'. In fact, the entire <span class="color">Dark World</span> is often decribed as being <span class="color">Holy</span>, from the fountains' song <i>THE HOLY</i>, to the 'ANGEL'S HEAVEN' that <span class="color">Ralsei</span> mentions.</p>
+					<p>With that, <span class="color">Holy</span> definitely seems to be a counterpart to <span class="color">Dark</span>, especially given that <i>Chrono Trigger</i>'s combination of lightning and heavenly magic is translated as 'Light' magic.</p>
+					<p>Given that both of these <span class="color">Elements</span> already have pairs, perhaps these pairs will be related to each other somehow? The unused <span class="color">Sky Mantle</span> item protects against <span class="color">Holy</span> and <span class="color">Elec</span> attacks, so perhaps the <span class="color">Shadow Mantle</span> <span class="color">Seam</span> mentions can be upgraded to or from it, and protects against <span class="color">Dark</span> and <span class="color">Star</span> attacks.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxDark">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/dark.png"> <span class="color">Dark</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/dark.png" width="200px">
+					<p><b class="color">Dark</b></p>
+					<p>Speaking of, <span class="color">Dark</span> is an <span class="color">Element</span> we know to exist via <span class="color">Spamton</span>'s QnA answer on <span class="color">Elements</span>.</p>
+					<p>It likely refers to, well, darkness.</p>
+					<p>Unanimously, in all cultures, the <span class="color">Dark</span> is commonly understood to be dangerous and undesirable, or at the very least inconvenient.</p>
+					<p>Considering this alongside Deltarune's fixation on the concept of darkness, <span class="color">Dark</span> seems like it may be a more powerful <span class="color">Element</span>, almost certainly wielded by the <span class="color">Knight</span> and the main bosses of each chapter.</p>
+					<p><span class="color">Dark</span> is likely antithetical or otherwise related to <span class="color">Holy</span> as discussed previously, and is confirmed to be paired with the <span class="color">Star</span> <span class="color">Element</span>. </p>
+					<p>It also seems like it would fit well alongside <span class="color">Death</span>, <span class="color">Chaos</span>, or even <span class="color">Puppet</span> (which would reflect the lack of freedom experienced by dark worlds and their occupants), but as <span class="color">Dark</span> is already paired with <span class="color">Star</span>, these correlations are likely little more than footnotes, especially given that the aforementioned connection with <span class="color">Holy</span> is far more likely to be expanded upon.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxStar">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/star.png"> <span class="color">Star</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/star.png" width="200px">
+					<p><b class="color">Star</b></p>
+					<p><span class="color">Star</span> is one of the more confounding <span class="color">Elements</span>:</p>
+					<p>It's seemingly unrelated to its partner <span class="color">Dark</span>, it's far removed from what one would normally classify as an '<span class="color">Element</span>', and it's hard to imagine how such an <span class="color">Element</span> would actually appear or be used in-game, barring truly apocolyptic circumstances.</p>
+					<p>All that can really be said about it just based off of its name is that it's likely a more powerful <span class="color">Element</span>, which lines up with its partner <span class="color">Dark</span>.</p>
+					<p>Its relation to <span class="color">Dark</span> may be related to the fact that <span class="color">Star</span>s are the universe's only major light sources; they produce light and are surrounded by darkness.</p>
+					<p>In <i>Undertale</i> however, <span class="color">Star</span>s are of particular importance. <br> A room near the Snowdin end of Waterfall has a plaque on the wall reading 'WISHING ROOM'. <br> The echo flowers in the room relay:</p>
+					<p>"* A long time ago, monsters would whisper their wishes to the stars in the sky." <br> "* If you hoped with all your heart, your wish would come true." <br> "* Now, all we have are these sparkling stones on the ceiling..."</p>
+					<p>"* Thousands of people wishing together can't be wrong!" <br> "* The king will prove that."</p>
+					<p>Reinforcing the themes prevalent in Waterfall, <span class="color">Star</span>s represent <span class="color">Hope</span> to the monsters of the underground. They represent a future in which they can live on the surface in peace.</p>
+					<p>Now, consider this.
+					<p>If we think of <span class="color">Star</span> as representing <span class="color">Hope</span>, then what does <span class="color">Dark</span> represent?
+					<p><span class="color">Dreams</span>.
+					<p>From <span class="color">Queen</span>'s dialogue to the dialogue of the <span class="color">Rudinn</span> in <span class="color">Castle Town</span>, <i>Deltarune</i> repeatedly compares the <span class="color">Dark World</span> to <span class="color">Dreams</span>.</p>
+					<p>Indeed, I firmly believe that <span class="color">Dark</span>/<span class="color">Star</span> is analagous to <i>Undertale</i>'s themes of <span class="color">Hopes</span> and <span class="color">Dreams</span>. <br> Of course, it doesn't take a genius to figure out that I also think that the <span class="color">Dark</span>/<span class="color">Star</span> pair belongs to <span class="color">Element 10</span>, but we'll discuss that later.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxDeathScythe">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/death.png"> <span class="color">Death</span> <img src="assets/images/elements/scythe.png"> <span class="color">Scythe</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/death.png" width="200px">
+					<img src="assets/images/elements/scythe.png" width="200px">
+					<p><b class="color">Death</b><b>/</b><b class="color">Scythe</b></p>
+					<p><span class="color">Death</span> and <span class="color">Scythe</span> are an <span class="color">Elemental Pair</span> introduced by the <i>Deltarune</i> 6th Anniversary <span class="color">Spamton</span> Sweepstakes.</p>
+					<p>I honestly don't have much to say regarding either of these on their own, as they seem like a reasonable pair, with little connection to any other <span class="color">Elements</span>.</p>
+					<p>One thing to mention is that <span class="color">Scythe</span> is seemingly meant to be <span class="color">Jevil</span>'s <span class="color">Element</span>, despite the fact that <span class="color">Jevil</span>'s <span class="color">Elements</span> are supposedly <span class="color">Chaos</span> and, um, <span class="color">Chaos</span>.</p>
+					<p>We can assume this via the fact that:
+						<ol>
+							<li><span class="color">Jevil</span> is the only one shown to wield a <span class="color">Scythe</span> thus far</li>
+							<!--Susie *can* equip the Devilsknife, but it's described as a 'scythe-axe', *not* just a scythe. Yes, I actually care about things like this.-->
+							<li>In mentioning the pair, <span class="color">Spamton</span> seems especially wary of the pair, which may tie in to his dislike of <span class="color">Jevil</span></li>
+						</ol>
+					</p>
+					<p>Notably, <span class="color">Spamton</span>'s warning may hint at a special property of the pair:</p>
+					<p>"WITH AN [Valuable item], YOU CAN DEFEND AGAINST [Puppet/Cat] OR [Thunder/Light], [Dark/Star]... JUST WATCH OUT FOR THE [$#&*] THAT USE [Death/Scythe]!!! NEVER AGAIN!!!!"</p>
+					<p><span class="color">Death</span>/<span class="color">Scythe</span> seems to be juxtaposed with the concept of <span class="color">Elemental Resistance</span>, which may imply that <span class="color">Death</span>/<span class="color">Scythe</span> is the identity of <span class="color">Element 0</span> (which cannot be resisted against, if you recall).</p>
+					<p>Thematically, this makes sense, as <span class="color">Element 0</span> would have to be a relatively dangerous <span class="color">Element</span> to bypass <span class="color">Elemental Resistance</span> like that.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxJewel">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/jewel.png"> <span class="color">Jewel</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/jewel.png" width="200px">
+					<p><b class="color">Jewel</b></p>
+					<p><span class="color">Jewel</span>, the signature <span class="color">Element</span> of <span class="color">Rudinn</span> and <span class="color">Rudinn Ranger</span>, seems to be a counterpart to <span class="color">Heart</span> (the signature <span class="color">Element</span> of <span class="color">Hathy</span> and <span class="color">Head Hathy</span>).</p>
+					<p>Aside from fitting in with <span class="color">Heart</span> via a card motif, <span class="color">Jewel</span> may also be related to <span class="color">Ice</span> (a crystalline structure similar to <span class="color">Jewels</span>) or <span class="color">Order</span> (as <span class="color">Jewels</span> and crystals are defined by their ordered molecular structure).</p>
+					<p><span class="color">Color</span> (an <span class="color">Element</span> I find difficult to pair with any other <span class="color">Elements</span>) may also be related <span class="color">Jewel</span>, as <span class="color">Jewels</span> are often prized specifically for their resplendance and <span class="color">Color</span>.</p>
+					<p>With all of that said, I still find it likely that:
+						<ol>
+							<li><span class="color">Heart</span> and <span class="color">Jewel</span> are paired together...</li>
+							<li>...in the event they're even present in the actual <span class="color">Element System</span> at all</li>
+						</ol>
+					</p>
+					<p>Indeed, there are quite a few elements (particularly of the following few) that are of questionable relevance.</p>
+					<p><span class="color">Star</span> may be all but confirmed to appear as an actual <span class="color">Element</span> because of <span class="color">Spamton</span>'s specific mention of <span class="color">Resistance</span> against it, but in what situation would '<span class="color">Rabbit</span>' or '<span class="color">Dust</span>' or '<span class="color">Jewel</span>' or '<span class="color">Heart</span>' ever be relevant?</p>
+					<p>After all, given Toby Fox's track record regarding in-game statistics (see: Glyde's statistics being 'ATK: HIGH DEF: HIGH'), it's entirely possible these '<span class="color">Elements</span>', though hypothetically existant in-universe, are irrelevant to actual gameplay.</p>
+					<p><span class="color">Jewel</span>, the others I mentioned, and even <span class="color">Elements</span> like <span class="color">Fight</span> and <span class="color">Puzzle</span> may be simple flavor text, and nothing more.</p>
+					<p><span class="color">Jewel</span> may be related to <span class="color">Heart</span>, <span class="color">Ice</span>, or <span class="color">Order</span>.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxHeart">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/heart.png"> <span class="color">Heart</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/heart.png" width="200px">
+					<p><b class="color">Heart</b></p>
+					<p>Of the two card-originated <span class="color">Elements</span>, <span class="color">Heart</span> seems to be a little more relevant.</p>
+					<p>After all, SOULs are represented by <span class="color">Hearts</span>, and <span class="color">Hearts</span> are often associated with things like <span class="color">LOVE</span> and the like.</p>
+					<p>With that said, it is important to note that, like <span class="color">Jewel</span>, it's entirely possible that <span class="color">Heart</span> has no actual relevance aside from flavor text.</p>
+					<p>As mentioned earlier, <span class="color">Heart</span> may be connected to the <span class="color">Fire</span> <span class="color">Element</span> via the concept of '<i>burn</i>ing passion'</p>
+					<p>Alternatively, <span class="color">Heart</span> may be associated with <span class="color">Ice</span> via the idea of being 'cold' to others (as seen by the behaviors of <span class="color">Head Hathy</span> or <span class="color">Noelle</span> during the <span class="color">Snowgrave</span> route).</p>
+					<p><span class="color">Puppet</span> could also be related to <span class="color">Heart</span>, given that the connection between <span class="color">Kris</span> and <span class="color">The Player</span> is via <span class="color">Kris</span>'s <span class="color">Heart</span>-shaped SOUL; <span class="color">Spamton</span> even mentions <span class="color">Kris</span> being a 'HEART ON A CHAIN'.</p>
+					<p>If we want to go super hard on the SOUL theming, we could even relate it to <span class="color">Color</span>, given how the <span class="color">Color</span> of SOULs is pretty important to <i>Undertale</i>, and likely to <i>Deltarune</i> as well.</p>
+					<p><span class="color">Heart</span> may be related to <span class="color">Jewel</span>, <span class="color">Fire</span>, <span class="color">Ice</span>, <span class="color">Puppet</span>, or <span class="color">Color</span>.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxOrderChaos">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/order.png"> <span class="color">Order</span> <img src="assets/images/elements/chaos.png"> <span class="color">Chaos</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/order.png" width="200px">
+					<img src="assets/images/elements/chaos.png" width="200px">
+					<p><b class="color">Order</b> <b>and</b> <b class="color">Chaos</b></p>
+					<p><span class="color">Order</span> and <span class="color">Chaos</span> are obviously related; given certain in-game interactions (namely <span class="color">Tasque Manager</span>'s reaction to <span class="color">Jevil</span>'s items) as well as simple cultural context, they serve as opposites and/or counterparts to eachother.</p>
+					<p>The divide of <span class="color">Order</span>/<span class="color">Chaos</span> is often associated with the divides of <span class="color">calmness</span>/<span class="color">energy</span>, <span class="color">strictness</span>/<span class="color">laissez faire attitudes</span>, <span class="color">organization</span>/<span class="color">disorganization</span>, <span class="color">predictability</span>/<span class="color">unpredictability</span>, and <span class="color">stability</span>/<span class="color">destruction</span>.</p>
+					<p>With that, <span class="color">Chaos</span> may be related to <span class="color">Fire</span> or <span class="color">Fight</span>, whereas <span class="color">Order</span> may be related to <span class="color">Ice</span>, <span class="color">Puzzle</span>, or <span class="color">Jewel</span>.</p>
+					<p>Of course, <span class="color">Jewel</span> is the outlier here; <span class="color">Jewel</span>'s assumed counterpart, <span class="color">Heart</span>, doesn't seem to have much to do with <span class="color">Chaos</span> at first glance, although one could argue something regarding the unpredictability of human emotions.</p>
+					<p>Of course, <span class="color">Order</span> and <span class="color">Chaos</span> may be paired with any pair of the <span class="color">Elements</span> above, with eachother, or with entirely unrelated <span class="color">Elements</span>. <br> In my opinion though, <span class="color">Fire</span>/<span class="color">Chaos</span> and <span class="color">Ice</span>/<span class="color">Order</span> seem the most likely, especially considering the ideas floated by the characters of <span class="color">Susie</span> and <span class="color">Ralsei</span>.</p>
+					<p>Speaking of, <span class="color">Susie</span> and <span class="color">Ralsei</span> feel exceptionally relevant to the <span class="color">Elements System</span>, given the variety of characteristics attributed to them:</p>
+					<p><span class="color">Susie</span> is loud, disorderly, and chaotic, can use the <span class="color">Fire</span>-adjacent <span class="color">Half-warm</span> ACT against <span class="color">Swatchlings</span>, and is referred to as a '<span class="color">Dark Knight</span>' who attacks using '<span class="color">Dark Energy</span>'.</p>
+					<p><span class="color">Ralsei</span> is calm, orderly, and polite, can use the <span class="color">Ice</span>-adjacent <span class="color">Half-cold</span> ACT against <span class="color">Swatchlings</span>, and is referred to as the '<span class="color">Prince of Darkness</span>'.</p>
+					<p><span class="color">Susie</span> represents the 'dark' half of the tao: <span class="color">Chaos</span>, <span class="color">Fire</span>, and <span class="color">Fight</span> suit her well.</p>
+					<p><span class="color">Ralsei</span> represents the 'light' half of the tao: <span class="color">Order</span>, <span class="color">ice</span>, and <span class="color">Puzzle</span> fit him quite nicely.</p>
+					<p><span class="color">Rude</span> seems to fit in very well with <span class="color">Chaos</span>. In fact, <span class="color">Jevil</span> has closer connections to <span class="color">Susie</span> than the other party members, as both are hyped for the battle, ready to go 'SHARK TO SHARK!'.</p>
+					<p>Like <span class="color">Jewel</span> from earlier however, <span class="color">Rude</span> seems an odd choice: <br> Its closest comparison, <span class="color">Blade</span> (presumably the <span class="color">Element</span> of <span class="color">Kris</span> and their attacks), doesn't seem to have much relation to <span class="color">Order</span>.</p>
+					<p>Hypothetically, <span class="color">Blade</span> can be stretched to fit the description of <span class="color">Order</span>, as it evokes images of smooth, well-defined <span class="color">Blades</span> used by orderly <span class="color">Knights</span> and the like.</p>
+					<p>Still, it's a vague connection, and arguably pokes a bit of a hole in this relation.</p>
+					<p><b>To Recap:</b></p>
+					<p><span class="color">Chaos</span> relates to <span class="color">Fire</span>, <span class="color">Fight</span>, <span class="color">Rude</span>, and arguably <span class="color">Heart</span>.</p>
+					<p><span class="color">Order</span> relates to <span class="color">Ice</span>, <span class="color">Puzzle</span>, <span class="color">Jewel</span>, and arguably <span class="color">Blade</span>.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxFightPuzzle">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/fight.png"> <span class="color">Fight</span> <img src="assets/images/elements/puzzle.png"> <span class="color">Puzzle</span> <br> (Click to expand)</button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/fight.png" width="200px">
+					<img src="assets/images/elements/puzzle.png" width="200px">
+					<p><b class="color">Fight</b> <b>and</b> <b class="color">Puzzle</b></p>
+					<p>Like <span class="color">Order</span> and <span class="color">Chaos</span>, <span class="color">Fight</span> and <span class="color">Puzzle</span> seem highly related to each other.</p>
+					<p>In <i>Undertale</i>, <span class="color">Fighting</span> and <span class="color">Puzzling</span> were opposed to each other via the dichotemy of murder and mercy, and <span class="color">Susie</span> and <span class="color">Ralsei</span> seem to uphold this dichotemy in <i>Deltarune</i>.</p>
+					<p>Further, <span class="color">Fight</span> and <span class="color">Puzzle</span> tie in to the dichotemy of <span class="color">Order</span> and <span class="color">Chaos</span> present in <i>Deltarune</i>'s <span class="color">Element System</span>, as discussed in the sub-section on that pair.</p>
+					<p>Regardless of this dichotemy, <span class="color">Fight</span> may relate to energetic, active, and offensive <span class="color">Elements</span> such as <span class="color">Fire</span>, <span class="color">Rude</span>, <span class="color">Blade</span>, <span class="color">Scythe</span>, and of course <span class="color">Chaos</span>.</p>
+					<p>Opposingly, <span class="color">Puzzle</span> may relate to contemplative or otherwise calmer <span class="color">Elements</span> such as <span class="color">Order</span> or <span class="color">Ice</span> (a connection notable given <span class="color">Noelle</span>'s habit of freezing puzzles to skip them).</p>
+					<p>Breaking further away from the dichotemy of <span class="color">Order</span> and <span class="color">Chaos</span>, <span class="color">Puzzle</span> may relate to <span class="color">Jewel</span>, <span class="color">Heart</span>, and/or <span class="color">Color</span>, relating more to literal physical <span class="color">Puzzles</span> as opposed to vague ideas. <br> Of course, in <i>Deltarune</i>'s universe, such puzzle would also inclued <span class="color">Mice</span></p>
+					<p><b>To Recap:</b></p>
+					<p><span class="color">Fight</span> may relate to <span class="color">Fire</span>, <span class="color">Chaos</span>, <span class="color">Rude</span>, <span class="color">Blade</span>, or <span class="color">Scythe</span>.</p>
+					<p><span class="color">Puzzle</span> may relate to <span class="color">Ice</span>, <span class="color">Order</span>, <span class="color">Jewel</span>, <span class="color">Heart</span>, <span class="color">Color</span>, or <span class="color">Mouse</span>.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxCatPuppet">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/cat.png"> <span class="color">Cat</span> <img src="assets/images/elements/puppet.png"> <span class="color">Puppet</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/cat.png" width="200px">
+					<img src="assets/images/elements/puppet.png" width="200px">
+					<p><b class="color">Cat</b> <b>and</b> <b class="color">Puppet</b></p>
+					<p>These two are the <span class="color">Elements</span> we know the most about, and it's by far.</p>
+					<p>We know their pairing, their ID, and the lack of special properties the <span class="color">Elements System</span> gives them.</p>
+					<p>Really, all that's left is figure out <i>why</i>.</p>
+					<p><i>Why exactly are <span class="color">Cat</span> and <span class="color">Puppet</span> a pair?</i></p>
+					<p>Well, given the obvious implication behind a <span class="color">Puppet</span> <span class="color">Element</span>, one can assume it has something to do with the concept of freedom.</p>
+					<p>Thinking about this, one notes that <span class="color">Cats</span> are often free to do as they please, whereas <span class="color">Mice</span> (which we already know to be separate from this pair) are subject to the <span class="color">Cats</span>' whims: <br> <span class="color">Mice</span> are the <span class="color">Puppets</span>, and <span class="color">Cats</span> are the <span class="color">Puppet</span> masters.</p>
+					<p>This seems to contradict the basis of such a pairing, but now look towards how <span class="color">Cats</span> are presented in <i>Deltarune</i>, specifically in the Cyber World.</p>
+					<p><span class="color">Tasques</span> are managed by <span class="color">Tasque Manager</span>; they are subject to her training and <span class="color">Orders</span>, whereas the <span class="color">Maice</span> run wild in the alleyways and in <span class="color">Queen</span>'s mansion, effectively free from anyone's control.</p>
+					<p>Now this is a bit more sensible, isn't it?</p>
+					<!--No? Shut up.-->
+					<p>Considering this, what else may we glean from connections such as this?</p>
+					<p>One would expect a future <span class="color">Element</span> to be introduced to mirror <span class="color">Puppet</span>, and for it to be paired with <span class="color">Cat</span>.</p>
+					<p>I, uh, don't quite know what such an <span class="color">Element</span> would be; my only guess would be 'Strings' or the like.</p>
+					<p><span class="color">Mouse</span> tails kinda look like string, and it would work if we take 'Strings' as representing the <span class="color">Puppet</span> master pulling them.</p>
+					<p>Similar to <span class="color">Death</span>/<span class="color">Scythe</span>, there's not much more to say, as there aren't too many free <span class="color">Elements</span> that could relate to either <span class="color">Cat</span> nor <span class="color">Puppet</span>, aside from <span class="color">Mouse</span> and a hypothetical opposite of <span class="color">Puppet</span>.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxMouse">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/mouse.png"> <span class="color">Mouse</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/mouse.png" width="200px">
+					<p><b class="color">Mouse</b></p>
+					<p><span class="color">Mouse</span>, belonging to the <span class="color">Element 7</span> slot, is pretty clearly the opposite of <span class="color">Cat</span> in some way, given the trope of <span class="color">Cats</span> chasing <span class="color">Mice</span>, as well as opposing the ideas presented by <span class="color">Puppet</span>, as discussed on the section on that pair.</p>
+					<p>With that said, we can get a bit of an idea of what exactly the <span class="color">Mouse</span> <span class="color">Element</span> is about by comparing and contrasting it with <span class="color">Cat</span> and <span class="color">Puppet</span>.</p>
+					<p><span class="color">Mouse</span> may relate to ideas of freedom or the like, in addition to being a small (and often dirty) prey animal often used in <span class="color">Puzzles</span>.</p>
+					<p>With that, <span class="color">Mouse</span> may relate to <span class="color">Rabbit</span>, <span class="color">Virus</span> or <span class="color">Dust</span>, or a hypothetical <span class="color">Element</span> opposite to <span class="color">Puppet</span>.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxRabbit">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/rabbit.png"> <span class="color">Rabbit</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/rabbit.png" width="200px">
+					<p><b class="color">Rabbit</b></p>
+					<p>In many cultures, <span class="color">Rabbits</span> relate to ideas of purity, serenity, nature, or the moon.</p>
+					<p>These ideas may suggest-<i><b>okay whatever let me get to the point</b></i>.</p>
+					<p>I don't think <span class="color">Rabbit</span> is of any real significance.</p>
+					<p>It might be paired with another small animal such as <span class="color">Mouse</span> or hypothetical <span class="color">Elements</span> such as 'Frog' or 'Dog' or whatnot.</p>
+					<p>Aside from that, I find it difficult to really relate <span class="color">Rabbit</span> to anything aside from <span class="color">Dust</span>, which is likely only because of <span class="color">Rabbick</span>.</p>
+					<p>Even then, <span class="color">Dust</span> is more likely to be paired with <span class="color">Virus</span>.</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxVirus">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/virus.png"> <span class="color">Virus</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/virus.png" width="200px">
+					<p><b class="color">Virus</b></p>
+					<p>t</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxDust">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/dust.png"> <span class="color">Dust</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/dust.png" width="200px">
+					<p><b class="color">Dust</b></p>
+					<p>t</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxColor">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/color.png"> <span class="color">Color</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/color.png" width="200px">
+					<p><b class="color">Color</b></p>
+					<p>t</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxRude">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/rude.png" id="annoyingAlign"> <span class="color">Rude</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/rude.png" width="200px">
+					<p><b class="color">Rude</b></p>
+					<p>t</p>
+				</span>
+			</span>
+			
+			<span class="dropDownBlockElement" id="eBoxBlade">
+				<button class="dropDownBoxButton"><img src="assets/images/elements/blade.png"> <span class="color">Blade</span> <br> <span>(Click to expand)</span></button>
+				<span class="dropDownBoxContent">
+					<img src="assets/images/elements/blade.png" width="200px">
+					<p><b class="color">Blade</b></p>
+					<p>t</p>
+				</span>
+			</span>
+			
+			<p>Of course, that would coincide with the <span class="color">Element</span> of <span class="color">Order</span>. More tenuously, <span class="color">Ice</span> may be connected to <span class="color">Jewel</span> via the fact that <span class="color">Ice</span> is (usually) a crystalline structue, akin to <span class="color">Jewels</span> or gems, or <span class="color">Puzzle</span>, reflecting <i>Undertale</i> (and <i>Deltarune</i>)'s dichotemy between <span class="color">Fight</span>ing enemies or sparing them via a <span class="color">Puzzle</span>-like series of ACTs.</p>
+			<p>This dichotemy has indeed been related to the dichotemy of <span class="color">Ice</span> and <span class="color">Fire</span> via <span class="color">Ralsei</span>, who prefers to solve <span class="color">Puzzles</span> and spare enemies, and <span class="color">Susie</span>, who prefers to <span class="color">Fight</span> her way through. <br> <span class="color">Susie</span> is often related to <span class="color">Fire</span>, as seen by her coaster (which has flames on it), her apparent dream of becoming '<span class="color">Susiezilla</span>' (who would most likely breathe fire), and her ability to use the <span class="color">Half-warm</span> ACT against <span class="color">Swatchlings</span>, whereas <span class="color">Ralsei</span> can use the the <span class="color">Half-cold</span> ACT.</p>
+			<p>Finally, <span class="color">Ice</span> could be associated with 'coldness' or being distant from others, as seen in <span class="color">Head</span> <span class="color">Hathy</span> and (arguably) <span class="color">Noelle</span>, particularly in the <span class="color">Snowgrave</span> route. In such case, <span class="color">Ice</span> may be <span class="color">Heart</span>'s counterpart, as opposed to <span class="color">Fire</span>.</p>
+			
+			<h3><a href="#header">Back to Top</a></h3>
+		</section>
+		
+		<section id="9"><h2><span id="">t</span></h2>
+				<p>Regarding <span class="color">Element IDs</span> 2, 8, and 9, there are a few possibilites:
+					<ol>
+						<li><span class="color">Elements</span> 2 and 8 could be <span class="color">Fire</span>/<span class="color">Chaos</span> and <span class="color">Ice</span>/<span class="color">Order</span>, with an unknown pair as <span class="color">Element</span> <span class="color">9</span> (<span class="color">Fight</span> and <span class="color">Puzzle</span> would be irrelevant to the <span class="color">Element Index</span> in this case)</li>
+						<li><span class="color">Elements</span> 2 and 8 could be <span class="color">Fight</span>/<span class="color">Chaos</span> and <span class="color">Puzzle</span>/<span class="color">Order</span>, with </li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ol>
+				</p>
+			<h3><a href="#header">Back to Top</a></h3>
+		</section>
+		
+		<section id="0"><h2><span id="">t</span></h2>
+			<p></p>
+			<h3><a href="#header">Back to Top</a></h3>
+		</section>
+		
+	</body>
+  
+	</html>

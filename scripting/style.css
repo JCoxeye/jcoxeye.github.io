@@ -67,7 +67,7 @@
 	Gives an element the associated color.
 	
 .MO_[property]_[value]
-	Overrides the usual value of the specified property. Potential for over-reliance; avoid using if possible. For more information.
+	Overrides the usual value of the specified property. Potential for over-reliance; avoid using if possible.
 */
 
 
@@ -279,17 +279,17 @@ nav:not(#mainNav) {
 }
 
 
-:not(section).dropDownContainer[dropDownBoxSize="100%"] {
+:not(section, footer).dropDownContainer[dropDownBoxSize="100%"] {
 	margin-left: 1px;
 	margin-right: 1px;
 	border-width: 2px;
 }
-:not(section).dropDownContainer[dropDownBoxSize="80%"] {
+:not(section, footer).dropDownContainer[dropDownBoxSize="80%"] {
 	margin-left: 10%;
 	margin-right: 10%;
 	border-width: 2px;
 }
-:not(section).dropDownContainer[dropDownBoxSize="70%"] {
+:not(section, footer).dropDownContainer[dropDownBoxSize="70%"] {
 	margin-left: 15%;
 	margin-right: 15%;
 	border-width: 2px;
@@ -380,25 +380,25 @@ nav:not(#mainNav) {
 /* 7. Audio, Video, and Images */
 
 
-img:not(.inline), iframe {
+:is(img, audio, iframe):not(.inline) {
 	display: block;
 }
-img.inline {
+:is(img, audio, iframe):.inline {
 	display: inline-block;
 }
 
 
-:is(img, iframe):not(.unframed) {
+:is(img, audio, iframe):not(.unframed) {
 	border-width: 2px;
 }
-:is(img, iframe).unframed {
+:is(img, audio, iframe).unframed {
 	border-width: 0px;
 }
-:is(img, iframe):not(.inline) {
+:is(img, audio, iframe):not(.inline) {
 	margin-left: auto;
 	margin-right: auto;
 }
-:is(img, iframe).inline.unframed {
+:is(img, audio, iframe).inline.unframed {
 	position: relative;
 	height: calc(.75em);
 	width: auto;
@@ -410,7 +410,6 @@ img.inline {
 	width: auto;
 	top: 0.1em;
 }
-
 
 
 /* 8. Headings, Paragraphs, and Lists */
@@ -458,6 +457,9 @@ p, ol, ul {
 li, :is(ol, ul) > p {
 	display: list-item;
 }
+.noHeart {
+	display: block;
+}
 
 
 :not(ol, ul) > p {
@@ -476,7 +478,7 @@ ul {
 ol {
 	list-style: decimal inside;
 }
-:is(ol, ul) :is(ol, ul) {
+:is(ol, ul) :is(ol, ul), :is(ol, ul) :is(li, p).smallLi {
 	font-size: 0.9em;
 }
 li, :is(ol, ul) > p {
@@ -503,7 +505,7 @@ li, :is(ol, ul) > p {
 span, a, i, b, em, strong {
 	display: inline;
 }
-kbd {
+kbd, .nobreak {
 	display: inline-block;
 }
 
@@ -845,7 +847,8 @@ kbd {
 :not(button, ol, ul, li) > :is(h1, h2, h3, h4, h5, h6, .flexHeading),
 :is(p, ol, ul, li) + :is(img:not(.inline), iframe),
 :is(header, nav#mainNav, section, footer) > .dropDownButtonBottom,
-.poppupAside :is(img, iframe, audio):first-child
+.poppupAside :is(img, iframe, audio):first-child,
+:is(audio) + :is(p, ol, ul)
 {
 	margin-top: 25px;
 }
@@ -856,7 +859,7 @@ kbd {
 
 
 :not(button, ol, ul) > :is(ol, ul) + :is(p, ol, ul, .dropDownContainer),
-:not(button, ol, ul) > p + :is(p, .dropDownContainer),
+:not(button, ol, ul) > p:not(.caption) + :is(p, .dropDownContainer),
 :not(button, ol, ul) > .dropDownContainer + :is(p, ol, ul),
 :is(button, .dropDownContent):not(header, nav, section, footer) > :not(.dropDownContainer):first-child,
 :is(p, ol, ul) + .flexCardContainer
@@ -870,7 +873,7 @@ kbd {
 } /* Paragraph Size */
 
 
-:not(button, ol, ul) > :is(h1, h2, h3, h4, h5, h6, .flexHeading, img:not(.inline), iframe) + :is(p, ol, ul, img:not(.inline), iframe, .dropDownContainer, .flexCardContainer),
+:not(button, ol, ul) > :is(h1, h2, h3, h4, h5, h6, .flexHeading, img:not(.inline), iframe) + :is(p, ol, ul, img:not(.inline), audio, iframe, .dropDownContainer, .flexCardContainer),
 :not(button, ol, ul) > p + :is(ol, ul),
 :not(nav:not(#mainNav)) > :is(ol, ul) li + *,
 button * + *,
@@ -894,7 +897,7 @@ button,
 }
 button,
 .dropDownContent,
-.dropDownContainer:last-child
+.dropDownContainer:last-child:not(footer)
 {
 	margin-bottom: 1px;
 } /* Button Size */
