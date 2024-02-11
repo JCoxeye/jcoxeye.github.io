@@ -26,7 +26,9 @@
 	Defines vertical margins for elements that need the specificty.
 12. Color Classes
 	Defines custom color classes
-13. Manual Overrides
+13. Cursor
+	Defines cursor changing stuff
+14. Manual Overrides
 	Janky !important overrides to bodge things together
 */
 
@@ -960,7 +962,16 @@ li
 
 
 
-/* 13. Manual Overrides */
+/* 13. Cursor */
+
+
+a, button {cursor: pointer}
+.poppupTrigger:not(a) {cursor: help}
+
+
+
+
+/* 14. Manual Overrides */
 
 
 .MO_background-color_black {background-color: black !important;}
