@@ -98,12 +98,15 @@
 			
 		</section>
 		
-		<section id="roadmap">
+		<section id="roadmap" class="dropDownContainer" dropDownBoxHasBottomButton="false" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
 			
-			<h2>Roadmap</h2>
-				<p>
-					Here's all of the things (both important and relatively unimportant) that I'd like to clarify/expand on:
-				</p>
+			<button id="roadmapButtonTop" class="dropDownButtonTop">
+				<h2>Roadmap</h2>
+				<p>All of the things (both important and relatively unimportant) that I'd like to clarify/expand on.</p>
+				<p>(<span id="roadmapToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+			</button>
+			
+			<div id="roadmapContent" class="dropDownContent">
 				
 				<h3>Leitmotif Articles</h3>
 					<ul>
@@ -154,7 +157,12 @@
 					<p>
 						What form said track listing will take is unclear, but hypothetically each song would have links to the relevant leitmotifs, and some general information (key, bpm, time signature, trivia, etc.), akin to the <i>Undertale</i> wiki.
 					</p>
+				
+			</div>
 			
+			<button id="roadmapButtonBottom" class="dropDownButtonBottom">
+				<p>(Roadmap - Click to Contract)</p>
+			</button>
 		</section>
 		
 		<section id="leitmotifs">
@@ -164,7 +172,7 @@
 				
 				<div id="ut-leitmotifs-part-1" class="dropDownContainer" dropDownBoxHasBottomButton="false" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
 					<button id="ut-leitmotifs-part-1ButtonTop" class="dropDownButtonTop">
-						<h2><i>Undertale</i> Leitmotifs, Part 1</h2>
+						<h3><i>Undertale</i> Leitmotifs, Part 1</h3>
 						<p>'Once Upon a Time' - 'Heartache'</p>
 						<p>(<span id="ut-leitmotifs-part-1ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
 					</button>
@@ -238,7 +246,7 @@
 				
 				<div id="ut-leitmotifs-part-2" class="dropDownContainer" dropDownBoxHasBottomButton="false" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
 					<button id="ut-leitmotifs-part-2ButtonTop" class="dropDownButtonTop">
-						<h2><i>Undertale</i> Leitmotifs, Part 2</h2>
+						<h3><i>Undertale</i> Leitmotifs, Part 2</h3>
 						<p>'sans.' - 'Memory'</p>
 						<p>(<span id="ut-leitmotifs-part-2ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
 					</button>
@@ -295,7 +303,7 @@
 				
 				<div id="ut-leitmotifs-part-3" class="dropDownContainer" dropDownBoxHasBottomButton="false" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
 					<button id="ut-leitmotifs-part-3ButtonTop" class="dropDownButtonTop">
-						<h2><i>Undertale</i> Leitmotifs, Part 3</h2>
+						<h3><i>Undertale</i> Leitmotifs, Part 3</h3>
 						<p>'Alphys' - 'Power of NEO'</p>
 						<p>(<span id="ut-leitmotifs-part-3ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
 					</button>
@@ -362,7 +370,7 @@
 				
 				<div id="dr-ch1-leitmotifs" class="dropDownContainer" dropDownBoxHasBottomButton="false" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
 					<button id="dr-ch1-leitmotifsButtonTop" class="dropDownButtonTop">
-						<h2><i>Deltarune Chapter 1</i> Leitmotifs</h2>
+						<h3><i>Deltarune Chapter 1</i> Leitmotifs</h3>
 						<p>'Don't Forget' - 'THE HOLY'</p>
 						<p>(<span id="dr-ch1-leitmotifsToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
 					</button>
@@ -444,7 +452,7 @@
 				
 				<div id="dr-ch2-leitmotifs" class="dropDownContainer" dropDownBoxHasBottomButton="false" dropDownBoxDefault="closed" dropDownBoxScroll="container" dropDownBoxSize="100%">
 					<button id="dr-ch2-leitmotifsButtonTop" class="dropDownButtonTop">
-						<h2><i>Deltarune Chapter 2</i> Leitmotifs</h2>
+						<h3><i>Deltarune Chapter 2</i> Leitmotifs</h3>
 						<p>'Girl Next Door' - 'Spamton'</p>
 						<p>(<span id="dr-ch2-leitmotifsToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
 					</button>
