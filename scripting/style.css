@@ -15,7 +15,7 @@
 6. Buttons, Dropdowns, and Poppups
 	Defines button elements and the like
 7. Audio, Video, and Images
-	Defines audio, iframe, and img elements
+	Defines audio, video, iframe, and img elements
 8. Headings, Paragraphs, and Lists
 	defines h, p, ol, ul, and li elements
 9. Inline Elements
@@ -382,31 +382,31 @@ nav:not(#mainNav) {
 /* 7. Audio, Video, and Images */
 
 
-:is(img, audio, iframe):not(.inline) {
+:is(img, audio, iframe, video):not(.inline) {
 	display: block;
 }
-:is(img, audio, iframe):.inline {
+:is(img, audio, iframe, video):.inline {
 	display: inline-block;
 }
 
 
-:is(img, audio, iframe):not(.unframed) {
+:is(img, audio, iframe, video):not(.unframed) {
 	border-width: 2px;
 }
-:is(img, audio, iframe).unframed {
+:is(img, audio, iframe, video).unframed {
 	border-width: 0px;
 }
-:is(img, audio, iframe):not(.inline) {
+:is(img, audio, iframe, video):not(.inline) {
 	margin-left: auto;
 	margin-right: auto;
 }
-:is(img, audio, iframe).inline.unframed {
+:is(img, audio, iframe, video).inline.unframed {
 	position: relative;
 	height: calc(.75em);
 	width: auto;
 	top: 0.1em;
 }
-:is(img, iframe).inline:not(.unframed) {
+:is(img, iframe, video).inline:not(.unframed) {
 	position: relative;
 	height: calc(.75em - 4px);
 	width: auto;
@@ -847,9 +847,9 @@ kbd {
 
 :is(header, nav, section, footer) > :not(button, .dropDownContainer, .flexCardContainer):first-child,
 :not(button, ol, ul, li) > :is(h1, h2, h3, h4, h5, h6, .flexHeading),
-:is(p, ol, ul, li) + :is(img:not(.inline), iframe),
+:is(p, ol, ul, li) + :is(img:not(.inline), iframe, video),
 :is(header, nav#mainNav, section, footer) > .dropDownButtonBottom,
-.poppupAside :is(img, iframe, audio):first-child,
+.poppupAside :is(img, iframe, audio, video):first-child,
 :is(audio) + :is(p, ol, ul)
 {
 	margin-top: 25px;
@@ -875,7 +875,7 @@ kbd {
 } /* Paragraph Size */
 
 
-:not(button, ol, ul) > :is(h1, h2, h3, h4, h5, h6, .flexHeading, img:not(.inline), iframe) + :is(p, ol, ul, img:not(.inline), audio, iframe, .dropDownContainer, .flexCardContainer),
+:not(button, ol, ul) > :is(h1, h2, h3, h4, h5, h6, .flexHeading, img:not(.inline), iframe, video) + :is(p, ol, ul, img:not(.inline), audio, iframe, video, .dropDownContainer, .flexCardContainer),
 :not(button, ol, ul) > p + :is(ol, ul),
 :not(nav:not(#mainNav)) > :is(ol, ul) li + *,
 button * + *,
