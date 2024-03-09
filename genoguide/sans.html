@@ -20,8 +20,6 @@
 	
 	<!-- P.S., thanks to ColdCalzone and Stagelights for ideas for corruptions of 'Sans Undertale' -->
 	
-	<!-- P.P.S., Yes, I know how much iframes suck. I don't have any great alternatives right now aside from remaking the lot of them as GIFs, so everyone will just have to deal with the horrific load times for a bit. -->
-	
 	<body>
 		
 		<nav>
@@ -74,7 +72,29 @@
 					<li>Although the battle is still turn-based, he takes his turn first.</li>
 					<li>Just as you (attempt) to dodge his attacks, he dodges your attacks as well, making your <span class="c">AT STAT</span> useless against him.</li>
 					<li>He ignores invincibility frames, damaging you for <span class="g">1 HP</span> every frame, for <span class="b">30 Damage</span> per second. Because he only deals <span class="b">1 Damage</span> at a time, your <span class="b">DF STAT</span> is useless as well.</li>
-					<li>He also inflicts a poison effect called <span class="p">KARMA</span>, in the form of additional purple damage that is slowly converted into actual damage.<br>Like <span class="b">Direct Damage</span>, <span class="p">KR</span> is inflicted at a rate of <span class="p">30 KR</span> per second.</li>
+					<li>
+						He also inflicts a poison effect called <span class="p">KARMA</span>, in the form of additional purple damage that is slowly converted into actual damage.
+						<br>
+						When you're first hit by an attack, you'll accrue an amount of <span class="p">KR</span> equal to that attack's
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="p">Innate KR</span>,
+								</span>
+								<span class="poppupAside">
+									How much any given attack has is shown in the <span class="b">Attacks</span> section.
+								</span>
+							</span>
+						in addition to an extra
+							<span class="poppup">
+								<span class="poppupTrigger">
+									<span class="p">30 KR</span>
+								</span>
+								<span class="poppupAside">
+									(That is, <span class="p">1 KR</span> per frame)
+								</span>
+							</span>
+						per second while you're still being hit by it.
+					</li>
 				</ul>
 				<p>Some other important notes:</p>
 				<ul>
@@ -217,111 +237,231 @@
 				
 				<div id="atk1" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk1ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 1: Intro</div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk1ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 1: Intro</div>
+							<img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk1ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk1Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/Xf4tECexiWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<p><span class="b">Seven Granddad</span>'s opening attack.</p>
-						<p>I recommend using only <kbd>Up</kbd> and <kbd>Down</kbd> for this entire attack; using <kbd>Left</kbd> and <kbd>Right</kbd> is unnecessary, and will only make dodging it more complicated.</p>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>First, he does a <span class="b">Gravity Slam</span> towards the bottom of the <span class="r">Bullet Board</span>.<br>Simply hold up as soon as the attack starts to dodge it, making sure to do a full jump.</p>
-						<h4 class="flexHeading r"><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"><div> Red SOUL Mode </div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>He then creates a Bone Hallway for you to squeeze through. At this point, you'll probably already be in position to dodge this if you dodged the last part properly.</p>
-						<p>After this, <span class="b">Sam Jaundice</span> summons several sets of <span class="gray">Gaster Blasters</span>, creating safe spots for you to dodge them:</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/01.mp4" controls></video>
+						<p>
+							<span class="b">Seven Granddad</span>'s opening attack.
+						</p>
+						<p>
+							I recommend using only <kbd>Up</kbd> and <kbd>Down</kbd> for this entire attack; using <kbd>Left</kbd> and <kbd>Right</kbd> is unnecessary, and will only make dodging it more complicated.
+						</p>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							First, he does a <span class="b">Gravity Slam</span> towards the bottom of the <span class="r">Bullet Board</span>.
+							<br>
+							Simply hold up as soon as the attack starts to dodge it, making sure to do a full jump.
+						</p>
+						<h4 class="flexHeading r">
+							<img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16">
+							<div> Red SOUL Mode </div>
+							<img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							He then creates a Bone Hallway for you to squeeze through. At this point, you'll probably already be in position to dodge this if you dodged the last part properly.
+						</p>
+						<p>
+							After this, <span class="b">Sam Jaundice</span> summons several sets of <span class="gray">Gaster Blasters</span>, creating safe spots for you to dodge them:
+						</p>
 						<ol>
 							<li>The first set makes a box around the center; simply move towards the center after dodging the last part of the attack.</li>
 							<li>The second set makes an 'x' shape across the <span class="r">Bullet Board</span>. You can dodge this either by going all the way up or all the way down.</li>
 							<li>The third set is another box shape, dodged the same way as last time.</li>
 							<li>The fourth set is two large <span class="gray">Gaster Blasters</span> shooting left and right, dodged the same way as the 'x' shape.</li>
 						</ol>
-						<p>[<span class="b">Gravity Slam</span> and Bone Hallway: <span class="p">6 Innate KR</span>] - [<span class="gray">Gaster Blasters</span>: <span class="p">10 Innate KR</span>]</p>
+						<p>
+							[<span class="b">Gravity Slam</span> and Bone Hallway: <span class="p">6 Innate KR</span>]
+							<br>
+							[<span class="gray">Gaster Blasters</span>: <span class="p">10 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk1ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 1: Intro - Click to Contract)</p>
+						<p>
+							(Attack 1: Intro - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk2" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk2ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 2: <span class="b">Small Hops 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk2ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 2: <span class="b">Small Hops 1</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk2ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk2Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/QEiQ37m1518" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>A seemingly simple <span class="b">Blue SOUL Mode</span> attack that is actually pretty dang hard to dodge.</p>
-						<p>Sets of vertical bones will shoot towards the center of the <span class="r">Bullet Board</span>, forcing you to jump between the small gaps.</p>
-						<p>Again, I recommend only using <kbd>Up</kbd> and <kbd>Down</kbd> for this attack. Pressing <kbd>Left</kbd> or <kbd>Right</kbd> will severely screw with the timing, making the attack nigh impossible to dodge.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/02.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							A seemingly simple <span class="b">Blue SOUL Mode</span> attack that is actually pretty dang hard to dodge.
+						</p>
+						<p>
+							Sets of vertical bones will shoot towards the center of the <span class="r">Bullet Board</span>, forcing you to jump between the small gaps.
+						</p>
+						<p>
+							Again, I recommend only using <kbd>Up</kbd> and <kbd>Down</kbd> for this attack. Pressing <kbd>Left</kbd> or <kbd>Right</kbd> will severely screw with the timing, making the attack nigh impossible to dodge.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk2ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 2: <span class="b">Small Hops 1</span> - Click to Contract)</p>
+						<p>
+							(Attack 2: <span class="b">Small Hops 1</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk3" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk3ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 3: <span class="b">Blue Bones</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk3ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 3: <span class="b">Blue Bones</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+						(<span id="atk3ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk3Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/C-C9qTCndDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>One of <span class="b">Anne</span>'s only <span class="c">Blue Attacks</span>.</p>
-						<p>This one is quite hard to dodge, especially if you don't know how to do it to begin with.</p>
-						<p>There's only a small window of time to jump over the small white bone after the <span class="c">blue bone</span> passes you, and the next <span class="c">blue bone</span> forces you to make as small a jump as possible.</p>
-						<p>This attack is made much easier by moving with the bones as you jump, giving you just enough time to land before the next <span class="c">blue bone</span> movement-checks you.</p>
-						<p>Importantly, after the third small white bone, the attack switches directions; after jumping over the third white bone, start shifting to the right to give yourself more time to react to the set coming from the left.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/03.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							One of <span class="b">Anne</span>'s only <span class="c">Blue Attacks</span>.
+						</p>
+						<p>
+							This one is quite hard to dodge, especially if you don't know how to do it to begin with.
+						</p>
+						<p>
+							There's only a small window of time to jump over the small white bone after the <span class="c">blue bone</span> passes you, and the next <span class="c">blue bone</span> forces you to make as small a jump as possible.
+						</p>
+						<p>
+							This attack is made much easier by moving with the bones as you jump, giving you just enough time to land before the next <span class="c">blue bone</span> movement-checks you.
+						</p>
+						<p>
+							Importantly, after the third small white bone, the attack switches directions; after jumping over the third white bone, start shifting to the right to give yourself more time to react to the set coming from the left.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk3ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 3: <span class="b">Blue Bones</span> - Click to Contract)</p>
+						<p>
+							(Attack 3: <span class="b">Blue Bones</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk4" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk4ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 4: <span class="b">Random Hops 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk4ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 4: <span class="b">Random Hops 1</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk4ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk4Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/GPYCZj9uT48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>A variation of the <span class="b">Small Hops</span> attack.</p>
-						<p>In this attack, the gaps are all random distances from the ground, requiring more reaction speed, and (slightly) less precision.</p>
-						<p>This attack can be pretty hard if you don't have it down, but muscle memory will eventually take hold, allowing you to know exactly how long to hold <kbd>Up</kbd> for.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/04.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							A variation of the <span class="b">Small Hops</span> attack.
+						</p>
+						<p>
+							In this attack, the gaps are all random distances from the ground, requiring more reaction speed, and (slightly) less precision.
+						</p>
+						<p>
+							This attack can be pretty hard if you don't have it down, but muscle memory will eventually take hold, allowing you to know exactly how long to hold <kbd>Up</kbd> for.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk4ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 4: <span class="b">Random Hops 1</span> - Click to Contract)</p>
+						<p>
+							(Attack 4: <span class="b">Random Hops 1</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk5" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk5ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 5: <span class="b">Simple Platforms 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk5ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 5: <span class="b">Simple Platforms 1</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk5ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk5Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/catdjl87v7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>Woohoo!</p>
-						<p>Platforming!</p>
-						<p>In this attack, the ground quickly becomes covered in bones, requiring you to jump on the moving <span class="b">platforms</span> hovering above.</p>
-						<p>This is simple at first, but the third <span class="b">platform</span> has bones jutting out from the ceiling above.</p>
-						<p>You'll have to maneuver around them by coming in at a sharper angle.</p>
-						<p>After the third <span class="b">platform</span> comes and goes, the 'Bone Ocean' will start to disappear. Quickly jump down to the clear ground before a single large bone blocks the path.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/05.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							Woohoo!
+						</p>
+						<p>
+							Platforming!
+						</p>
+						<p>
+							In this attack, the ground quickly becomes covered in bones, requiring you to jump on the moving <span class="b">platforms</span> hovering above.
+						</p>
+						<p>
+							This is simple at first, but the third <span class="b">platform</span> has bones jutting out from the 	ceiling above.
+						</p>
+						<p>
+							You'll have to maneuver around them by coming in at a sharper angle.
+						</p>
+						<p>
+							After the third <span class="b">platform</span> comes and goes, the 'Bone Ocean' will start to disappear. Quickly jump down to the clear ground before a single large bone blocks the path.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk5ButtonBottom" class="dropDownButtonBottom">
@@ -331,21 +471,51 @@
 				
 				<div id="atk6" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk6ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 6: <span class="b">Simple Platforms 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk6ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 6: <span class="b">Simple Platforms 2</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk6ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk6Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/5GU9umBMUXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>The continuation of the last attack.</p>
-						<p>It's mostly the same at first, albeit headed in the opposite direction.</p>
-						<p>The big difference comes in with a large extra bone with a <span class="b">platform</span> above, sitting in between the first and second <span class="b">platforms</span>.<br>You can jump onto the high <span class="b">platform</span> if you want, but you can also just jump all the way to the next one, making the attack quite a bit simpler.</p>
-						<p>Next comes three <span class="b">platforms</span> with bones above them, like the third <span class="b">platform</span> from the previous attack.<br>Like last time, you'll have to come in at a sharper angle so you don't get hit by the bones above.</p>
-						<p>Once you're on the first of these <span class="b">platforms</span>, you'll notice a large bone coming from the left, which limits the time you have to finish the attack.</p>
-						<p>Thankfully, getting to the second <span class="b">platform</span> only requires moving off the edge of the first - you'll land right on it, without having to do an otherwise tricky jump.</p>
-						<p>After a small hop to the third of these <span class="b">platforms</span>, a large bone will come from the right, forcing you to squeeze above it, landing on the clear ground below. You'll have to wait for the perfect moment, as the ceiling prohibits a larger jump.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/06.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							The continuation of the last attack.
+						</p>
+						<p>
+							It's mostly the same at first, albeit headed in the opposite direction.
+						</p>
+						<p>
+							The big difference comes in with a large extra bone with a <span class="b">platform</span> above, sitting in between the first and second <span class="b">platforms</span>.
+							<br>
+							You can jump onto the high <span class="b">platform</span> if you want, but you can also just jump all the way to the next one, making the attack quite a bit simpler.
+						</p>
+						<p>
+							Next comes three <span class="b">platforms</span> with bones above them, like the third <span class="b">platform</span> from the previous attack.
+							<br>
+							Like last time, you'll have to come in at a sharper angle so you don't get hit by the bones above.
+						</p>
+						<p>
+							Once you're on the first of these <span class="b">platforms</span>, you'll notice a large bone coming from the left, which limits the time you have to finish the attack.
+						</p>
+						<p>
+							Thankfully, getting to the second <span class="b">platform</span> only requires moving off the edge of the first - you'll land right on it, without having to do an otherwise tricky jump.
+						</p>
+						<p>
+							After a small hop to the third of these <span class="b">platforms</span>, a large bone will come from the right, forcing you to squeeze above it, landing on the clear ground below. You'll have to wait for the perfect moment, as the ceiling prohibits a larger jump.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk6ButtonBottom" class="dropDownButtonBottom">
@@ -355,257 +525,550 @@
 				
 				<div id="atk7" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk7ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 7: <span class="b">Sliding Platforms<span></div></img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk7ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 7: <span class="b">Sliding Platforms<span></div>
+							</img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk7ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk7Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/ZZp3ouXDmks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>This ends up being one of <span class="b">Shams</span>' hardest attacks due to its random nature.</p>
-						<p>Sets of <span class="b">platforms</span> come in two rows, dividing the play field into three rows for you to stand in.</p>
-						<p>In the top and bottom rows, bones come from the right, while the middle row has bones coming from the left.</p>
-						<p>These bones sweep across the entire row, forcing you to vacate to one of the surrounding rows.</p>
-						<p>I recommend disregarding the top row entirely. You can avoid the entire attack by just moving between the bottom two rows.</p>
-						<p>Once you've exited the bottom row, try getting back to it as soon as the coast is clear. Doing this will save you the trouble and brainpower of having to deal with the moving <span class="b">platforms</span>.</p>
-						<p>Note the movement pattern here - stay in one row, moving with the bones, until you're forced to move to the other row, switching directions. You'll notice this ends up making a big circle pattern. Recognizing this will come in handy for later attacks.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/07.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							This ends up being one of <span class="b">Shams</span>' hardest attacks due to its random nature.
+						</p>
+						<p>
+							Sets of <span class="b">platforms</span> come in two rows, dividing the play field into three rows for you to stand in.
+						</p>
+						<p>
+							In the top and bottom rows, bones come from the right, while the middle row has bones coming from the left.
+						</p>
+						<p>
+							These bones sweep across the entire row, forcing you to vacate to one of the surrounding rows.
+						</p>
+						<p>
+							I recommend disregarding the top row entirely. You can avoid the entire attack by just moving between the bottom two rows.
+						</p>
+						<p>
+							Once you've exited the bottom row, try getting back to it as soon as the coast is clear. Doing this will save you the trouble and brainpower of having to deal with the moving <span class="b">platforms</span>.
+						</p>
+						<p>
+							Note the movement pattern here - stay in one row, moving with the bones, until you're forced to move to the other row, switching directions. You'll notice this ends up making a big circle pattern. Recognizing this will come in handy for later attacks.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk7ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 7: <span class="b">Sliding Platforms<span> - Click to Contract)</p>
+						<p>
+							(Attack 7: <span class="b">Sliding Platforms<span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk8" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk8ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 8: <span class="b">Platform Hops 1</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk8ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 8: <span class="b">Platform Hops 1</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							</h3>
+						<p>
+							(<span id="atk8ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk8Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/mXGvYjZmrnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>In this attack, you'll start on a single moving <span class="b">platform</span> above a 'Bone Ocean'.</p>
-						<p>This joyride is interrupted by three columns of bones that force you to weave between the gaps.</p>
-						<p>If you know the attack well, you'll know when to jump and when to sit in place on the platform, but, since I know you, I'll save you the trouble and tell you outright.</p>
-						<p>When moving to the right, jump to pass through the gaps of the first two columns, coming to a rest on the right side of the <span class="b">platform</span> to cruise through the third.</p>
-						<p>Then, once you're past the third column, line yourself up with the right side of the <span class="b">platform</span>.</p>
-						<p>Lining it up right isn't as precise as you might expect, and you can push against the right wall of the <span class="r">Bullet Board</span> help with this.<br>Doing this, you'll simply cruise back through the bones, no problem.</p>
-						<p>Notably, this attack is timed such that once you're back in between the left and middle columns, you can simply do a full jump directly upwards to run out the clock, saving you the trouble of dodging the left column again.</p>
-						<p>[Vertical Looping Bones: <span class="p">5 Innate KR</span>] ['Bone Ocean': <span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/08.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							In this attack, you'll start on a single moving <span class="b">platform</span> above a 'Bone Ocean'.
+						</p>
+						<p>
+							This joyride is interrupted by three columns of bones that force you to weave between the gaps.
+						</p>
+						<p>
+							If you know the attack well, you'll know when to jump and when to sit in place on the platform, but, since I know you, I'll save you the trouble and tell you outright.
+						</p>
+						<p>
+							When moving to the right, jump to pass through the gaps of the first column, coming to a rest on the left side of the <span class="b">platform</span>.
+						</p>
+						<p>
+							Then, move to the right side of the <span class="b">platform</span> to pass through the second bone column and cruise through the third.
+						</p>
+						<p>
+							Then, once you're past the third column, line yourself up with the right side of the <span class="b">platform</span>.
+						</p>
+						<p>
+							Lining it up right isn't as precise as you might expect, and you can push against the right wall of the <span class="r">Bullet Board</span> help with this.
+							<br>
+							Doing this, you'll simply cruise back through the bones, no problem.
+						</p>
+						<p>
+							Notably, this attack is timed such that once you're back in between the left and middle columns, you can simply do a full jump directly upwards to run out the clock, saving you the trouble of dodging the left column again.
+						</p>
+						<p>
+							[Vertical Looping Bones: <span class="p">5 Innate KR</span>]
+							<br>
+							['Bone Ocean': <span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk8ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 8: <span class="b">Platform Hops 1</span> - Click to Contract)</p>
+						<p>
+							(Attack 8: <span class="b">Platform Hops 1</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk9" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk9ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 9: <span class="b">Blaster Platforms</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk9ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 9: <span class="b">Blaster Platforms</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk9ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk9Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/TrUOv6ChddU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>The same as the <span class="b">Sliding Platforms</span> attack, but with <span class="gray">Gaster Blasters</span> instead of bones.</p>
-						<p>Again, you can get by with only using the bottom two rows, alternating between them as you're about to get blasted, and sticking to the bottom row.</p>
-						<p>If you're on the middle row and are about to be hit, do a very small jump to get yourself off the <span class="b">platform</span>, before falling down to the bottom row.</p>
-						<p>If you stay on the <span class="b">platform</span>, it can be hard to get the momentum to fall off quick enough.</p>
-						<p>[<span class="p">10 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/09.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							The same as the <span class="b">Sliding Platforms</span> attack, but with <span class="gray">Gaster Blasters</span> instead of bones.
+						</p>
+						<p>
+							Again, you can get by with only using the bottom two rows, alternating between them as you're about to get blasted, and sticking to the bottom row.
+						</p>
+						<p>
+							If you're on the middle row and are about to be hit, do a very small jump to get yourself off the <span class="b">platform</span>, before falling down to the bottom row.
+						</p>
+						<p>
+							If you stay on the <span class="b">platform</span>, it can be hard to get the momentum to fall off quick enough.
+						</p>
+						<p>
+							[<span class="p">10 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk9ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 9: <span class="b">Blaster Platforms</span> - Click to Contract)</p>
+						<p>
+							(Attack 9: <span class="b">Blaster Platforms</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk10" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk10ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 10: <span class="b">Platform Hops 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk10ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 10: <span class="b">Platform Hops 2</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk10ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk10Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/3DGZC7WLDcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>A continuation of the <span class="b">Platform Hops</span> attack, with the left and right columns having tighter gaps for you to squeeze through.</p>
-						<p>Again, here's the strats:</p>
-						<p>To dodge the left column, do a full jump, catching the gap as it's high in the air.</p>
-						<p>Dodge the middle column by doing a small hop through the gap heading down.</p>
-						<p>Dodge the right column by doing a full jump, catching the gap as you're heading up. This may seem like a bad idea, but the hitboxes are pretty forgiving, and doing full jumps like this gives you as much time as possible to get your bearings.</p>
-						<p>On the return trip, line yourself up with the right side of the <span class="b">platform</span>, but once you're close to the right column, quickly race to the other side to get through the small gap.</p>
-						<p>Afterwards, simply line yourself up with the left side of the <span class="b">platform</span>, allowing you to cruise through the middle column and run out the clock by jumping straight up again.</p>
-						<p>[Vertical Looping Bones: <span class="p">5 Innate KR</span>] ['Bone Ocean': <span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/10.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							A continuation of the <span class="b">Platform Hops</span> attack, with the left and right columns having tighter gaps for you to squeeze through.
+						</p>
+						<p>
+							Again, here's the strats:
+						</p>
+						<p>
+							To dodge the left column, do a full jump, catching the gap as it's high in the air.
+						</p>
+						<p>
+							Dodge the middle column by staying on the left side of the platform.
+						</p>
+						<p>
+							Dodge the right column the same way as the left; by doing a jumping, catching the gap as you're in the air.
+						</p>
+						<p>
+							On the return trip, line yourself up with the right side of the <span class="b">platform</span>, but once you're close to the right column, quickly race to the other side to get through the small gap.
+						</p>
+						<p>
+							Afterwards, simply line yourself up with the left side of the <span class="b">platform</span>, allowing you to cruise through the middle column and run out the clock by jumping straight up again.
+						</p>
+						<p>
+							[Vertical Looping Bones: <span class="p">5 Innate KR</span>]
+							<br>
+							['Bone Ocean': <span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk10ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 10: <span class="b">Platform Hops 2</span> - Click to Contract)</p>
+						<p>
+							(Attack 10: <span class="b">Platform Hops 2</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk11" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk11ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 11: <span class="b">Small Hops 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk11ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 11: <span class="b">Small Hops 2</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk11ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk11Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/LijZQkzmETU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>The <span class="b">Small Hops</span> attack again, but quite a bit faster.</p>
-						<p>Unfortunately, there's not much advice to give aside from 'git gud'.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/11.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							</h4>
+						<p>
+							The <span class="b">Small Hops</span> attack again, but quite a bit faster.
+						</p>
+						<p>
+							Unfortunately, there's not much advice to give aside from 'git gud'.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk11ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 11: <span class="b">Small Hops 2</span> - Click to Contract)</p>
+						<p>
+							(Attack 11: <span class="b">Small Hops 2</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk12" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk12ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 12: <span class="b">Horizontal Bone Slide</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk12ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 12: <span class="b">Horizontal Bone Slide</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk12ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk12Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/dKFeGRy25vI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>Now we get back to that circle motion I mentioned earlier.</p>
-						<p>In this attack, large bones above move to the left, while small bones below move to the right.</p>
-						<p>Stay on the ground, moving to the right with the small bones, before doing a full jump to the left, moving with the big bones. You may need to shift a little bit to the side so you don't hit a small bone as you're falling back down.<br>Rinse and repeat.</p>
-						<p>Depending on how full your jumps are, you'll either clear the entire thing with only two jumps, or you may need to do an extra one or two.</p>
-						<p>Try to limit the amount of jumps you have to do, whilst also being safe.</p>
-						<p>For me, the sweet spot is doing two mostly full jumps, and then doing an extra small jump over two small bones at the end.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/12.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							Now we get back to that circle motion I mentioned earlier.
+						</p>
+						<p>
+							In this attack, large bones above move to the left, while small bones below move to the right.
+						</p>
+						<p>
+							Stay on the ground, moving to the right with the small bones, before doing a full jump to the left, moving with the big bones. You may need to shift a little bit to the side so you don't hit a small bone as you're falling back down.
+							<br>
+							Rinse and repeat.
+						</p>
+						<p>
+							Depending on how full your jumps are, you'll either clear the entire thing with only two jumps, or you may need to do an extra one or two.
+						</p>
+						<p>
+							Try to limit the amount of jumps you have to do, whilst also being safe.
+						</p>
+						<p>
+							For me, the sweet spot is doing two mostly full jumps, and then doing an extra small jump over two small bones at the end.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk12ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 12: <span class="b">Horizontal Bone Slide</span> - Click to Contract)</p>
+						<p>
+							(Attack 12: <span class="b">Horizontal Bone Slide</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk13" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk13ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 13: <span class="b">Random Hops 2</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk13ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 13: <span class="b">Random Hops 2</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk13ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk13Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/RW-TSdlwwjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>A continuation of the <span class="b">Random Hops</span> attack from earlier.</p>
-						<p>Provided you've attacked him every single turn since the beginning of the fight, this is the last attack you'll see before the halfway point.</p>
-						<p>Like <span class="b">Small Hops 2</span>, there's not much advice I can give aside from 'git gud'.</p>
-						<p>[<span class="p">6 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/13.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							A continuation of the <span class="b">Random Hops</span> attack from earlier.
+						</p>
+						<p>
+							Provided you've attacked him every single turn since the beginning of the fight, this is the last attack you'll see before the halfway point.
+						</p>
+						<p>
+							Like <span class="b">Small Hops 2</span>, there's not much advice I can give aside from 'git gud'.
+						</p>
+						<p>
+							[<span class="p">6 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk13ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 13: <span class="b">Random Hops 2</span> - Click to Contract)</p>
+						<p>
+							(Attack 13: <span class="b">Random Hops 2</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk14" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk14ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 14: <span class="b">Faster Blaster Platforms</span></div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk14ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 14: <span class="b">Faster Blaster Platforms</span></div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk14ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk14Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/TgDH-00X8yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-						<p>A faster version of the <span class="b">Blaster Platforms</span> attack.</p>
-						<p>The same advice as last time still applies.</p>
-						<p>Notably, you won't see this attack at all unless you've used a turn to <span class="g">ACT</span>, heal, or <span class="y">SPARE</span>.</p>
-						<p>[<span class="p">10 Innate KR</span>]</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/14.mp4" controls></video>
+						<h4 class="flexHeading b">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div> Blue SOUL Mode </div>
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+						</h4>
+						<p>
+							A faster version of the <span class="b">Blaster Platforms</span> attack.
+						</p>
+						<p>
+							The same advice as last time still applies.
+						</p>
+						<p>
+							Notably, you won't see this attack at all unless you've used a turn to <span class="g">ACT</span>, heal, or <span class="y">SPARE</span>.
+						</p>
+						<p>
+							[<span class="p">10 Innate KR</span>]
+						</p>
 					</div>
 					
 					<button id="atk14ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 14: <span class="b">Faster Blaster Platforms</span> - Click to Contract)</p>
+						<p>
+							(Attack 14: <span class="b">Faster Blaster Platforms</span> - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
-				<p><b animSubType="wave">From here until you attack him for the 13th time, <span class="b">Jevil Deltarune</span> reuses his attacks, randomly choosing from one of these four</b>:<br><span class="b">Small Hops 2</span>, <span class="b">Horizontal Bone Slide</span>, <span class="b">Random Hops 2</span>, and <span class="b">Faster Blaster Platforms</span>.</p>
-				<p>Anyway, this here's the halfway point - if you want to duck out to avoid spoilers for the rest of the fight, this is a great place to stop.</p>-->
+				<p>
+					<b animSubType="wave">From here until you attack him for the 13th time, <span class="b">Jevil Deltarune</span> reuses his attacks, randomly choosing from one of these four</b>:
+					<br>
+					<span class="b">Small Hops 2</span>, <span class="b">Horizontal Bone Slide</span>, <span class="b">Random Hops 2</span>, and <span class="b">Faster Blaster Platforms</span>.
+				</p>
+				<p>
+					Anyway, this here's the halfway point - if you want to duck out to avoid spoilers for the rest of the fight, this is a great place to stop.
+				</p>
 				<!-- <p>In the meantime, have a Gaster GIF.</p>
 				<img src="../assets/images/gaster.gif" class="inline unframed" title="If you're reading this guide, chances are you don't even know who this guy is, so I don't know why I bothered."> --> <!-- Realized this kinda didn't make sense for the target audience of this guide. Thought about giving it some text referring to that, but i decided to just cut it. He's still here in spirit. -->
 				
 				<div id="atkSpare" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atkSpareButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><div>Attack N/A: Spare</div></h3>
-						<p>(<span id="atkSpareToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<div>Attack N/A: Spare</div>
+						</h3>
+						<p>
+							(<span id="atkSpareToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atkSpareContent" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/gN1vfGyrVzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<p>Once you've attacked <span class="b">Raisin Brans</span> 13 times, he'll <span class="y">SPARE</span> you.</p>
-						<p>For as long as he's sparing you, <span class="g">ACT</span>ing and using <span class="p">ITEM</span>s does not progress the fight, nor cause him to attack.</p>
-						<p>Use this time to take a breather and heal if necessary - it amounts to a free turn.</p>
-						<p>I recommend using the worst healing items you have, as you can use multiple in a row with no consequence.</p>
-						<p>To progress the fight, just start attacking again.</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/spare.mp4" controls></video>
+						<p>
+							Once you've attacked <span class="b">Raisin Brans</span> 13 times, he'll <span class="y">SPARE</span> you.
+						</p>
+						<p>
+							For as long as he's sparing you, <span class="g">ACT</span>ing and using <span class="p">ITEM</span>s does not progress the fight, nor cause him to attack.
+						</p>
+						<p>
+							Use this time to take a breather and heal if necessary - it amounts to a free turn.
+						</p>
+						<p>
+							I recommend using the worst healing items you have, as you can use multiple in a row with no consequence.
+						</p>
+						<p>
+							To progress the fight, just start attacking again.
+						</p>
 					</div>
 					
 					<button id="atkSpareButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack N/A: Spare - Click to Contract)</p>
+						<p>
+							(Attack N/A: Spare - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
 				<div id="atk15" class="dropDownContainer" dropDownBoxScroll="container" dropDownBoxDefault="closed" dropDownBoxSize="100%">
 					<button id="atk15ButtonTop" class="dropDownButtonTop">
-						<h3 class="flexHeading"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div>Attack 15: Mini Attacks 1</div><img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16"></h3>
-						<p>(<span id="atk15ToggleText" class="dropDownToggleText">Click to Expand</span>)</p>
+						<h3 class="flexHeading">
+							<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							<div>Attack 15: Mini Attacks 1</div>
+							<img src="../assets/images/icons/heartR16px.png" class="inline unframed" width="16" height="16">
+						</h3>
+						<p>
+							(<span id="atk15ToggleText" class="dropDownToggleText">Click to Expand</span>)
+						</p>
 					</button>
 					
 					<div id="atk15Content" class="dropDownContent">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/HtY8p7URmk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-						<p>This is where this guide gets (even more) complicated.</p>
-						<p>Occasionally, <span class="b">Ness Earthbound</span> will perform a set of multiple small attacks, randomly selected from a pool, comprised mostly of shorter versions of <span class="b">Lucas Motherthree</span>'s other attacks.</p>
-						<p>This first set has five attacks, and appears just after attacking <span class="b">Sandy Cheeks</span> once he <span class="y">SPARE</span>s you.</p>
-						<p>For all of the following 'Mini Attacks', only move up and down unless specified. It's easy to accidently move left or right when you shouldn't, which is very dangerous and hard to recover from.</p>
+						<video width="640" height="480" src="../assets/videos/sans-attack-footage/15.mp4" controls></video>
+						<p>
+							This is where this guide gets (even more) complicated.
+						</p>
+						<p>
+							Occasionally, <span class="b">Ness Earthbound</span> will perform a set of multiple small attacks, randomly selected from a pool, comprised mostly of shorter versions of <span class="b">Lucas Motherthree</span>'s other attacks.
+						</p>
+						<p>
+							This first set has five attacks, and appears just after attacking <span class="b">Sandy Cheeks</span> once he <span class="y">SPARE</span>s you.
+						</p>
+						<p>
+							For all of the following 'Mini Attacks', only move up and down unless specified. It's easy to accidently move left or right when you shouldn't, which is very dangerous and hard to recover from.
+						</p>
 						
 						<h3 class="heartB">Mini Attack 1: <span class="b">Mini Bone Jump</span></h3>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/WF51XcSYRv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-							<p>In this attack, bones will quickly rush towards you from both sides, with a bunch of bones covering the floor, and followed by large bones stretching from the floor to the ceiling.</p>
-							<p>To dodge it, you must jump directly upwards over the approaching floor bones.</p>
-							<p>[<span class="p">6 Innate KR</span>]</p>
+							<video width="640" height="480" src="../assets/videos/sans-attack-footage/ma1.mp4" controls></video>
+							<h4 class="flexHeading b">
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+								<div> Blue SOUL Mode </div>
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							</h4>
+							<p>
+								In this attack, bones will quickly rush towards you from both sides, with a bunch of bones covering the floor, and followed by large bones stretching from the floor to the ceiling.
+							</p>
+							<p>
+								To dodge it, you must jump directly upwards over the approaching floor bones.
+							</p>
+							<p>
+								[<span class="p">6 Innate KR</span>]
+							</p>
 						
 						<h3 class="heartB">Mini Attack 2: <span class="b">Mini Bone Mountain</span></h3>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/lylTbuPG1pg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-							<p>In this attack, you start on the far side of the <span class="r">Bullet Board</span>, with a mountain of bones rushing towards you.</p>
-							<p>(it looks like this; I couldn't figure out how to describe it)<br>-> <span class="g">[</span>,,,,,||||| <img src="../assets/images/icons/heartR.png" width="16" height="16" class="unframed inline"><span class="g"> ]</span></p>
-							<p>To jump over the large bones, do a full jump, and once you're above them, move sideways directly towards them to fully clear them.</p>
-							<p>After jumping over the large bones, don't worry about clearing the small bones; the clock will run out before you fall into them.</p>
-							<p>[<span class="p">6 Innate KR</span>]</p>
+							<video width="640" height="480" src="../assets/videos/sans-attack-footage/ma2.mp4" controls></video>
+							<h4 class="flexHeading b">
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+								<div> Blue SOUL Mode </div>
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							</h4>
+							<p>
+								In this attack, you start on the far side of the <span class="r">Bullet Board</span>, with a mountain of bones rushing towards you.
+							</p>
+							<p>
+								(it looks like this; I couldn't figure out how to describe it)
+								<br>
+								-> <span class="g">[</span>,,,,,||||| <img src="../assets/images/icons/heartR16px.png" width="16" height="16" class="unframed inline"><span class="g"> ]</span>
+							</p>
+							<p>
+								To jump over the large bones, do a full jump, and once you're above them, move sideways directly towards them to fully clear them.
+							</p>
+							<p>
+								After jumping over the large bones, don't worry about clearing the small bones; the clock will run out before you fall into them.
+							</p>
+							<p>
+								[<span class="p">6 Innate KR</span>]
+							</p>
 						
 						<h3 class="heartB">Mini Attack 3: <span class="b">Mini Blue Bones</span></h3>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/FBcBUTkDT80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-							<p>Very similar to the first 'Mini Attack', except it's preceeded by two large <span class="b">blue bones</span>, forcing you to wait for them to pass before jumping over the small bones.</p>
-							<p>[<span class="p">6 Innate KR</span>]</p>
+							<video width="640" height="480" src="../assets/videos/sans-attack-footage/ma3.mp4" controls></video>
+							<h4 class="flexHeading b">
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+								<div> Blue SOUL Mode </div>
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							</h4>
+							<p>
+								Very similar to the first 'Mini Attack', except it's preceeded by two large <span class="b">blue bones</span>, forcing you to wait for them to pass before jumping over the small bones.
+							</p>
+							<p>
+								[<span class="p">6 Innate KR</span>]
+							</p>
 						
 						<h3 class="heartB">Mini Attack 4: <span class="b">Mini Hops</span></h3>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/RQC1b1MDTDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-							<p>A mini version of the <span class="b">Small Hops</span> attack.</p>
-							<p>Do note you only have to jump through two gaps before the attack ends.</p>
-							<p>[<span class="p">6 Innate KR</span>]</p>
+							<video width="640" height="480" src="../assets/videos/sans-attack-footage/ma4.mp4" controls></video>
+							<h4 class="flexHeading b">
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+								<div> Blue SOUL Mode </div>
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							</h4>
+							<p>
+								A mini version of the <span class="b">Small Hops</span> attack.
+							</p>
+							<p>
+								Do note you only have to jump through two gaps before the attack ends.
+							</p>
+							<p>
+								[<span class="p">6 Innate KR</span>]
+							</p>
 						
 						<h3 class="heartB">Mini Attack 5: <span class="b">Random Mini Hops</span></h3>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/BVI2T50mynw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-							<h4 class="flexHeading b"><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"><div> Blue SOUL Mode </div><img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16"></h4>
-							<p>A mini version of the <span class="b">Random Hops</span> attack.</p>
-							<p>You only need to jump through two gaps before the attack ends.</p>
-							<p>[<span class="p">6 Innate KR</span>]</p>
+							<video width="640" height="480" src="../assets/videos/sans-attack-footage/ma5.mp4" controls></video>
+							<h4 class="flexHeading b">
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+								<div> Blue SOUL Mode </div>
+								<img src="../assets/images/icons/heartB16px.png" class="inline unframed" width="16" height="16">
+							</h4>
+							<p>
+								A mini version of the <span class="b">Random Hops</span> attack.
+							</p>
+							<p>
+								You only need to jump through two gaps before the attack ends.
+							</p>
+							<p>
+								[<span class="p">6 Innate KR</span>]
+							</p>
 						
 					</div>
 					
 					<button id="atk15ButtonBottom" class="dropDownButtonBottom">
-						<p>(Attack 15: Mini Attacks 1 - Click to Contract)</p>
+						<p>
+							(Attack 15: Mini Attacks 1 - Click to Contract)
+						</p>
 					</button>
 				</div>
 				
