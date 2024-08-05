@@ -306,7 +306,7 @@ function lorePitRoulette()
 	};
 	for (var elem of document.getElementsByClassName("rouletteZ"))
 	{
-		switch (Math.ceil(Math.random() * 36))
+		switch (Math.ceil(Math.random() * 38))
 		{
 			case 1:
 				tempContent = `the Knight`;
@@ -454,6 +454,10 @@ function lorePitRoulette()
 			
 			case 37:
 				tempContent = `the Player`;
+			break;
+			
+			case 38:
+				tempContent = `lost in the depths`;
 			break;
 		};
 		elem.innerHTML = tempContent;
